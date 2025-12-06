@@ -133,6 +133,35 @@ import { AIAutomationBasicsPage } from './pages/getting-started/AIAutomationBasi
 import { ImplementingAIAutomationPage } from './pages/getting-started/ImplementingAIAutomationPage';
 import { FirstAIAutomationProjectPage } from './pages/getting-started/FirstAIAutomationProjectPage';
 import { AIAutomationForSmallBusinessPage } from './pages/getting-started/AIAutomationForSmallBusinessPage';
+// About manuv.co Pages
+import { WhatIsManuvPage } from './pages/about-manuv/WhatIsManuvPage';
+import { ManuvServicesPage } from './pages/about-manuv/ManuvServicesPage';
+import { HowManuvWorksPage } from './pages/about-manuv/HowManuvWorksPage';
+import { WorkingWithManuvPage } from './pages/about-manuv/WorkingWithManuvPage';
+import { ManuvPricingPage } from './pages/about-manuv/ManuvPricingPage';
+import { ManuvSuccessStoriesPage } from './pages/about-manuv/ManuvSuccessStoriesPage';
+// manuv.co Solutions Pages
+import { ManuvCustomerSupportSolutionPage } from './pages/solutions-manuv/ManuvCustomerSupportSolutionPage';
+import { ManuvSalesAutomationSolutionPage } from './pages/solutions-manuv/ManuvSalesAutomationSolutionPage';
+import { ManuvDataProcessingSolutionPage } from './pages/solutions-manuv/ManuvDataProcessingSolutionPage';
+// manuv.co Case Studies Pages
+import { ManuvCaseStudyEcommercePage } from './pages/case-studies-manuv/ManuvCaseStudyEcommercePage';
+import { ManuvCaseStudySaaSPage } from './pages/case-studies-manuv/ManuvCaseStudySaaSPage';
+// manuv.co Industries Pages
+import { ManuvForSaaSCompaniesPage } from './pages/industries-manuv/ManuvForSaaSCompaniesPage';
+import { ManuvForEcommercePage } from './pages/industries-manuv/ManuvForEcommercePage';
+// manuv.co Use Cases Pages
+import { ManuvForCustomerRetentionPage } from './pages/use-cases-manuv/ManuvForCustomerRetentionPage';
+import { ManuvForLeadGenerationPage } from './pages/use-cases-manuv/ManuvForLeadGenerationPage';
+// manuv.co Comparisons Pages
+import { ManuvVsTraditionalAutomationPage } from './pages/comparisons-manuv/ManuvVsTraditionalAutomationPage';
+// manuv.co Guides Pages
+import { GettingStartedWithManuvPage } from './pages/guides-manuv/GettingStartedWithManuvPage';
+// manuv.co FAQ Pages
+import { WhyChooseManuvPage } from './pages/faq-manuv/WhyChooseManuvPage';
+import { WhatMakesManuvDifferentPage } from './pages/faq-manuv/WhatMakesManuvDifferentPage';
+import { HowMuchDoesManuvCostPage } from './pages/faq-manuv/HowMuchDoesManuvCostPage';
+import { HowLongDoesManuvTakePage } from './pages/faq-manuv/HowLongDoesManuvTakePage';
 
 function App() {
   return (
@@ -272,6 +301,35 @@ function App() {
             <Route path="/getting-started/implementing-ai-automation" element={<ImplementingAIAutomationPage />} />
             <Route path="/getting-started/first-ai-automation-project" element={<FirstAIAutomationProjectPage />} />
             <Route path="/getting-started/ai-automation-for-small-business" element={<AIAutomationForSmallBusinessPage />} />
+            {/* About manuv.co Routes */}
+            <Route path="/about-manuv/what-is-manuv" element={<WhatIsManuvPage />} />
+            <Route path="/about-manuv/manuv-services" element={<ManuvServicesPage />} />
+            <Route path="/about-manuv/how-manuv-works" element={<HowManuvWorksPage />} />
+            <Route path="/about-manuv/working-with-manuv" element={<WorkingWithManuvPage />} />
+            <Route path="/about-manuv/manuv-pricing" element={<ManuvPricingPage />} />
+            <Route path="/about-manuv/manuv-success-stories" element={<ManuvSuccessStoriesPage />} />
+            {/* manuv.co Solutions Routes */}
+            <Route path="/solutions-manuv/manuv-customer-support-solution" element={<ManuvCustomerSupportSolutionPage />} />
+            <Route path="/solutions-manuv/manuv-sales-automation-solution" element={<ManuvSalesAutomationSolutionPage />} />
+            <Route path="/solutions-manuv/manuv-data-processing-solution" element={<ManuvDataProcessingSolutionPage />} />
+            {/* manuv.co Case Studies Routes */}
+            <Route path="/case-studies-manuv/manuv-case-study-ecommerce" element={<ManuvCaseStudyEcommercePage />} />
+            <Route path="/case-studies-manuv/manuv-case-study-saas" element={<ManuvCaseStudySaaSPage />} />
+            {/* manuv.co Industries Routes */}
+            <Route path="/industries-manuv/manuv-for-saas-companies" element={<ManuvForSaaSCompaniesPage />} />
+            <Route path="/industries-manuv/manuv-for-ecommerce" element={<ManuvForEcommercePage />} />
+            {/* manuv.co Use Cases Routes */}
+            <Route path="/use-cases-manuv/manuv-for-customer-retention" element={<ManuvForCustomerRetentionPage />} />
+            <Route path="/use-cases-manuv/manuv-for-lead-generation" element={<ManuvForLeadGenerationPage />} />
+            {/* manuv.co Comparisons Routes */}
+            <Route path="/comparisons-manuv/manuv-vs-traditional-automation" element={<ManuvVsTraditionalAutomationPage />} />
+            {/* manuv.co Guides Routes */}
+            <Route path="/guides-manuv/getting-started-with-manuv" element={<GettingStartedWithManuvPage />} />
+            {/* manuv.co FAQ Routes */}
+            <Route path="/faq-manuv/why-choose-manuv" element={<WhyChooseManuvPage />} />
+            <Route path="/faq-manuv/what-makes-manuv-different" element={<WhatMakesManuvDifferentPage />} />
+            <Route path="/faq-manuv/how-much-does-manuv-cost" element={<HowMuchDoesManuvCostPage />} />
+            <Route path="/faq-manuv/how-long-does-manuv-take" element={<HowLongDoesManuvTakePage />} />
           </Routes>
         </main>
         <Footer />
