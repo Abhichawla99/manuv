@@ -8,7 +8,8 @@ import { PixelShaderCard } from './pixel-shader-card';
 
 gsap.registerPlugin(SplitText);
 
-// @ts-expect-error - Unused component, kept for potential future use
+// Unused component, kept for potential future use
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const _SingularityWaveShader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const materialRef = useRef<THREE.ShaderMaterial | undefined>(undefined);

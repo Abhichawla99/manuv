@@ -271,10 +271,18 @@ export const WorkPage = () => {
                                 <p className="text-sm font-light text-white/50 mb-6">
                                     {agent.description}
                                 </p>
-                                <button className="text-xs font-light text-primary hover:text-primary/80 transition-colors flex items-center gap-2">
+                                <Link
+                                    to={agent.name === 'AI Customer Support Agent' ? '/agents/ai-customer-support-agent' :
+                                        agent.name === 'AI SDR / Outbound Agent' ? '/agents/ai-sdr-agent' :
+                                        agent.name === 'AI Research Agent' ? '/agents/ai-research-agent' :
+                                        agent.name === 'AI Content Agent' ? '/agents/ai-content-agent' :
+                                        agent.name === 'AI Operations Agent' ? '/agents/ai-operations-agent' :
+                                        '/agents/ai-data-agent'}
+                                    className="text-xs font-light text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
+                                >
                                     See how it works
                                     <ExternalLink className="w-3 h-3" />
-                                </button>
+                                </Link>
                             </motion.div>
                         ))}
                     </div>
@@ -313,9 +321,17 @@ export const WorkPage = () => {
                                 <p className="text-sm font-light text-white/60 mb-4">
                                     {system.description}
                                 </p>
-                                <button className="text-xs font-light text-primary hover:text-primary/80 transition-colors">
+                                <Link
+                                    to={system.title === 'Lead Qualification & Routing' ? '/automations/lead-qualification-routing' :
+                                        system.title === 'CRM Enrichment Engine' ? '/automations/crm-enrichment-engine' :
+                                        system.title === 'Inbox → CRM Ingestion' ? '/automations/inbox-crm-ingestion' :
+                                        system.title === 'Client Onboarding Flow' ? '/automations/client-onboarding-flow' :
+                                        system.title === 'Automated Reporting System' ? '/automations/automated-reporting-system' :
+                                        '/automations/document-processing-pipeline'}
+                                    className="text-xs font-light text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
+                                >
                                     Learn more →
-                                </button>
+                                </Link>
                             </motion.div>
                         ))}
                     </div>
