@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import { Link } from 'react-router-dom';
 import { PixelShaderCard } from './pixel-shader-card';
 
 gsap.registerPlugin(SplitText);
@@ -316,9 +317,9 @@ export default function Hero({
 
             <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
               {ctaButtons.map((button, index) => (
-                <a
+                <Link
                   key={index}
-                  href={button.href}
+                  to={button.href}
                   className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 ${
                     button.primary
                       ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
@@ -326,7 +327,7 @@ export default function Hero({
                   }`}
                 >
                   {button.text}
-                </a>
+                </Link>
               ))}
             </div>
 
