@@ -109,6 +109,30 @@ import { SaaSCompaniesPage } from './pages/industries/SaaSCompaniesPage';
 import { TechnologyPage } from './pages/industries/TechnologyPage';
 import { TelecommunicationsPage } from './pages/industries/TelecommunicationsPage';
 import { TransportationPage } from './pages/industries/TransportationPage';
+// FAQ Pages
+import { WhatIsAIAutomationPage } from './pages/faq/WhatIsAIAutomationPage';
+import { HowDoesAIAutomationWorkPage } from './pages/faq/HowDoesAIAutomationWorkPage';
+import { WhatAreAIAgentsPage } from './pages/faq/WhatAreAIAgentsPage';
+import { HowMuchDoesAIAutomationCostPage } from './pages/faq/HowMuchDoesAIAutomationCostPage';
+import { HowLongDoesItTakeToImplementPage } from './pages/faq/HowLongDoesItTakeToImplementPage';
+import { DoINeedTechnicalSkillsPage } from './pages/faq/DoINeedTechnicalSkillsPage';
+// How-To Pages
+import { HowToChooseRightAIAutomationPage } from './pages/how-to/HowToChooseRightAIAutomationPage';
+import { HowToMeasureAIAutomationROIPage } from './pages/how-to/HowToMeasureAIAutomationROIPage';
+import { HowToGetStartedWithAIAutomationPage } from './pages/how-to/HowToGetStartedWithAIAutomationPage';
+import { HowToTrainAIAgentPage } from './pages/how-to/HowToTrainAIAgentPage';
+import { HowToIntegrateAIAutomationPage } from './pages/how-to/HowToIntegrateAIAutomationPage';
+// Best Practices Pages
+import { AIAutomationSuccessFactorsPage } from './pages/best-practices/AIAutomationSuccessFactorsPage';
+import { WhenToUseAIAutomationPage } from './pages/best-practices/WhenToUseAIAutomationPage';
+import { HowToMaintainAIAutomationPage } from './pages/best-practices/HowToMaintainAIAutomationPage';
+import { AIAutomationMistakesToAvoidPage } from './pages/best-practices/AIAutomationMistakesToAvoidPage';
+import { AIAutomationROIBestPracticesPage } from './pages/best-practices/AIAutomationROIBestPracticesPage';
+// Getting Started Pages
+import { AIAutomationBasicsPage } from './pages/getting-started/AIAutomationBasicsPage';
+import { ImplementingAIAutomationPage } from './pages/getting-started/ImplementingAIAutomationPage';
+import { FirstAIAutomationProjectPage } from './pages/getting-started/FirstAIAutomationProjectPage';
+import { AIAutomationForSmallBusinessPage } from './pages/getting-started/AIAutomationForSmallBusinessPage';
 
 function App() {
   return (
@@ -224,6 +248,30 @@ function App() {
             <Route path="/industries/technology" element={<TechnologyPage />} />
             <Route path="/industries/telecommunications" element={<TelecommunicationsPage />} />
             <Route path="/industries/transportation" element={<TransportationPage />} />
+            {/* FAQ Routes */}
+            <Route path="/faq/what-is-ai-automation" element={<WhatIsAIAutomationPage />} />
+            <Route path="/faq/how-does-ai-automation-work" element={<HowDoesAIAutomationWorkPage />} />
+            <Route path="/faq/what-are-ai-agents" element={<WhatAreAIAgentsPage />} />
+            <Route path="/faq/how-much-does-ai-automation-cost" element={<HowMuchDoesAIAutomationCostPage />} />
+            <Route path="/faq/how-long-does-it-take-to-implement" element={<HowLongDoesItTakeToImplementPage />} />
+            <Route path="/faq/do-i-need-technical-skills" element={<DoINeedTechnicalSkillsPage />} />
+            {/* How-To Routes */}
+            <Route path="/how-to/choose-right-ai-automation" element={<HowToChooseRightAIAutomationPage />} />
+            <Route path="/how-to/measure-ai-automation-roi" element={<HowToMeasureAIAutomationROIPage />} />
+            <Route path="/how-to/get-started-with-ai-automation" element={<HowToGetStartedWithAIAutomationPage />} />
+            <Route path="/how-to/train-ai-agent" element={<HowToTrainAIAgentPage />} />
+            <Route path="/how-to/integrate-ai-automation" element={<HowToIntegrateAIAutomationPage />} />
+            {/* Best Practices Routes */}
+            <Route path="/best-practices/ai-automation-success-factors" element={<AIAutomationSuccessFactorsPage />} />
+            <Route path="/best-practices/when-to-use-ai-automation" element={<WhenToUseAIAutomationPage />} />
+            <Route path="/best-practices/how-to-maintain-ai-automation" element={<HowToMaintainAIAutomationPage />} />
+            <Route path="/best-practices/ai-automation-mistakes-to-avoid" element={<AIAutomationMistakesToAvoidPage />} />
+            <Route path="/best-practices/ai-automation-roi-best-practices" element={<AIAutomationROIBestPracticesPage />} />
+            {/* Getting Started Routes */}
+            <Route path="/getting-started/ai-automation-basics" element={<AIAutomationBasicsPage />} />
+            <Route path="/getting-started/implementing-ai-automation" element={<ImplementingAIAutomationPage />} />
+            <Route path="/getting-started/first-ai-automation-project" element={<FirstAIAutomationProjectPage />} />
+            <Route path="/getting-started/ai-automation-for-small-business" element={<AIAutomationForSmallBusinessPage />} />
           </Routes>
         </main>
         <Footer />
