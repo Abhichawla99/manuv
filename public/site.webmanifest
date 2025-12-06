@@ -1,0 +1,17 @@
+{
+  "name": "manuv.co - AI Automation Studio",
+  "short_name": "manuv.co",
+  "description": "Custom AI agents and automation systems for businesses",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#00ff88",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/"
+}
