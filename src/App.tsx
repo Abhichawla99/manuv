@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { useWebView } from './hooks/use-webview';
+import { ChatInterface } from './components/ui/chat-interface';
+import { FloatingChatBar } from './components/ui/floating-chat-bar';
+import { ChatProvider, useChat } from './contexts/ChatContext';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { WorkPage } from './pages/WorkPage';
@@ -163,7 +168,38 @@ import { WhatMakesManuvDifferentPage } from './pages/faq-manuv/WhatMakesManuvDif
 import { HowMuchDoesManuvCostPage } from './pages/faq-manuv/HowMuchDoesManuvCostPage';
 import { HowLongDoesManuvTakePage } from './pages/faq-manuv/HowLongDoesManuvTakePage';
 
-function App() {
+function AppContent() {
+  const isWebView = useWebView();
+  const { isChatOpen, initialMessage, handleSendMessage, handleOpenChat, handleCloseChat } = useChat();
+
+  // Set favicon globally for all pages
+  useEffect(() => {
+    const setFavicon = () => {
+      let faviconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+      if (!faviconLink) {
+        faviconLink = document.createElement('link');
+        faviconLink.rel = 'icon';
+        document.head.appendChild(faviconLink);
+      }
+      faviconLink.type = 'image/png';
+      faviconLink.href = '/logos/manuv logo.png';
+
+      // Also set apple-touch-icon
+      let appleIconLink = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
+      if (!appleIconLink) {
+        appleIconLink = document.createElement('link');
+        appleIconLink.rel = 'apple-touch-icon';
+        document.head.appendChild(appleIconLink);
+      }
+      appleIconLink.href = '/logos/manuv logo.png';
+    };
+
+    setFavicon();
+  }, []);
+
+  // Always show webview features (floating chat bar)
+  const showWebViewFeatures = true;
+
   return (
     <Router>
       <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
@@ -334,9 +370,27 @@ function App() {
         </main>
         <Footer />
         <Analytics />
+        
+        {/* Floating Chat Bar - Shows when scrolled past hero */}
+        <FloatingChatBar />
+        
+        {/* Chat Interface - Always show */}
+        <ChatInterface
+          isOpen={isChatOpen}
+          onClose={handleCloseChat}
+          initialMessage={initialMessage}
+        />
       </div>
     </Router>
-  )
+  );
+}
+
+function App() {
+  return (
+    <ChatProvider>
+      <AppContent />
+    </ChatProvider>
+  );
 }
 
 export default App

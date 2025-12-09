@@ -62,8 +62,7 @@ export default {
     		},
     		animation: {
     			'background-gradient': 'background-gradient var(--background-gradient-speed, 15s) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite',
-    			'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
-    			'scroll': 'scroll 40s linear infinite'
+    			'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
     		},
     		keyframes: {
     			'background-gradient': {
@@ -90,14 +89,6 @@ export default {
     				},
     				'50%': {
     					transform: 'translateX(100%)'
-    				}
-    			},
-    			'scroll': {
-    				'0%': {
-    					transform: 'translateX(0)'
-    				},
-    				'100%': {
-    					transform: 'translateX(-50%)'
     				}
     			}
     		}

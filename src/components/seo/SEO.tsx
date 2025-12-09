@@ -11,6 +11,29 @@ interface SEOProps {
 
 export const SEO = ({ title, description, keywords, ogImage, canonical, ogUrl }: SEOProps) => {
     useEffect(() => {
+        // Set favicon for all pages
+        const setFavicon = () => {
+            let faviconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+            if (!faviconLink) {
+                faviconLink = document.createElement('link');
+                faviconLink.rel = 'icon';
+                document.head.appendChild(faviconLink);
+            }
+            faviconLink.type = 'image/png';
+            faviconLink.href = '/logos/manuv logo.png';
+
+            // Also set apple-touch-icon
+            let appleIconLink = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
+            if (!appleIconLink) {
+                appleIconLink = document.createElement('link');
+                appleIconLink.rel = 'apple-touch-icon';
+                document.head.appendChild(appleIconLink);
+            }
+            appleIconLink.href = '/logos/manuv logo.png';
+        };
+
+        setFavicon();
+
         // Set title
         document.title = title;
 

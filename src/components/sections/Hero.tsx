@@ -1,6 +1,9 @@
-import { useRef, useEffect, Suspense } from "react";
+import { useRef, useEffect, Suspense, useState } from "react";
 import * as THREE from "three";
 import { Link } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { HeroChatBar } from "../ui/hero-chat-bar";
+import { useChat } from "../../contexts/ChatContext";
 
 function GenerativeArtScene() {
     const mountRef = useRef<HTMLDivElement>(null);
@@ -167,8 +170,43 @@ function GenerativeArtScene() {
 }
 
 export const Hero = () => {
+    const { handleSendMessage, handleOpenChat } = useChat();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const heroRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (heroRef.current) {
+                const rect = heroRef.current.getBoundingClientRect();
+                // Start hiding when hero is 80% scrolled
+                const heroHeight = heroRef.current.offsetHeight;
+                const scrollThreshold = heroHeight * 0.8;
+                setIsScrolled(rect.bottom < (window.innerHeight - scrollThreshold));
+            }
+        };
+
+        // Use requestAnimationFrame for smooth scroll tracking
+        let rafId: number;
+        const onScroll = () => {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+            }
+            rafId = requestAnimationFrame(handleScroll);
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        handleScroll(); // Check initial state
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+            }
+        };
+    }, []);
+    
     return (
-        <section className="relative min-h-screen w-full bg-background overflow-hidden">
+        <section ref={heroRef} className="relative min-h-screen w-full bg-background overflow-hidden pt-12 lg:pt-16">
             {/* Split Layout Container */}
             <div className="flex flex-col lg:flex-row min-h-screen">
 
@@ -193,8 +231,9 @@ export const Hero = () => {
                 <div className="relative w-full lg:w-1/2 flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0">
                     <div className="max-w-xl">
                         {/* Eyebrow */}
-                        <p className="text-primary/80 text-sm font-mono tracking-widest uppercase mb-6 animate-pulse">
-                            AI-Powered Automation
+                        <p className="relative inline-block text-primary text-sm font-mono tracking-widest uppercase mb-6 px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                            <span className="relative z-10">Custom AI Solutions</span>
+                            <span className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20 rounded-lg blur-sm"></span>
                         </p>
 
                         {/* Main Headline */}
@@ -214,6 +253,18 @@ export const Hero = () => {
                             Faster delivery. Fewer mistakes. More profit — without adding headcount.
                         </p>
 
+                        {/* Chat Bar - Only show when not scrolled */}
+                        <AnimatePresence>
+                            {!isScrolled && (
+                                <HeroChatBar
+                                    key="inline-chat"
+                                    onSendMessage={handleSendMessage}
+                                    onOpenChat={handleOpenChat}
+                                    isFloating={false}
+                                />
+                            )}
+                        </AnimatePresence>
+
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link to="/contact" className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,136,0.4)] text-center">
@@ -224,53 +275,6 @@ export const Hero = () => {
                             </Link>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-
-            {/* Logo Carousel - Full Width */}
-            <div className="absolute bottom-0 left-0 right-0 py-8 border-t border-white/10 bg-background/80 backdrop-blur-sm">
-                <div className="overflow-hidden">
-                    <div className="flex animate-scroll">
-                        {[
-                            { file: 'openai logo.png', name: 'OpenAI', invert: true },
-                            { file: 'claude logo (1).png', name: 'Claude' },
-                            { file: 'geminilogo.png', name: 'Gemini' },
-                            { file: 'cursor logo.png', name: 'Cursor' },
-                            { file: 'supabase-logo-vector--comseeklogo435677 (1).png', name: 'Supabase' },
-                            { file: '11labs.png', name: 'ElevenLabs' },
-                            { file: 'airtable logo (1).png', name: 'Airtable' },
-                            { file: 'HubSpot-Emblem (1).png', name: 'HubSpot' },
-                            { file: 'kisspng-salesforce-com-netsuite-customer-relationship-mana-great-idea-5b22720fe7eb20.32355178152898407995.png', name: 'Salesforce' },
-                            { file: 'make-color (1).png', name: 'Make' },
-                            { file: 'Notion-logo.png', name: 'Notion' },
-                            { file: 'slack-logo-vector-white-background-slack-logo-vector-white-background-editorial-illustrative-social-media-logo-206665964.png', name: 'Slack' }
-                        ].concat([
-                            { file: 'openai logo.png', name: 'OpenAI', invert: true },
-                            { file: 'claude logo (1).png', name: 'Claude' },
-                            { file: 'geminilogo.png', name: 'Gemini' },
-                            { file: 'cursor logo.png', name: 'Cursor' },
-                            { file: 'supabase-logo-vector--comseeklogo435677 (1).png', name: 'Supabase' },
-                            { file: '11labs.png', name: 'ElevenLabs' },
-                            { file: 'airtable logo (1).png', name: 'Airtable' },
-                            { file: 'HubSpot-Emblem (1).png', name: 'HubSpot' },
-                            { file: 'kisspng-salesforce-com-netsuite-customer-relationship-mana-great-idea-5b22720fe7eb20.32355178152898407995.png', name: 'Salesforce' },
-                            { file: 'make-color (1).png', name: 'Make' },
-                            { file: 'Notion-logo.png', name: 'Notion' },
-                            { file: 'slack-logo-vector-white-background-slack-logo-vector-white-background-editorial-illustrative-social-media-logo-206665964.png', name: 'Slack' }
-                        ]).map((logo, index) => (
-                            <div key={index} className="flex-shrink-0 px-8">
-                                <img
-                                    src={`/logos/${logo.file}`}
-                                    alt={logo.name}
-                                    className={`h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 object-contain ${logo.invert ? 'invert' : ''}`}
-                                    style={{ maxWidth: '140px' }}
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).style.display = 'none';
-                                    }}
-                                />
-                            </div>
-                        ))}
                     </div>
                 </div>
             </div>

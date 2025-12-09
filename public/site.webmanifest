@@ -4,9 +4,9 @@
   "description": "Custom AI agents and automation systems for businesses",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/logos/manuv logo.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],

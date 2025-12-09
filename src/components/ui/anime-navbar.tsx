@@ -171,28 +171,10 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
                       >
                         <motion.div
                           className="absolute w-2 h-2 bg-black rounded-full"
-                          animate={
-                            hoveredTab ? {
-                              scaleY: [1, 0.2, 1],
-                              transition: {
-                                duration: 0.2,
-                                times: [0, 0.5, 1]
-                              }
-                            } : {}
-                          }
                           style={{ left: '25%', top: '40%' }}
                         />
                         <motion.div
                           className="absolute w-2 h-2 bg-black rounded-full"
-                          animate={
-                            hoveredTab ? {
-                              scaleY: [1, 0.2, 1],
-                              transition: {
-                                duration: 0.2,
-                                times: [0, 0.5, 1]
-                              }
-                            } : {}
-                          }
                           style={{ right: '25%', top: '40%' }}
                         />
                         <motion.div
@@ -212,15 +194,6 @@ export function AnimeNavBar({ items, className, defaultActive = "Home" }: NavBar
 
                         <motion.div
                           className="absolute w-4 h-2 border-b-2 border-black rounded-full"
-                          animate={
-                            hoveredTab ? {
-                              scaleY: 1.5,
-                              y: -1
-                            } : {
-                              scaleY: 1,
-                              y: 0
-                            }
-                          }
                           style={{ left: '30%', top: '60%' }}
                         />
                         <AnimatePresence>
