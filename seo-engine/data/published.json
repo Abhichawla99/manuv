@@ -10,8 +10,19 @@
       "state": "NY",
       "topic": "ai-agents-implementation",
       "wordCount": 3340
+    },
+    {
+      "slug": "ai-agents-implementation-legal-los-angeles-ca",
+      "title": "AI Agents for Law Firms in Los Angeles, CA: 2026 Implementation Guide",
+      "metaDescription": "How LA law firms deploy Claude-powered AI agents in 2026: intake, conflict checks, document review. California ethics rules, COPRAC guidance, ROI math, 90-day plan.",
+      "publishedAt": "2026-05-27",
+      "vertical": "legal",
+      "city": "Los Angeles",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3380
     }
   ],
-  "lastRunAt": "2026-05-27T14:57:16.671Z",
-  "totalPublished": 1
+  "lastRunAt": "2026-05-27T15:21:41.872Z",
+  "totalPublished": 2
 }
