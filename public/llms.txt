@@ -1,0 +1,38 @@
+# manuv.co
+
+> Boutique AI studio building custom Claude-powered agents, Claude Code skills, and end-to-end automations for law firms, medical practices, real estate agents, and home services businesses across the United States. We help local businesses become 10x more efficient with AI that fits their actual workflow - not generic SaaS.
+
+## What manuv.co builds
+
+- **Custom AI agents** built on Claude (Anthropic's Claude Sonnet, Opus, and Haiku models) for intake, follow-up, scheduling, and 24/7 coverage
+- **Claude Code skills** that package vertical-specific automations into reusable, deployable units
+- **Workflow automation stacks** combining Claude + n8n + your existing CRM / PMS / case management
+- **Local-business AI deployments** tuned to single-vertical use cases (legal intake, dental no-shows, real estate lead response, home services dispatch)
+
+## Contact
+
+- Website: https://manuv.co
+- Book a strategy call: https://manuv.co/contact
+- Free AI assessment: https://manuv.co/assessment
+
+## Core service pages
+
+- [AI Customer Support Agent](https://manuv.co/agents/ai-customer-support-agent)
+- [AI SDR Agent](https://manuv.co/agents/ai-sdr-agent)
+- [AI Research Agent](https://manuv.co/agents/ai-research-agent)
+- [Lead Qualification & Routing Automation](https://manuv.co/automations/lead-qualification-routing)
+- [CRM Enrichment Engine](https://manuv.co/automations/crm-enrichment-engine)
+- [Document Processing Pipeline](https://manuv.co/automations/document-processing-pipeline)
+
+## Industry verticals served
+
+- [Legal services](https://manuv.co/industries/legal) - law firms, intake, document review
+- [Healthcare](https://manuv.co/industries/healthcare) - medical and dental practices, scheduling, intake
+- [Real Estate](https://manuv.co/industries/real-estate) - agents, brokerages, lead response
+- [Professional Services](https://manuv.co/industries/professional-services)
+
+## Daily research articles
+
+Below is the full index of in-depth, location-and-vertical-specific research articles published on manuv.co. Each article covers a specific industry in a specific U.S. city with implementation steps, ROI math, local regulatory notes, and FAQ answers.
+
+- [AI Agents for Law Firms in New York, NY: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-new-york-ny) - Complete 2026 guide to deploying AI agents at New York law firms. Claude-powered intake, conflict checks, and document review. Local ethics rules, NYCBA guidance, ROI math, and a 90-day plan.

@@ -18,6 +18,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { MeetingBookedPage } from './pages/MeetingBookedPage';
 import { AssessmentPage } from './pages/AssessmentPage';
+import { ArticlePage } from './pages/ArticlePage';
 // Agent Pages
 import { AICustomerSupportAgentPage } from './pages/agents/AICustomerSupportAgentPage';
 import { AISDRAgentPage } from './pages/agents/AISDRAgentPage';
@@ -217,6 +218,7 @@ function AppContent() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/assessment" element={<AssessmentPage />} />
+            <Route path="/resources/:slug" element={<ArticlePage />} />
             <Route path="/meetingbooked" element={<MeetingBookedPage />} />
             {/* Agent Routes */}
             <Route path="/agents/ai-customer-support-agent" element={<AICustomerSupportAgentPage />} />

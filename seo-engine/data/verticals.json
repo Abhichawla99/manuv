@@ -1,0 +1,164 @@
+{
+  "verticals": [
+    {
+      "id": "legal",
+      "label": "Law Firms & Legal Practices",
+      "shortLabel": "law firms",
+      "industry": "Legal Services",
+      "subNiches": [
+        {"id": "personal-injury", "label": "Personal Injury Law"},
+        {"id": "family-law", "label": "Family & Divorce Law"},
+        {"id": "criminal-defense", "label": "Criminal Defense"},
+        {"id": "estate-planning", "label": "Estate Planning & Probate"},
+        {"id": "immigration", "label": "Immigration Law"},
+        {"id": "business-law", "label": "Business & Corporate Law"},
+        {"id": "real-estate-law", "label": "Real Estate Law"},
+        {"id": "intellectual-property", "label": "Intellectual Property"},
+        {"id": "employment-law", "label": "Employment Law"}
+      ],
+      "painPoints": [
+        "intake forms taking 45+ minutes per new client",
+        "document review backlogs delaying case progress",
+        "missed follow-ups with leads who go to competitors within 24 hours",
+        "manual conflict checks slowing new matter opening",
+        "after-hours client calls going to voicemail",
+        "billable-hour leakage from administrative tasks",
+        "discovery review consuming associate time at $300+/hr",
+        "compliance documentation requirements (state bar reporting)"
+      ],
+      "aiUseCases": [
+        "Claude-powered intake agent that pre-qualifies leads 24/7 and books consults",
+        "Claude Code skill for automated conflict-of-interest checks across firm matter database",
+        "AI document review agent for contract redlining and discovery summarization",
+        "Lead-to-CRM sync with automated case-type classification",
+        "Court filing deadline tracker that calculates dates per local rules",
+        "Automated client status updates pulled from case management",
+        "Voicemail-to-text triage with priority routing",
+        "Bill review automation that flags time entries against ethics rules"
+      ],
+      "regulatoryNotes": "State bar advertising rules apply. Confidentiality and conflict checks mandatory. ABA Model Rule 1.1 (competence) increasingly cited for AI use.",
+      "averageFirmSize": "1-15 attorneys",
+      "annualTechSpendRange": "$3K - $80K"
+    },
+    {
+      "id": "medical",
+      "label": "Medical & Dental Practices",
+      "shortLabel": "medical and dental practices",
+      "industry": "Healthcare Services",
+      "subNiches": [
+        {"id": "dental-general", "label": "General Dentistry"},
+        {"id": "orthodontics", "label": "Orthodontics"},
+        {"id": "dermatology", "label": "Dermatology"},
+        {"id": "chiropractic", "label": "Chiropractic"},
+        {"id": "physical-therapy", "label": "Physical Therapy"},
+        {"id": "mental-health", "label": "Mental Health & Counseling"},
+        {"id": "veterinary", "label": "Veterinary"},
+        {"id": "med-spa", "label": "Med Spa & Aesthetics"},
+        {"id": "optometry", "label": "Optometry"},
+        {"id": "pediatrics", "label": "Pediatrics"}
+      ],
+      "painPoints": [
+        "no-show rates of 12-30% costing $200+ per slot",
+        "insurance verification taking 15-20 minutes per patient",
+        "patient intake paperwork done on clipboards",
+        "front-desk staff overwhelmed by phones and check-ins",
+        "review request follow-ups that never happen",
+        "prior authorization delays for procedures",
+        "post-op patient questions flooding nurse lines",
+        "appointment scheduling phone-tag loops"
+      ],
+      "aiUseCases": [
+        "Claude-powered SMS appointment confirmation + reschedule agent that reduces no-shows 40-60%",
+        "Insurance verification automation that queries payers and pre-fills patient files",
+        "HIPAA-conscious AI intake form that adapts questions based on chief complaint",
+        "Post-visit review request agent with personalized messaging by procedure",
+        "Patient FAQ chatbot trained on practice protocols",
+        "Recall automation for hygiene cleanings and annual exams",
+        "Prior-auth submission agent that drafts and tracks payer responses",
+        "Symptom triage agent that routes to telehealth, ER, or scheduling"
+      ],
+      "regulatoryNotes": "HIPAA covered. Business Associate Agreements required for any vendor handling PHI. State telehealth and dental practice acts apply.",
+      "averageFirmSize": "1-5 providers",
+      "annualTechSpendRange": "$5K - $120K"
+    },
+    {
+      "id": "real-estate",
+      "label": "Real Estate Agents & Brokerages",
+      "shortLabel": "real estate agents and brokerages",
+      "industry": "Real Estate",
+      "subNiches": [
+        {"id": "residential-agents", "label": "Residential Agents"},
+        {"id": "commercial-brokers", "label": "Commercial Brokers"},
+        {"id": "property-management", "label": "Property Management"},
+        {"id": "real-estate-teams", "label": "Real Estate Teams"},
+        {"id": "luxury-real-estate", "label": "Luxury Real Estate"},
+        {"id": "investor-agents", "label": "Investor-Focused Agents"},
+        {"id": "new-construction", "label": "New Construction Sales"}
+      ],
+      "painPoints": [
+        "lead response times averaging 24+ hours when speed-to-lead under 5 min wins",
+        "drip campaigns that read like templates and get ignored",
+        "showing requests at 9pm with no one to respond",
+        "listing description writing eating 2-3 hours per property",
+        "transaction coordination errors causing closing delays",
+        "old leads in CRM with no re-engagement strategy",
+        "referral tracking that lives in someone's head",
+        "open house attendee follow-up that drops to zero by day 3"
+      ],
+      "aiUseCases": [
+        "Claude-powered lead-response agent that texts within 90 seconds with property-specific data",
+        "Listing description generator pulling MLS data + neighborhood facts + walking distances",
+        "Showing-request triage that books on Calendly when calendar matches",
+        "Drip nurture that personalizes by buyer stage and neighborhood preference",
+        "Past-client reactivation agent that detects life events from public records",
+        "Transaction milestone tracker that auto-updates all parties",
+        "Open house follow-up that delivers comp data within 4 hours of visit",
+        "Investor lead qualifier that asks ROI, cash flow, and 1031 questions upfront"
+      ],
+      "regulatoryNotes": "TCPA applies to SMS automation. Fair Housing language must be reviewed for AI-generated copy. State licensing laws limit who can perform certain activities.",
+      "averageFirmSize": "Solo agent or 2-25 person team",
+      "annualTechSpendRange": "$2K - $60K"
+    },
+    {
+      "id": "home-services",
+      "label": "Home Services & Trades",
+      "shortLabel": "home services businesses",
+      "industry": "Specialty Trade Contractors",
+      "subNiches": [
+        {"id": "plumbing", "label": "Plumbing"},
+        {"id": "hvac", "label": "HVAC"},
+        {"id": "electrical", "label": "Electrical"},
+        {"id": "roofing", "label": "Roofing"},
+        {"id": "landscaping", "label": "Landscaping & Lawn Care"},
+        {"id": "pest-control", "label": "Pest Control"},
+        {"id": "cleaning-services", "label": "Cleaning Services"},
+        {"id": "garage-door", "label": "Garage Door"},
+        {"id": "pool-service", "label": "Pool Service"},
+        {"id": "remodeling", "label": "Remodeling & General Contracting"}
+      ],
+      "painPoints": [
+        "lead-form leads dying because no one calls back for hours",
+        "dispatcher juggling phones, scheduling, and angry customers simultaneously",
+        "estimate follow-ups that never happen, leaving 60% of quotes unanswered",
+        "review collection so manual it averages 1-2 per month",
+        "seasonal demand spikes overwhelming small teams",
+        "tech routing inefficiencies causing 2+ hours of windshield time daily",
+        "quote-to-close visibility that doesn't exist",
+        "customer questions about ETA, pricing, and payment during jobs"
+      ],
+      "aiUseCases": [
+        "Claude-powered phone agent that books service calls, qualifies emergencies, and routes to dispatch",
+        "Quote follow-up agent that texts at 24h, 72h, and 7d with FAQ answers",
+        "Review request automation triggered post-job-completion with name personalization",
+        "Dispatch optimization that suggests next stop based on tech location and skill match",
+        "AI estimator that drafts quotes from job-site photos and customer descriptions",
+        "After-hours intake bot that captures emergency vs. schedulable jobs",
+        "Customer ETA SMS that updates from GPS data",
+        "Lead-source attribution agent that ties closed jobs back to marketing channels"
+      ],
+      "regulatoryNotes": "TCPA for SMS. State contractor licensing limits scope. Service area definitions affect lead handling.",
+      "averageFirmSize": "1-25 employees",
+      "annualTechSpendRange": "$3K - $50K"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "articles": [
+    {
+      "slug": "ai-agents-implementation-legal-new-york-ny",
+      "title": "AI Agents for Law Firms in New York, NY: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at New York law firms. Claude-powered intake, conflict checks, and document review. Local ethics rules, NYCBA guidance, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-05-27",
+      "vertical": "legal",
+      "city": "New York",
+      "state": "NY",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3340
+    }
+  ],
+  "lastRunAt": "2026-05-27T14:57:16.671Z",
+  "totalPublished": 1
+}

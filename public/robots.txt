@@ -1,10 +1,11 @@
 # robots.txt for manuv.co
 # Optimized for search engine crawling and LLM discovery
+# Last updated: 2026-05-27
 
 User-agent: *
 Allow: /
 
-# Allow all major search engines
+# Search engines
 User-agent: Googlebot
 Allow: /
 
@@ -23,23 +24,20 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-User-agent: Sogou
-Allow: /
-
-User-agent: Exabot
-Allow: /
-
 User-agent: facebot
 Allow: /
 
 User-agent: ia_archiver
 Allow: /
 
-# Allow LLM crawlers (ChatGPT, Claude, etc.)
+# LLM and AI crawlers - explicitly allowed
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: CCBot
@@ -51,18 +49,44 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# Disallow admin/internal pages (if any)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Disallow internal pages
 Disallow: /meetingbooked
 Disallow: /game
 
-# Sitemap location
 Sitemap: https://manuv.co/sitemap.xml
-
-# Crawl-delay (optional, can be removed if not needed)
-Crawl-delay: 0.5

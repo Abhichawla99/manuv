@@ -1,0 +1,112 @@
+{
+  "topics": [
+    {
+      "id": "ai-agents-implementation",
+      "label": "AI Agents Implementation Guide",
+      "titleTemplate": "AI Agents for {VERTICAL} in {CITY}, {STATE}: 2026 Implementation Guide",
+      "metaDescriptionTemplate": "Complete guide to deploying AI agents in {CITY} {VERTICAL}. Covers Claude-powered agents, ROI benchmarks, local regulations, implementation steps, and 12 questions answered.",
+      "primaryKeyword": "AI agents for {VERTICAL} in {CITY}",
+      "angle": "implementation",
+      "claudeCodeAngle": "high"
+    },
+    {
+      "id": "claude-code-skills",
+      "label": "Claude Code Skills for Business",
+      "titleTemplate": "Claude Code Skills for {VERTICAL} in {CITY}: Custom Automation Playbook",
+      "metaDescriptionTemplate": "How {CITY} {VERTICAL} use Claude Code skills to automate intake, follow-ups, and document workflows. Includes 8 ready-to-deploy skill templates and ROI math.",
+      "primaryKeyword": "Claude Code skills for {VERTICAL}",
+      "angle": "skills-building",
+      "claudeCodeAngle": "primary"
+    },
+    {
+      "id": "automation-roi",
+      "label": "Automation ROI Calculator",
+      "titleTemplate": "Automation ROI for {VERTICAL} in {CITY}: Real Numbers, Local Benchmarks",
+      "metaDescriptionTemplate": "Calculate the real ROI of AI automation for {CITY} {VERTICAL}. Local cost benchmarks, payback periods, and a 90-day deployment plan with measurable outcomes.",
+      "primaryKeyword": "{VERTICAL} automation ROI {CITY}",
+      "angle": "roi",
+      "claudeCodeAngle": "medium"
+    },
+    {
+      "id": "claude-vs-chatgpt-vs-gemini",
+      "label": "Claude vs ChatGPT vs Gemini for Business",
+      "titleTemplate": "Claude vs ChatGPT vs Gemini for {VERTICAL} in {CITY}: A 2026 Comparison",
+      "metaDescriptionTemplate": "Side-by-side comparison of Claude, ChatGPT, and Gemini for {CITY} {VERTICAL}. Cost, accuracy, integration depth, and which one wins each use case.",
+      "primaryKeyword": "Claude vs ChatGPT for {VERTICAL}",
+      "angle": "comparison",
+      "claudeCodeAngle": "medium"
+    },
+    {
+      "id": "intake-automation",
+      "label": "Intake Automation Playbook",
+      "titleTemplate": "How {CITY} {VERTICAL} Automate Client Intake with AI (Full Playbook)",
+      "metaDescriptionTemplate": "Step-by-step playbook for automating client intake at {CITY} {VERTICAL}. Forms, qualification, scheduling, CRM sync, and the LLM prompt patterns that work.",
+      "primaryKeyword": "{VERTICAL} intake automation {CITY}",
+      "angle": "playbook",
+      "claudeCodeAngle": "high"
+    },
+    {
+      "id": "after-hours-coverage",
+      "label": "24/7 AI Coverage",
+      "titleTemplate": "24/7 AI Coverage for {VERTICAL} in {CITY}: Capture Leads While You Sleep",
+      "metaDescriptionTemplate": "How {CITY} {VERTICAL} deploy after-hours AI to capture 30-50% more leads. Phone, SMS, and chat agents that hand off cleanly to your team in the morning.",
+      "primaryKeyword": "after hours AI agent {VERTICAL} {CITY}",
+      "angle": "use-case",
+      "claudeCodeAngle": "medium"
+    },
+    {
+      "id": "lead-response-time",
+      "label": "Speed-to-Lead Automation",
+      "titleTemplate": "Speed-to-Lead for {VERTICAL} in {CITY}: The 90-Second AI Response System",
+      "metaDescriptionTemplate": "Why 90-second response wins more deals for {CITY} {VERTICAL}, and exactly how to build the AI pipeline that delivers it consistently.",
+      "primaryKeyword": "lead response automation {VERTICAL} {CITY}",
+      "angle": "use-case",
+      "claudeCodeAngle": "high"
+    },
+    {
+      "id": "custom-ai-vs-saas",
+      "label": "Custom AI vs Off-the-Shelf SaaS",
+      "titleTemplate": "Custom AI vs Off-the-Shelf SaaS for {VERTICAL} in {CITY}: How to Choose",
+      "metaDescriptionTemplate": "Decision framework for {CITY} {VERTICAL} choosing between custom Claude builds and off-the-shelf AI SaaS. Cost, lock-in, integration, and total ownership.",
+      "primaryKeyword": "custom AI vs SaaS {VERTICAL}",
+      "angle": "decision-framework",
+      "claudeCodeAngle": "high"
+    },
+    {
+      "id": "ai-phone-agent",
+      "label": "AI Phone Agent",
+      "titleTemplate": "AI Phone Agents for {VERTICAL} in {CITY}: The 2026 Deployment Guide",
+      "metaDescriptionTemplate": "Deploy an AI phone agent at your {CITY} {VERTICAL}. Real conversation patterns, handoff rules, compliance notes, and how to keep it sounding human.",
+      "primaryKeyword": "AI phone agent {VERTICAL} {CITY}",
+      "angle": "use-case",
+      "claudeCodeAngle": "medium"
+    },
+    {
+      "id": "workflow-automation",
+      "label": "Workflow Automation Stack",
+      "titleTemplate": "The {CITY} {VERTICAL} Workflow Automation Stack (Tools, Costs, Build Order)",
+      "metaDescriptionTemplate": "Exact tool stack {CITY} {VERTICAL} use to automate workflows end-to-end. n8n + Claude + your CRM, with the build order that doesn't break things.",
+      "primaryKeyword": "{VERTICAL} workflow automation stack {CITY}",
+      "angle": "stack-guide",
+      "claudeCodeAngle": "high"
+    },
+    {
+      "id": "compliance-considerations",
+      "label": "Compliance & AI",
+      "titleTemplate": "AI Compliance for {VERTICAL} in {STATE}: What {CITY} Owners Need to Know",
+      "metaDescriptionTemplate": "AI compliance map for {CITY}, {STATE} {VERTICAL}. State rules, federal overlays, BAA requirements, ABA/board guidance, and a deployment checklist.",
+      "primaryKeyword": "{VERTICAL} AI compliance {STATE}",
+      "angle": "compliance",
+      "claudeCodeAngle": "low"
+    },
+    {
+      "id": "local-case-study-pattern",
+      "label": "Local AI Adoption Patterns",
+      "titleTemplate": "How {CITY} {VERTICAL} Are Adopting AI in 2026 (And What's Working)",
+      "metaDescriptionTemplate": "Patterns we see across {CITY} {VERTICAL}: which AI tools they pick, what they automate first, time-to-value, and the mistakes the early adopters made.",
+      "primaryKeyword": "{VERTICAL} AI adoption {CITY}",
+      "angle": "adoption-patterns",
+      "claudeCodeAngle": "medium"
+    }
+  ]
+}
