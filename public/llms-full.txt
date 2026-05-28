@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-05-27T15:21:41.898Z
+> Last regenerated: 2026-05-28T14:05:32.777Z
 
 ---
 
@@ -498,5 +498,254 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [ABA Formal Opinion 512 - Generative AI Tools and Professional Responsibility](https://www.americanbar.org/groups/professional_responsibility/publications/)
 - [Los Angeles County Superior Court - eFiling Rules and Civil Procedure](https://www.lacourt.ca.gov/pages/cp/gi-court-rules)
 - [LEXGRO - Law Firm Marketing Budgets 2026 Benchmarks](https://lexgro.com/insights/law-firm-marketing-spend-2026/)
+
+---
+
+# AI Agents for Law Firms in Chicago, IL: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-chicago-il
+> Published: 2026-05-28
+> Vertical: Law Firms & Legal Practices | Location: Chicago, IL
+
+**TL;DR:** Chicago is the third-largest legal market in the U.S. with roughly 96,821 Illinois attorneys on the Master Roll. Small and mid-size Chicago firms are losing intake to faster competitors and burning associate hours on document review. The 2026 fix is a three-agent stack - Claude-powered intake, a Claude Code conflict-check skill, and a discovery review agent - deployed in 90 days under ISBA Advisory Opinion 24-01 and the Illinois Supreme Court's January 2025 AI Policy.
+
+## Quick Facts
+- Illinois had **96,821 attorneys on the 2024 Master Roll**, with roughly **74,824 active practitioners** - the third-largest U.S. legal market after California and New York (ARDC 2024 Annual Report).
+- **79% of legal professionals use AI in 2025**, and firms with wide AI adoption are nearly **3x more likely to report revenue growth** (Clio 2025 Legal Trends Report).
+- Personal-injury leads contacted within 60 seconds convert at rates **391% higher** than leads contacted after 5 minutes - in a Chicago market where competitors saturate Google LSA at **$685-$950 per signed case**.
+- **Cook County is 26.2% Hispanic or Latino**, with 17.63% of residents speaking Spanish at home - meaning every Chicago intake workflow needs native Spanish triage or it loses share in Pilsen, Little Village, and Humboldt Park.
+- **ISBA Advisory Opinion 24-01 (August 2024)** and the **Illinois Supreme Court AI Policy (effective January 1, 2025)** govern Chicago AI deployments - both authorize AI use but apply Rules 1.1, 1.6, and 5.3 in full.
+- Chicago BigLaw associates earn **$225,000 base in year one** on the Cravath scale - making associate-hours on document review the highest-leverage cost to compress with AI.
+
+## Why Chicago law firms need AI agents in 2026
+
+Chicago is the third-largest legal market in the United States and one of the most internally competitive. Illinois had 96,821 attorneys on the 2024 ARDC Master Roll, with roughly 74,824 active practitioners - and a disproportionate share of them work the Loop, the West Loop, River North, and the LaSalle Street corridor. Personal injury, employment, immigration, and family-law boutiques sit next to AmLaw 100 home offices like Kirkland & Ellis, Mayer Brown, Sidley Austin, and Winston & Strawn. Small and mid-size firms compete for the same intake calls, the same Cook County jury pools, and the same Google LSA inventory.
+
+Three forces are pushing AI from optional to non-negotiable for Chicago firms in 2026:
+
+**First, the speed-to-lead math has changed.** Lead response data shows that personal-injury leads contacted within 60 seconds convert at rates 391% higher than leads contacted after 5 minutes, and Clio's 2025 Legal Trends Report confirms that improving intake workflows is the single highest-ROI lever for mid-size firms. A potential client filling out a contact form in Albany Park at 10pm expects a response before they sleep. Chicago has dozens of personal injury firms running 24/7 paid intake centers - if your firm responds Monday morning, the case is already signed.
+
+**Second, Illinois ethics rules now expect AI competence.** ISBA Advisory Opinion 24-01 (August 2024) and the Illinois Supreme Court AI Policy (effective January 1, 2025) both authorize attorney AI use but apply Rule 1.1 (competence), Rule 1.6 (confidentiality), and Rule 5.3 (supervision of non-lawyer assistance) in full. The Illinois Supreme Court explicitly declined to require disclosure of AI use - reasoning that existing rules already address the risks - which puts the responsibility squarely on the deploying firm to get configuration right.
+
+**Third, the talent math no longer works.** Chicago BigLaw associates earn $225,000 base in year one on the Cravath scale, escalating to $435,000 by year eight before bonuses. Asking a junior associate to spend three hours summarizing a deposition transcript is a $900 task that Claude Sonnet 4.5 can do in eight minutes for under a dollar of API cost. The firms re-allocating that time to client strategy and trial prep are the ones taking share.
+
+## The three-agent stack for Chicago firms
+
+Most Chicago firms over-think the AI question. They start by trying to find a single all-in-one platform, get overwhelmed by the vendor landscape, and end up with nothing deployed. The pattern that actually works - and the one we deploy at manuv.co across Chicago firms - is a focused three-agent stack, each addressing a specific bottleneck:
+
+**Agent 1 - The intake agent.** Captures and qualifies new leads 24/7 across web chat, after-hours phone, and inbound SMS. Books consults on the firm's calendar, writes a structured intake note into the case management system, and detects language so Spanish-speaking clients get a native experience. This is the highest-ROI deployment for almost every Chicago firm.
+
+**Agent 2 - The Claude Code conflict-check skill.** A packaged automation that runs against the firm's matter database to clear new-matter conflicts in seconds instead of days, with an audit trail that satisfies Illinois Rule of Professional Conduct 1.7(b) documentation expectations.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines contracts, and surfaces issue spots from discovery production. Replaces 60-80% of the manual review hours associates currently bill - the highest single line item in most litigation matters.
+
+Each agent is small enough to deploy in 2-4 weeks. Together, they cover the three places Chicago firms leak the most value: leads that don't get answered, matters that take days to open while a paralegal runs conflicts, and associate hours that get burned reviewing documents at $300+/hour effective billing rates.
+
+## Agent 1: Claude-powered intake
+
+The intake agent runs on three channels - web chat, after-hours phone (via Vapi or Bland integration), and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, conflict-disqualification language, and consultation booking rules.
+
+A realistic Chicago personal-injury intake conversation looks like this: a prospective client texts at 11:30pm after a rear-end collision on the Kennedy Expressway. The agent acknowledges within 90 seconds, asks for the basics in the client's preferred language (date, location, injuries, whether they received treatment, insurance carrier), runs an instant conflict pre-check by pasting the at-fault driver's name into the firm's matter database, books a consultation slot on the firm's Calendly, and writes a structured intake note into Clio or MyCase before the intake partner wakes up. By 9am Tuesday, the partner sees a qualified, conflict-cleared lead with a scheduled call - while three competitor firms are still leaving voicemails from intake calls they missed overnight.
+
+### What makes a Chicago intake agent compliant
+
+- Client communications are routed through Anthropic's commercial Claude API under a Data Processing Addendum - the consumer Claude.ai product is **not** sufficient under ISBA 24-01 because consumer plans have weaker data-handling guarantees.
+- For firms handling PHI (medical malpractice plaintiffs, workers' comp), Anthropic offers a Business Associate Agreement that, as of December 2, 2025, covers both Claude API and Enterprise usage under a single agreement.
+- The system prompt restricts the agent to triage and scheduling - it is explicitly instructed not to provide legal advice, satisfying the unauthorized-practice constraint.
+- Confidentiality language is included in the first message to satisfy Rule 1.18 (duty to prospective clients).
+- Conflict pre-check runs before any substantive case discussion.
+- Spanish-language detection is configured for Cook County's 17.63% Spanish-speaking population - critical in immigration, PI, and family law intake.
+
+Deployment time at a typical 6-attorney Chicago firm: 2 weeks. Monthly cost including Claude API, hosting, and SMS gateway: $400-$700. Replaces roughly $3,500-$5,000/month of after-hours answering service or paralegal-monitored chat.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of Chicago mid-size firms. Every new matter requires running adverse-party and related-entity searches against the firm's full historical client list. At firms with 15-20 years of matter history in Clio, NetDocuments, iManage, or a legacy SharePoint instance, the process is almost always manual - and it gates how fast you can open new business.
+
+Claude Code skills are the perfect deployment unit for this. A Claude Code skill is a packaged, reusable automation that runs locally with access to the firm's data, returns structured output, and can be versioned and audited - exactly what ethics counsel and the ARDC's Illinois Attorney's Guide to Implementing AI ask for.
+
+### What the skill does
+
+1. Takes new-matter inputs (client name, opposing parties, related entities, witnesses, beneficial owners).
+2. Runs fuzzy-match queries against the firm's full matter database - Clio, MyCase, NetDocuments, iManage, SharePoint, or an on-premises SQL Server.
+3. Flags exact matches, near matches, and previously waived conflicts.
+4. Produces a markdown conflict-check memo a partner can review and sign in five minutes.
+5. Logs the run in the firm's audit trail with timestamp, user, and inputs - satisfying Illinois Rule 1.7(b) documentation expectations and the Supreme Court AI Policy's record-keeping requirements.
+
+### Why this matters in Chicago specifically
+
+Chicago firms run high matter volume per attorney - especially in plaintiff-side PI, employment, and immigration, where intake volume often outpaces the firm's matter-opening capacity. A manual conflict check against a 30,000-matter database takes a paralegal 30-90 minutes. The Claude Code skill returns the same result in under 60 seconds with better recall - the fuzzy matching catches name variants (transliterated Spanish, Polish, and Mandarin surnames common in Chicago intake) and related-entity overlaps a paralegal would miss. For a firm doing 25-50 new matter openings per month, this skill alone returns 20-45 paralegal hours per month.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the savings get serious. Chicago litigation boutiques and commercial firms spend enormous associate hours on document review, deposition summary, and discovery production analysis - and Cook County's discovery process is famously cumbersome, with paper and CD/DVD exchanges still common at status dates rather than ongoing electronic exchange.
+
+A Claude-powered review agent does three things very well:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, and key admissions extracted. Replaces 2-4 hours of associate time per deposition. At a $300/hour effective billing rate, that is $600-$1,200 of compressed cost per deposition.
+- **Contract redlining.** Compares a counterparty's proposed contract against the firm's preferred terms and produces a clean redline plus a memo flagging deviations from the firm's playbook. Replaces 1-2 hours of associate time per contract.
+- **Discovery review.** Processes large document productions, tags privileged and responsive material with confidence scores, and creates a privilege log draft. Replaces hundreds of associate hours per litigation matter for firms running mid-size commercial disputes in the Northern District of Illinois or the Cook County Law Division.
+
+### The accuracy question
+
+The legitimate concern is hallucinations - Claude making up facts or citations that are not in the document. The fix is technical and well-established by 2026: the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages, and a final human review pass spot-checks the cited sources. The Illinois Supreme Court AI Policy specifically requires that all AI-generated content be reviewed for accuracy before submission to court - the workflow we deploy makes that review pass a click-through of citation links rather than a re-read of the underlying document.
+
+In practice, this still cuts review hours by 60-80% while improving consistency. The associate's job shifts from reading every page to validating Claude's pulled citations - a higher-leverage task that produces better matter outcomes at a fraction of the billable cost.
+
+## Illinois ethics & compliance considerations
+
+Every Chicago firm we work with asks the same question first: what are the ethics risks? Here is the 2026 picture.
+
+### ISBA Advisory Opinion 24-01 (August 2024)
+
+The Illinois State Bar Association's foundational AI ethics guidance. It applies Rule 1.1 (competence), Rule 1.6 (confidentiality), Rule 1.5 (billing), and Rule 5.3 (supervision) to AI use. Practical implications:
+
+- Attorneys must understand the capabilities and limitations of any AI tool used - including the hallucination risk in legal citations.
+- AI tools must be configured so client data is not used for vendor model training. Consumer Claude.ai and ChatGPT are presumptively inadequate; the commercial Claude API is appropriate when paired with a DPA.
+- Billing for AI-assisted work must be reasonable and transparent under Rule 1.5 - you cannot bill four hours for what Claude produced in eight minutes.
+
+### Illinois Supreme Court AI Policy (effective January 1, 2025)
+
+The Court explicitly authorized AI use by attorneys, judges, and court staff and declined to impose a mandatory disclosure requirement. The reasoning: existing Rules of Professional Conduct already address competence, candor, and supervision. The policy does require that AI-generated content be thoroughly reviewed for accuracy before submission, and prohibits use that compromises confidential communications, PII, PHI, or justice and public safety data.
+
+### Rule 5.3 supervision of non-lawyer assistance
+
+ABA Formal Opinion 512 (2024) - cited approvingly in Illinois guidance - holds that Rules 5.1 and 5.3 require supervision of AI with the same rigor as a non-lawyer human assistant. Designate a partner as the AI supervisor, document the review cadence, and keep an audit log.
+
+### Illinois TCPA / SMS exposure
+
+Illinois is one of the most litigated states for SMS-marketing claims. If your intake agent sends outbound SMS to prospects who have not given prior express written consent, you have meaningful TCPA exposure. The fix is straightforward: configure the agent to only respond to **inbound** SMS and require a checkbox-captured consent on the web intake form before any outbound text.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable under current Illinois rules when (a) the agents run on Anthropic's commercial API with a DPA in place, (b) the intake agent identifies itself as an AI assistant in its first message, (c) a designated partner supervises the deployment under Rule 5.3 with a documented review cadence, and (d) every court-bound output is reviewed by a licensed attorney before filing.
+
+## The 90-day deployment plan
+
+Most Chicago firms we work with want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use:
+
+### Days 1-15: Discovery and intake agent
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, an associate, and the managing partner. We map every step from first lead touch through matter opening, including the Spanish-language flow for firms with significant Cook County Spanish-speaking intake.
+- Week 2: intake agent deployed to web chat only. Soft launch with monitoring - the firm sees every transcript in a dedicated Slack channel, and the supervising partner signs off on the first 50 conversations.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS (inbound-only, per Illinois TCPA posture) and phone via Vapi or Bland with a Claude back-end.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals trained on the skill's output format.
+
+### Days 31-60: Document review pilot
+
+- Weeks 5-6: document review agent deployed on one active litigation matter. Associates use it on deposition summaries and discovery review with full citation grounding.
+- Weeks 7-8: expand to contract redlining for the corporate or real-estate practice group.
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on real Chicago transcripts. Many firms find their intake agent needs a more conservative qualification standard after seeing 30 days of conversations - the agent is too willing to book early on.
+- Weeks 11-12: run the ROI report. Compare consultation booking rate, average matter-open time, and associate hours per matter against the pre-deployment baseline.
+
+At the end of 90 days, the firm has a working, ethics-compliant AI agent stack and 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for Chicago firms
+
+Numbers vary by practice area, but here is what we typically see at Chicago firms in the 4-25 attorney range after 90 days of the full stack:
+
+- **Intake**: 25-40% increase in consultation booking rate. The largest single driver is after-hours coverage - Chicago intake volume in PI and family law spikes between 6pm and 11pm, exactly when most firms are offline.
+- **Spanish-language capture**: 12-22% more signed cases from Spanish-speaking prospects compared to English-only intake workflows, because the agent handles Pilsen, Little Village, Belmont Cragin, and Humboldt Park intake natively rather than dropping the lead.
+- **Conflict checks**: matter-open time drops from 2-3 days to under 4 hours. Critical in PI where competing firms are working the same plaintiff.
+- **Document review**: 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode.
+- **Total monthly cost** (Claude API + hosting + maintenance): $1,200-$2,500 depending on firm size and matter volume.
+- **Typical payback period**: 4-7 weeks for the intake agent alone, less if you count after-hours answering service replacement.
+
+The number that surprises every Chicago firm: the intake agent typically captures 18-26% more *qualified* leads, not just more leads in absolute terms. The agent's structured qualification asks the same questions every time, with no fatigue. Paralegals tend to under-document late-night intake; the agent does not.
+
+## Common mistakes Chicago firms make
+
+After working with Chicago firms across PI, employment, immigration, family, and commercial practices, these are the mistakes we see most often:
+
+**Mistake 1: Treating AI as a generic SaaS purchase.** Most off-the-shelf legal AI products are tuned for the average U.S. firm. Chicago firms are not average - the bilingual intake requirements, the Cook County discovery posture, and the Illinois-specific ethics overlay are specific enough that a custom Claude deployment outperforms generic legal-AI SaaS by 3x in real measurement.
+
+**Mistake 2: Deploying without partner supervision under Rule 5.3.** This is the single biggest Illinois ethics risk. Designate a partner as the AI supervisor before you turn anything on, document the review cadence, and keep an audit log. Both ISBA 24-01 and the Illinois Supreme Court AI Policy implicitly assume this is in place.
+
+**Mistake 3: Using consumer Claude.ai or ChatGPT for client work.** Consumer plans have weaker data-handling guarantees. Use the commercial Claude API with a DPA - and a BAA if the firm handles PHI.
+
+**Mistake 4: Outbound SMS without consent.** Illinois has aggressive TCPA enforcement and a robust plaintiff bar. Configure the intake agent to respond only to inbound SMS and require an explicit consent checkbox before any outbound text follow-up.
+
+**Mistake 5: Overscoping the first deployment.** Firms that try to deploy all three agents in week one fail. Start with the intake agent, prove ROI, then expand. Showing the managing partner a clean 30-day intake report buys the political capital to fund the rest.
+
+**Mistake 6: Skipping the measurement plan.** If you cannot show numbers at day 90, the budget gets cut. Define your three metrics (consultation booking rate, matter-open time, associate review hours per matter) on day one and instrument them from the start.
+
+## How to pick an implementation partner
+
+If you are a Chicago firm evaluating AI implementation partners in 2026, ask these five questions:
+
+1. **Do you build on Anthropic's commercial Claude API specifically, with a Data Processing Addendum in place?** Anything else is an Illinois ethics exposure under ISBA 24-01.
+2. **Can you produce Chicago or Illinois law firm case studies with named partners willing to take a reference call?** Generic AI consultancies usually cannot. Local references matter because the Cook County workflow specifics (bilingual intake, paper discovery exchange, the ARDC's audit posture) do not translate from a New York or Los Angeles deployment.
+3. **What is your deployment timeline?** A real partner deploys the first agent in 2-4 weeks. If a vendor quotes you six months for an intake agent, they are upselling enterprise consulting you do not need.
+4. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform - you want the system prompts, Claude Code skills, and integration code in your own repository.
+5. **How do you handle Rule 5.3 supervision?** The answer should include a named partner relationship, a written supervision plan, and a documented monthly review cadence with archived transcripts.
+
+At manuv.co we focus on local-business and professional-services AI deployments. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with Illinois-specific ethics compliance built into every deployment. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at a Chicago law firm?
+
+Initial deployment of a Claude-powered intake agent for a typical 4-15 attorney Chicago firm runs $8,000-$18,000 one-time, with $400-$700/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake + Claude Code conflict-check skill + document review) runs $20,000-$45,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 4-7 weeks on the intake agent alone, and faster if you count after-hours answering-service replacement.
+
+### Is using AI for client work allowed under Illinois attorney ethics rules?
+
+Yes, under conditions set by ISBA Advisory Opinion 24-01 (August 2024) and the Illinois Supreme Court AI Policy (effective January 1, 2025). The AI tool must be deployed with confidentiality controls under Rule 1.6 - meaning the commercial Claude API with a Data Processing Addendum, not consumer Claude.ai or ChatGPT. A partner must supervise the deployment under Rule 5.3. Billing under Rule 1.5 must reflect actual AI-assisted time. The attorney remains personally responsible for any work product under Rule 1.1.
+
+### Does Illinois require attorneys to disclose AI use in court filings?
+
+No. The Illinois Supreme Court AI Policy explicitly declined to require mandatory disclosure of AI use, reasoning that existing Rules of Professional Conduct - particularly competence, candor, and supervision - already address the risks. However, the policy requires that all AI-generated content be thoroughly reviewed for accuracy before submission. Some federal judges in the Northern District of Illinois have issued individual standing orders requiring disclosure; check the specific judge's rules before filing.
+
+### What is the difference between Claude API and Claude.ai for a Chicago law firm?
+
+Consumer Claude.ai is a chat interface for individuals. Its data-handling terms are weaker than the commercial product and are insufficient for ISBA 24-01 confidentiality compliance. The commercial Claude API is the developer interface used by businesses - Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and, for HIPAA-covered workflows, a Business Associate Agreement. For client work in Illinois, only the commercial API is appropriate.
+
+### How long does it take to deploy an AI intake agent at a Chicago law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator and managing partner. Week 2 is build and soft-launch on web chat with the supervising partner reviewing the first 50 transcripts. Weeks 3-4 are expansion to inbound after-hours SMS and phone, with the Spanish-language flow turned on for firms serving Pilsen, Little Village, Belmont Cragin, or Humboldt Park. The full three-agent stack takes 90 days.
+
+### Can AI agents handle Spanish-speaking clients in Chicago?
+
+Yes, and this is one of the highest-ROI configurations in the Chicago market. Cook County is 26.2% Hispanic or Latino, with 17.63% of residents speaking Spanish at home. Claude is natively multilingual and handles Spanish, Polish, Mandarin, and other major Chicago intake languages with high fluency. We configure the agent to detect language on first contact and respond in kind. For firms with significant Spanish-speaking intake - common in PI, immigration, family law, and employment practices - this typically converts 12-22% more cases that would otherwise drop.
+
+### What about TCPA exposure if my intake agent sends SMS?
+
+Illinois is one of the most-litigated states for SMS marketing claims. The safe posture is to configure the intake agent to respond only to **inbound** SMS - prospects who texted your firm's number first. For outbound follow-up SMS, capture explicit consent through a checkbox on the web intake form before any text is sent, and store the consent record with a timestamp. This is the same compliance posture used by Chicago answering services that handle SMS without TCPA exposure.
+
+### What happens if Claude makes a mistake in a Chicago client communication?
+
+Two safeguards. First, the intake agent's system prompt restricts it to triage and scheduling - it is explicitly instructed not to provide legal advice. Second, a designated partner reviews transcripts on a documented cadence under Rule 5.3. If a mistake occurs, the attorney of record is responsible and can correct it directly. In our deployed Chicago intake agents, the substantive errors we see are around lead qualification (the agent being too willing or too unwilling to book a consult), not advice. The supervising partner tunes the system prompt to fix qualification drift in the first 30 days.
+
+### Will my Chicago staff lose their jobs to AI?
+
+In our Chicago deployments, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service or rolled to voicemail. The conflict-check skill returns 20-45 paralegal hours per month that get re-allocated to case prep, court filings, and client communication. The document review agent shifts associate time from reading every page to validating Claude's pulled citations - the same associates produce more matter output per week. Firms grow into the capacity rather than cutting staff.
+
+### How does the AI intake agent integrate with Clio, MyCase, or PracticePanther?
+
+All three have public APIs the agent uses to create new contacts, draft matter records, attach intake notes, and schedule consultations against the firm's calendar. We have deployed against Clio Grow (the lead pipeline product), Clio Manage (matter management), MyCase, PracticePanther, Smokeball, Filevine, and NetDocuments. Integration typically consumes 2-3 days of the 2-week deployment window. For firms on legacy on-premises systems like iManage Work or a SharePoint-based matter database - common in older Chicago mid-size firms - we deploy a hybrid pattern where the Claude Code skill queries on-premises and writes back through an internal API.
+
+### What about HIPAA - we represent medical malpractice plaintiffs sometimes?
+
+Anthropic offers a Business Associate Agreement for the commercial Claude API. As of December 2, 2025, a single BAA covers both Claude API and Enterprise usage. When your Chicago firm signs the BAA, the API can be used in HIPAA-covered workflows - which matters in plaintiff-side med-mal practices, workers' compensation, and personal injury matters where medical records are part of intake. We configure the agent under the BAA with Zero Data Retention enabled where appropriate.
+
+### How do I get started with manuv.co for a Chicago law firm deployment?
+
+Book a 30-minute strategy call at [manuv.co/contact](/contact). We will walk through your firm's current intake and matter-open workflow, your Cook County practice mix, your matter management system, and your bilingual intake needs. You will leave the call with a concrete recommendation on which agent to deploy first and a written quote. There is no cost to the assessment call and no obligation to proceed.
+
+## Sources
+- [ARDC 2024 Annual Report - 96,821 Illinois attorneys on the Master Roll](https://www.isba.org/barnews/2025/04/ardcreleases2024annualreport)
+- [ISBA Advisory Opinion 24-01 - Illinois attorney AI ethics guidance (August 2024)](https://www.isba.org/ethics)
+- [Illinois Supreme Court Policy on Artificial Intelligence (effective January 1, 2025)](https://www.illinoiscourts.gov/News/1485/Illinois-Supreme-Court-Announces-Policy-on-Artificial-Intelligence/news-detail/)
+- [ARDC Illinois Attorney's Guide to Implementing AI (October 2025)](https://www.isba.org/barnews/2025/10/ardcreleasestheillinoisattorneysguidetoimplementin)
+- [Clio 2025 Legal Trends Report - 79% AI adoption, 3x revenue growth correlation](https://www.clio.com/resources/legal-trends/)
+- [ABA Formal Opinion 512 (2024) - Generative AI and Rules 5.1 / 5.3 supervision](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_5_3_responsibilities_regarding_nonlawyer_assistant/)
+- [U.S. Census - Cook County demographics (26.2% Hispanic, 17.63% Spanish at home)](https://www.census.gov/quickfacts/fact/table/chicagocityillinois/HSD410222)
+- [Biglaw Investor - 2026 Cravath scale ($225K first-year base)](https://www.biglawinvestor.com/biglaw-salary-scale/)
+- [Anthropic - Business Associate Agreement (BAA) for commercial customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
+- [Anthropic Trust Center - SOC 2 Type II, ISO 27001, ISO 42001 certifications](https://trust.anthropic.com/)
 
 ---

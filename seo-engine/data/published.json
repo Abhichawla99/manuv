@@ -21,8 +21,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3380
+    },
+    {
+      "slug": "ai-agents-implementation-legal-chicago-il",
+      "title": "AI Agents for Law Firms in Chicago, IL: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Chicago law firms. Claude-powered intake, conflict checks, and discovery review. ISBA 24-01 ethics, IL Supreme Court AI policy, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-05-28",
+      "vertical": "legal",
+      "city": "Chicago",
+      "state": "IL",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3285
     }
   ],
-  "lastRunAt": "2026-05-27T15:21:41.872Z",
-  "totalPublished": 2
+  "lastRunAt": "2026-05-28T14:05:32.750Z",
+  "totalPublished": 3
 }
