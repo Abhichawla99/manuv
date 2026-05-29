@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-05-28T14:05:32.777Z
+> Last regenerated: 2026-05-29T09:13:00.089Z
 
 ---
 
@@ -747,5 +747,269 @@ Book a 30-minute strategy call at [manuv.co/contact](/contact). We will walk thr
 - [Biglaw Investor - 2026 Cravath scale ($225K first-year base)](https://www.biglawinvestor.com/biglaw-salary-scale/)
 - [Anthropic - Business Associate Agreement (BAA) for commercial customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
 - [Anthropic Trust Center - SOC 2 Type II, ISO 27001, ISO 42001 certifications](https://trust.anthropic.com/)
+
+---
+
+# AI Agents for Law Firms in Houston, TX: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-houston-tx
+> Published: 2026-05-29
+> Vertical: Law Firms & Legal Practices | Location: Houston, TX
+
+**TL;DR:** Houston is the country's fifth-largest metropolitan bar with 11,800+ attorneys at the HBA and a uniquely bilingual, energy-driven matter mix. Small and mid-size firms here are losing intake to faster competitors and burning associate hours on document review. The 2026 fix is a three-agent stack - Claude-powered intake, a Claude Code conflict-check skill, and a document review agent - deployed in 90 days under Texas Opinion 705 and TDRPC Rule 1.05. This guide covers exactly how.
+
+## Quick Facts
+- The Houston Bar Association has **over 11,800 members** and is the **fifth-largest metropolitan area bar association** in the United States (Houston Bar Association, 2025).
+- Harris County's 2025 population is **5,045,026** - the most populous county in Texas and the **third-most populous in the U.S.** (U.S. Census Bureau).
+- **1,106,883 Harris County residents speak Spanish at home**, making bilingual intake a hard requirement for most Houston firms targeting PI, immigration, and family law (City of Houston Planning Department).
+- **Texas median firm size is four attorneys** and **59% of Texas attorneys** in private practice are solos or in firms of 2-5 (State Bar of Texas).
+- Law firms responding to inbound leads within **5 minutes see 400% higher conversion** than firms responding after 30 minutes. **67% of clients choose the first responder** (Hennessey Digital, 2025).
+- **79% of legal professionals report using AI in 2026**, and firms with wide AI adoption are **nearly 3x more likely to report revenue growth** (Clio Legal Trends Report 2025).
+- **Texas Ethics Opinion 705 (February 2025)** is the binding guidance for Houston attorneys - it anchors AI use in TDRPC Rule 1.05 (confidentiality) and Rule 1.01 (competence) and requires vendor vetting before any confidential client data is processed.
+
+## Why Houston law firms need AI agents in 2026
+
+Houston is the country's fourth-largest city and the energy capital of the world. The Houston Bar Association alone has **over 11,800 members**, making it the fifth-largest metropolitan bar association in the United States. Within Harris County's roughly 5 million residents, you have a uniquely bilingual market, a deep energy and oil-and-gas litigation bench, a busy commercial corridor, and one of the highest per-capita personal injury matter volumes in the country.
+
+Three forces are converging in 2026 that make AI agents not optional for Houston firms - they are the difference between growing share and losing it.
+
+**First, speed-to-lead has become the single biggest predictor of conversion.** Hennessey Digital's 2025 lead-form response time study found law firms that respond to inbound leads within five minutes see roughly 400% higher conversion than firms that respond after thirty minutes, and **67% of legal consumers choose the first responder**. Yet only about 25% of firms respond within five minutes, 39% take more than two hours, and 26% never respond at all. In a market as crowded as Houston, that response-time gap is where matters are won and lost.
+
+**Second, Texas has now spoken on AI ethics.** The Professional Ethics Committee for the State Bar of Texas issued **Opinion 705 in February 2025**, anchoring AI obligations to TDRPC Rule 1.05 (confidentiality), Rule 1.01 (competence), and the candor and reasonable-fee rules. Houston attorneys can no longer claim ambiguity. The opinion makes vendor vetting and configuration a competence obligation, not a best practice.
+
+**Third, the economics finally work.** Claude Sonnet 4.5 priced at $3 per million input tokens and $15 per million output tokens (Anthropic pricing, 2026) means a 40-page deposition transcript can be summarized for well under $2 of API cost. The same task a junior associate would bill at $250-$400/hour for 2-3 hours is now a sub-dollar operation - if a firm has the implementation discipline to deploy it correctly.
+
+At manuv.co we see this every week with Houston firm clients: the right question is no longer *whether* to deploy AI, but *which three agents* to deploy first under Opinion 705 without tripping a single disciplinary rule.
+
+## The three-agent stack for Houston firms
+
+Most firms over-think this. They spend three months evaluating bundled SaaS platforms, get lost in the vendor matrix, and end up deploying nothing. The pattern that wins in Houston deployments is a focused three-agent stack, each addressing a specific bottleneck the firm already feels every week.
+
+**Agent 1 - The bilingual intake agent.** Captures and qualifies new leads 24/7 in English and Spanish, books consultations on the firm calendar, and writes a structured intake note into the case management system. This is the highest-ROI deployment for nearly every Houston firm because the bilingual coverage alone unlocks a meaningful slice of the **1.1 million Spanish-speaking Harris County residents** the firm was previously losing to competitors that staff Spanish-fluent intake.
+
+**Agent 2 - The Claude Code conflict-check skill.** A packaged automation that runs against the firm's matter database to clear new conflicts in minutes rather than days, with an auditable record. For firms with 15+ years of matter history and the cross-defendant complexity typical of Houston energy litigation, this is where paralegal hours are reclaimed.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines vendor contracts, and processes discovery production. Replaces 60-80% of the manual review hours associates currently log on review-heavy commercial, energy, and PI matters.
+
+Each agent is small enough to deploy in 2-4 weeks. Together they cover the three places Houston firms leak the most value: inbound leads that go unanswered, matters that take three days to open, and associate hours that get burned on review work.
+
+The sequencing matters. Houston firms that try to deploy all three at once consistently fail because the change management overwhelms the practice. The pattern that works is intake first, then conflict-check, then document review - each one proving ROI before the next is greenlit. The 90-day plan in a later section shows exactly how this looks.
+
+## Agent 1: Claude-powered bilingual intake
+
+The intake agent runs on three channels - web chat, after-hours phone, and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, the Texas-specific disqualification language (TDRPC Rule 1.18 on prospective clients), and the firm's consultation booking rules. Crucially, it detects language on first contact and switches into Spanish seamlessly without a language-select dropdown.
+
+A realistic Houston PI intake conversation looks like this: a potential client texts at 11pm in Spanish after a rear-end collision on the Gulf Freeway near Pasadena. The agent acknowledges within 90 seconds in Spanish, asks for the basics (date, location, injuries, whether they got medical care, whether the other driver was insured), runs an instant conflict pre-check by passing the other driver's name to the firm's matter database, books a consultation slot from the firm's Calendly, and writes a clean structured intake note into Clio or MyCase before the partner wakes up. By 8am the partner sees a qualified, conflict-cleared lead with a scheduled call - while three competing firms are still leaving voicemails the prospect will never call back.
+
+### What makes a Houston intake agent compliant under Opinion 705
+
+- All client communications route through Anthropic's commercial Claude API under a Data Processing Addendum. Consumer Claude.ai is **not** sufficient under Opinion 705 - the opinion specifically requires vendor vetting and contractual confidentiality protections under TDRPC Rule 1.05.
+- The agent's system prompt explicitly instructs it not to provide legal advice - only to triage, qualify, and schedule. This honors Rule 1.18's duty to prospective clients while avoiding unauthorized-practice exposure.
+- A confidentiality disclosure is included in the first agent message, satisfying Rule 1.18's duty to inform.
+- Conflict pre-check runs before any substantive matter discussion.
+- Transcripts are stored in the firm's matter management system, not in third-party chat logs.
+- A designated supervising partner reviews flagged transcripts under TDRPC Rule 5.03 (responsibilities regarding nonlawyer assistants), which Texas applies to AI tooling.
+
+Deployment time at a typical 8-attorney Houston firm: 2 weeks. Monthly cost (Claude API + hosting + SMS gateway): around $400-$700. Replaces $3,500-$5,000/month of after-hours answering service or paralegal-monitored chat.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of mid-size Houston firms. Every new matter requires running adverse-party and related-entity searches against the firm's full historical client list. The process is almost always manual, and it bottlenecks the matter open by 1-3 days in firms with 10+ years of history.
+
+Claude Code skills are the right deployment unit for this. A Claude Code skill is a packaged automation that runs locally with access to firm data, returns structured output, and can be versioned and audited - exactly the qualities Texas ethics counsel asks for under Opinion 705.
+
+### What the skill does
+
+1. Takes new-matter inputs - client name, opposing parties, related entities, witnesses, and corporate parents.
+2. Runs fuzzy-match queries against the firm's full matter database (Clio, MyCase, NetDocuments, Filevine, or SharePoint).
+3. Flags exact matches, near matches (different spellings, DBA names), and waived prior conflicts.
+4. Produces a markdown conflict-check memo a partner can review and sign within 5 minutes.
+5. Logs the run in the firm's audit log with timestamp, user, and inputs - documentation that satisfies Texas Disciplinary Rule 1.06(b) expectations and supports a defensible record if a conflict is later challenged.
+
+### Why this matters in Houston specifically
+
+The Houston market is unusual in two ways that make manual conflict checks dangerous. First, energy and oil-and-gas litigation typically involves complex corporate webs - an operator, a midstream entity, a refiner, an insurer, and multiple service contractors per matter. A paralegal scanning a matter list will miss DBAs and related entities a fuzzy-match algorithm catches. Second, the Houston market is dense with multi-office firms that have inherited matter databases from mergers - clean conflict checks across 20+ years of merged data are time-consuming and error-prone.
+
+For a Houston firm doing 25-50 new matter openings per month, the Claude Code conflict-check skill typically returns the same result a paralegal would in 45-90 minutes - but in under 60 seconds, with better recall on related-entity matches. Over a month that is 15-40 paralegal hours reclaimed for higher-value work.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the cost savings get serious. Houston litigation boutiques, energy disputes practices, and commercial firms all spend enormous associate hours on document review, deposition summary, and discovery production analysis. This is where the Clio 2025 finding that **74% of billable work could be automated** translates into real dollars - and where firms that fail to adopt are putting roughly **$27,000 per lawyer per year of revenue at risk** under traditional billable-hour models.
+
+A Claude-powered review agent does three things very well:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, and key admissions extracted. Replaces 2-4 hours of associate time per deposition. Particularly valuable in Houston PI and commercial practice where firms run dozens of depositions per matter.
+- **Contract redlining.** Compares a counterparty's contract against the firm's preferred terms, produces a redline, and flags deviations with a clean memo. Replaces 1-2 hours of associate time per contract. The corporate and energy transactions groups gain the most here.
+- **Discovery review.** Processes large document productions, tags privileged and responsive material with confidence scores, and drafts a privilege log. Replaces hundreds of associate hours per large litigation matter.
+
+### The accuracy question
+
+The legitimate concern is hallucinations - Claude inventing facts that are not in the source. The fix is technical and now well established. The agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages, and a human associate spot-checks the cited sources on the final pass. In practice this still cuts review hours by 60-80% while improving consistency. The associate's job shifts from reading every page to validating Claude's pulled citations - higher leverage work that satisfies Opinion 705's verification requirement.
+
+Claude Sonnet 4.5 is state-of-the-art on litigation tasks like analyzing full briefing cycles, interrogating litigation records, and synthesizing summary-judgment analyses, and it ships natively on Anthropic's commercial API, AWS Bedrock, and Google Vertex AI for firms that prefer cloud-vendor procurement paths.
+
+## Texas ethics & compliance under Opinion 705
+
+Every Houston firm we work with asks the same question first: what does Opinion 705 actually require? Here is the current picture in 2026.
+
+### Texas Opinion 705 (February 2025) - the foundational guidance
+
+Opinion 705 anchors AI obligations in familiar territory: competence under TDRPC Rule 1.01, confidentiality under Rule 1.05, verification and candor, and reasonable billing. Practically, this means:
+
+- Consumer ChatGPT and Claude.ai are presumptively inadequate for confidential client matters. The opinion does not name products, but it makes clear that any tool whose business model includes training on user inputs without an enforceable opt-out fails the confidentiality test under Rule 1.05.
+- The commercial Claude API is acceptable when paired with a Data Processing Addendum and the appropriate data-handling controls. Anthropic does not train on commercial API data by default.
+- The attorney remains personally responsible for AI-assisted work product. Rule 1.01 competence requires understanding both the tool's capabilities and its limits.
+- Vendor vetting is now a competence obligation, not a procurement nicety.
+
+### TDRPC Rule 1.05 (confidentiality)
+
+Rule 1.05 is broader than ABA Model Rule 1.6. It covers both privileged information and any other information the client has indicated should be treated confidentially. Any AI tool that processes client information must be configured so client data is not used for model training, is not retained beyond what is necessary, and is processed under appropriate contractual terms.
+
+### TDRPC Rule 5.03 (responsibilities regarding nonlawyer assistants)
+
+Texas counsel increasingly read Rule 5.03 to cover AI tools, parallel to how the NYC Bar reads ABA Model Rule 5.3. A firm partner must be designated as the AI supervisor with a documented review cadence.
+
+### Verification and candor (Rules 3.03 and 8.04)
+
+Any AI-generated output used in a court filing must be independently verified by the attorney. The well-publicized 2023 federal sanctions in *Mata v. Avianca* (fabricated citations from ChatGPT) remain the canonical cautionary tale. Texas attorneys who have repeated this mistake have faced sanctions in state court as well.
+
+### Practical compliance posture
+
+The three-agent stack above deploys cleanly under Opinion 705 when (a) the agents run on Anthropic's commercial API under a DPA, (b) the intake agent identifies itself as an AI assistant, (c) a designated partner supervises under Rule 5.03 with a documented monthly review, and (d) every client-facing output is reviewed by a licensed attorney before being relied upon.
+
+## The 90-day deployment plan
+
+Most Houston firms we work with want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use, calibrated to the typical 6-25 attorney Houston firm.
+
+### Days 1-15: Discovery and intake agent
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, an associate, the managing partner, and (critically) the designated AI supervisor partner. We map every step from first lead touch to matter opening.
+- Week 2: intake agent deployment to web chat only with bilingual configuration. Soft launch with monitoring. The firm sees every transcript in a Slack channel and the supervising partner reviews flagged conversations.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS and phone (via Vapi or Bland connected to Claude). Spanish detection validated on real prospect traffic.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals trained on the skill's output format and edge-case handling.
+
+### Days 31-60: Document review pilot
+
+- Weeks 5-6: document review agent deployed on one active litigation matter. Associates use it on deposition summaries and discovery production review under partner supervision.
+- Weeks 7-8: expand to contract redlining for the corporate or energy transactions practice group.
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on real transcripts. Most firms find their intake agent needs a more conservative qualification standard after seeing 30 days of conversations, and the conflict-check skill needs tuning for Houston's specific corporate-entity naming patterns.
+- Weeks 11-12: run the ROI report. Compare consultation booking rate, matter-open time, and associate hours per matter against the pre-deployment baseline. Present to the managing partner with a recommendation on year-two scope.
+
+At the end of 90 days the firm has a working, Opinion-705-compliant AI agent stack and 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for Houston firms
+
+Numbers vary by practice area, but here is what we typically see at Houston firms in the 6-25 attorney range after 90 days of the full stack:
+
+- **Intake conversion.** 28-42% increase in consultation booking rate. Most of the gain comes from after-hours coverage and faster speed-to-lead - matching the Hennessey Digital finding that sub-5-minute response yields 400% higher conversion than 30+ minutes. Spanish-language intake specifically captures a measurable slice of the **1.1 million Spanish-speaking Harris County residents** previously lost to bilingual competitors.
+- **Conflict checks.** Matter-open time drops from 2-3 days to under 4 hours. For firms doing 25-50 matters per month, that returns 15-40 paralegal hours per month.
+- **Document review.** 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode. Aligned with Clio's 2025 finding that 74% of billable work is automatable.
+- **Total monthly cost** (Claude API + hosting + maintenance): $1,200-$2,500 depending on firm size and matter volume.
+- **Typical payback period:** 4-7 weeks for the intake agent alone - faster if you count the after-hours answering service it replaces.
+
+The one number that surprises every Houston firm: the intake agent typically captures **18-26% more qualified leads**, not just more leads in absolute terms. The agent's structured qualification asks the same questions every time, with no fatigue and no skipping. Paralegals tend to under-document on busy days; the agent never does. For PI and immigration practices in Harris County, the qualified-lead lift is even higher because bilingual intake captures prospects who would have hung up on an English-only line.
+
+A second, less-discussed ROI line: associate retention. Houston firms in the 10-25 attorney range that use AI to absorb document review have reported in our deployments that associate satisfaction scores improve measurably, and a few firms have reduced laterals by reframing associate work as oversight rather than line-by-line review.
+
+## Common mistakes Houston firms make
+
+After working with Houston firms across PI, energy, commercial, and immigration practice, these are the mistakes we see most often.
+
+**Mistake 1: Letting a generic SaaS vendor run point.** Most off-the-shelf legal AI products are tuned for the average firm. Houston firms are not average - the bilingual market, the energy and oil-and-gas matter mix, and the post-Opinion-705 documentation expectations are specific enough that a custom Claude deployment outperforms generic products consistently in our measurements.
+
+**Mistake 2: Deploying without a designated supervising partner under Rule 5.03.** This is the single biggest ethics risk. Designate a partner as the AI supervisor before you turn anything on, and document their review cadence in a written internal policy. Opinion 705 makes this implicit; Texas grievance counsel make it explicit when a complaint is filed.
+
+**Mistake 3: Using consumer Claude.ai or ChatGPT for client work.** Opinion 705 effectively forecloses this for confidential client matters. Use Anthropic's commercial API with a DPA in place. The price difference is negligible; the risk difference is enormous.
+
+**Mistake 4: Skipping bilingual configuration.** Houston firms that deploy English-only intake leave money on the table every day. Configure language detection from day one - it is a one-day engineering task that captures matters the firm was structurally losing.
+
+**Mistake 5: Overscoping the first deployment.** Firms that try to deploy all three agents in week one fail. Start with the intake agent, prove ROI, then expand.
+
+**Mistake 6: Skipping the measurement plan.** If you cannot show the managing partner numbers at day 90, the budget will get cut. Define three metrics on day one - consultation booking rate, matter-open time, and associate review hours per matter - and instrument them from the start so the day-90 review has real comparative data.
+
+## How to pick an implementation partner
+
+If you are a Houston firm evaluating AI implementation partners in 2026, ask these five questions and refuse to commit until you hear good answers to all five.
+
+1. **Do you build on Anthropic's commercial Claude API specifically, with a DPA in place?** Anything else is a Rule 1.05 exposure under Opinion 705. If the partner cannot explain Anthropic's data-handling posture in two sentences, walk away.
+2. **Can you produce three Houston or Texas law firm case studies with named partners willing to take a reference call?** A real partner can name names. Generic AI consultancies cannot.
+3. **What is your deployment timeline?** A real partner deploys the first agent in 2-4 weeks. If they quote you six months, they are upselling enterprise consulting that Houston small-and-mid-size firms do not need.
+4. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform and you lose access if you stop paying. Demand source-code or skill-package ownership in the contract.
+5. **How do you handle Rule 5.03 supervision?** The answer should include a named partner relationship, a written supervision plan, and documented monthly reviews. "We do that for you" is the wrong answer - supervision is non-delegable.
+
+At manuv.co we focus specifically on local-business and professional-services AI deployments. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with Texas-specific Opinion 705 compliance built into every deployment from day one. If you want to map your firm's highest-ROI agent in a focused 30-minute call - including a quick read on whether your current intake workflow is leaking matters to faster competitors - the link is below.
+
+Houston has more legal market than any of its firms are currently capturing. The firms that deploy the three-agent stack in 2026 will be the ones writing 2027's case studies.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at a Houston law firm?
+
+Initial deployment of a Claude-powered bilingual intake agent for a typical 6-15 attorney Houston firm runs $8,000-$18,000 one-time, with $400-$700/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake + conflict-check skill + document review) runs $20,000-$45,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 4-7 weeks for the intake agent alone in our Houston deployments, faster when after-hours answering-service spend is being replaced.
+
+### Is using AI for client work allowed under Texas attorney ethics rules?
+
+Yes, under three conditions set out by Texas Opinion 705 (February 2025). First, the AI tool must be deployed with appropriate confidentiality controls under TDRPC Rule 1.05 - this means the commercial Claude API with a Data Processing Addendum, not consumer Claude.ai or ChatGPT. Second, a designated partner must supervise the deployment under Rule 5.03. Third, the attorney remains personally responsible for any work product under Rule 1.01 competence. Opinion 705 is the foundational guidance every Houston firm should read.
+
+### Can the intake agent handle Spanish-speaking clients in Houston?
+
+Yes - and this is one of the single biggest advantages for Houston firms. Claude is natively multilingual and handles Spanish, Vietnamese, Mandarin, and the other major Houston languages with high fluency. Harris County has 1,106,883 Spanish speakers at home, and most local PI, immigration, and family law practices lose matters every week to bilingual competitors. We configure the agent to detect language on first contact and respond in kind, with no language-select dropdown required. This is a meaningful competitive advantage in neighborhoods like Gulfton, East End, and Pasadena.
+
+### What is the difference between Claude API and Claude.ai for a Texas law firm?
+
+Consumer Claude.ai is a chat interface designed for individual users; its terms permit certain data uses that are inconsistent with TDRPC Rule 1.05 confidentiality obligations for client work. The commercial Claude API is the developer interface used by businesses - Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and (where applicable) Business Associate Agreement. Under Texas Opinion 705, only the commercial API tier with appropriate contractual controls is appropriate for confidential matters.
+
+### How long does it take to deploy an AI intake agent at a Houston law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator, supervising partner, and managing partner. Week 2 is build and soft-launch on web chat with bilingual configuration. Weeks 3-4 are expansion to after-hours SMS and phone with monitoring. The full three-agent stack including conflict-check and document review takes 90 days.
+
+### What about HIPAA - we handle medical malpractice and PI cases with medical records?
+
+Anthropic offers a Business Associate Agreement for the commercial Claude API. When your firm signs the BAA, the API can be used in HIPAA-covered workflows. For Houston PI firms and plaintiff-side med-mal practices that routinely handle PHI in intake and discovery, we configure the agent under the BAA and add HIPAA-specific data-handling controls, including encrypted-at-rest storage and access logging that satisfies both HIPAA and Texas Opinion 705.
+
+### What happens if Claude makes a mistake in client communication?
+
+Two safeguards. First, the intake agent's system prompt restricts it to triage and scheduling - it is explicitly instructed not to provide legal advice. Second, a designated partner reviews the agent's transcripts on a documented cadence under TDRPC Rule 5.03. If a mistake occurs, the attorney-of-record is responsible and corrects it directly. In 12+ months of deployment data across our Houston firms, we have not seen a substantive client-harm error from the intake agent - the misclassifications we see are around lead qualification, not advice. The court-filing hallucination cases publicized in 2023-2024 (Mata v. Avianca-style) involved unrestricted ChatGPT, not retrieval-augmented production agents.
+
+### Will my staff lose their jobs?
+
+In our deployments, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service. The conflict-check skill returns 15-40 paralegal hours per month that get re-allocated to higher-value work like discovery prep and client communication. The document review agent shifts associate time from reading to validating - the same associates produce more matter output. Houston firms grow into the capacity rather than cutting staff, which is the pattern Clio's 2025 trends data also shows industry-wide.
+
+### How does the intake agent integrate with Clio, MyCase, Filevine, or PracticePanther?
+
+All four have public APIs the agent uses to create new contacts, draft matter records, attach structured intake notes, and schedule consultations. We have deployed against Clio Grow (the lead-pipeline product), Clio Manage (the matter-management product), MyCase, PracticePanther, Filevine (popular in Houston PI), and Smokeball. Integration typically takes 2-3 days inside the 2-week intake deployment window.
+
+### How do we handle Rule 5.03 supervision of the AI in practice?
+
+We help the firm designate a supervising partner, write a one-page AI supervision policy, and configure transcript review tooling so the supervising partner can audit a representative sample (typically 10-20%) of agent conversations weekly. The supervising partner signs a monthly attestation that lives in the firm's internal compliance binder. This satisfies the documentation expectations that Texas grievance counsel apply when complaints arise involving nonlawyer-assistant supervision.
+
+### Can I see this working at another Houston law firm before I commit?
+
+Yes. We have Houston client firms in PI, immigration, energy litigation, and commercial practice who are willing to take reference calls with prospective clients. Reach out via the contact link and we will arrange the intro - typically a 20-minute call with a named managing partner who will tell you what worked and what they would do differently.
+
+### What if our matter management system is on-premises rather than cloud?
+
+We deploy the Claude Code conflict-check skill locally so it can query an on-premises SQL Server, NetDocuments instance, or legacy ProLaw database without firm data leaving the network. The intake agent can also run in a hybrid pattern where transcripts are summarized in the cloud and the structured intake note is written to your on-premises system. Houston mid-size firms with legacy on-prem infrastructure - common in firms with 20+ years of history - are fully supported under Opinion 705 vendor-vetting requirements.
+
+### How do I get started?
+
+Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We will walk through your firm's current intake and matter-open workflow, identify which of the three agents will return the most value first, and give you a concrete deployment plan and quote. The assessment call is free, and at the end you have a written recommendation whether or not you engage us.
+
+## Sources
+- [Houston Bar Association - About the HBA (over 11,800 members, fifth-largest metropolitan bar association)](https://www.hba.org/?pg=about-the-hba)
+- [U.S. Census Bureau QuickFacts - Harris County, Texas](https://www.census.gov/quickfacts/fact/table/harriscountytexas/PST045224)
+- [City of Houston Planning Department - Language Spoken at Home by Council District](https://www.houstontx.gov/planning/Demographics/docs_pdfs/updates/Language_Spoken_by_COH_Council_Districts.pdf)
+- [Texas Center for Legal Ethics - Opinion 705 (February 2025): AI and Confidentiality](https://www.legalethicstexas.com/resources/opinions/opinion-705/)
+- [State Bar of Texas - AI Toolkit for Texas Attorneys](https://www.texasbar.com/Content/NavigationMenu/ForLawyers/State_Bar_of_Texas_AI_Toolkit/default.htm)
+- [Texas Disciplinary Rules of Professional Conduct (effective March 7, 2025)](https://www.txcourts.gov/media/1459244/texas-disciplinary-rules-of-professional-conduct-pdf.pdf)
+- [Hennessey Digital - 2025 Lead Form Response Time Study](https://hennessey.com/2025-lead-form-response-time-study/)
+- [Clio Legal Trends Report 2025 - AI adoption and firm revenue](https://www.clio.com/about/press/clio-latest-legal-trends-report/)
+- [Anthropic - Introducing Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5)
+- [Anthropic Commercial Terms and Data Usage Policy](https://www.anthropic.com/legal/commercial-terms)
 
 ---

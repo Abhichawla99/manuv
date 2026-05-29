@@ -32,8 +32,19 @@
       "state": "IL",
       "topic": "ai-agents-implementation",
       "wordCount": 3285
+    },
+    {
+      "slug": "ai-agents-implementation-legal-houston-tx",
+      "title": "AI Agents for Law Firms in Houston, TX: 2026 Implementation Guide",
+      "metaDescription": "Practical 2026 guide to deploying AI agents at Houston law firms. Claude-powered intake, conflict checks, document review. Texas Opinion 705 rules, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-05-29",
+      "vertical": "legal",
+      "city": "Houston",
+      "state": "TX",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-05-28T14:05:32.750Z",
-  "totalPublished": 3
+  "lastRunAt": "2026-05-29T09:13:00.062Z",
+  "totalPublished": 4
 }
