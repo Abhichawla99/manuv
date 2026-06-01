@@ -54,8 +54,19 @@
       "state": "AZ",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-philadelphia-pa",
+      "title": "AI Agents for Law Firms in Philadelphia, PA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Philadelphia law firms. Claude intake, conflict checks, document review, PA Opinion 2024-200 ethics, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-01",
+      "vertical": "legal",
+      "city": "Philadelphia",
+      "state": "PA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-05-30T09:13:23.985Z",
-  "totalPublished": 5
+  "lastRunAt": "2026-06-01T01:40:34.046Z",
+  "totalPublished": 6
 }
