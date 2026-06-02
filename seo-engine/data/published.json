@@ -65,8 +65,19 @@
       "state": "PA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-san-antonio-tx",
+      "title": "AI Agents for Law Firms in San Antonio, TX: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at San Antonio law firms. Claude-powered bilingual intake, conflict checks, document review under Texas Opinion 705, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-02",
+      "vertical": "legal",
+      "city": "San Antonio",
+      "state": "TX",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-01T01:40:34.046Z",
-  "totalPublished": 6
+  "lastRunAt": "2026-06-02T09:12:08.453Z",
+  "totalPublished": 7
 }

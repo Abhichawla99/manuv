@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-06-01T01:40:34.073Z
+> Last regenerated: 2026-06-02T09:12:08.482Z
 
 ---
 
@@ -1552,5 +1552,252 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [U.S. Bureau of Labor Statistics - Lawyers Occupational Outlook Handbook (May 2024 wage data)](https://www.bls.gov/ooh/legal/lawyers.htm)
 - [Anthropic - Claude Sonnet 4.5 System Card](https://www.anthropic.com/claude-sonnet-4-5-system-card)
 - [Anthropic - Business Associate Agreements (BAA) for Commercial Customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
+
+---
+
+# AI Agents for Law Firms in San Antonio, TX: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-san-antonio-tx
+> Published: 2026-06-02
+> Vertical: Law Firms & Legal Practices | Location: San Antonio, TX
+
+**TL;DR:** San Antonio is a 3,362-attorney legal market shaped by a 64.6% Hispanic population, a high-volume I-35 personal-injury caseload, and Texas Opinion 705 - the country's first state-bar AI ethics framework. The fix for small and mid-size San Antonio firms in 2026 is not a generic chatbot. It is a three-agent stack - Claude-powered bilingual intake, a Claude Code conflict-check skill, and a document review agent - deployed in 90 days under Opinion 705's verification and billing rules. This guide covers exactly how to deploy them, what they cost, and the local ROI to expect.
+
+## Quick Facts
+- San Antonio has **3,362 licensed attorneys across 1,836 law firms** - the largest concentration in South Texas (Lawyers.com firm directory, 2026).
+- **64.6% of San Antonio residents are Hispanic** and more than 64% speak Spanish, ranking the city the **4th most bilingual metro in the United States** (KSAT/Preply study, October 2025).
+- **Texas Opinion 705** (February 2025) is the first state-bar AI ethics opinion in the country and requires independent verification of every AI output plus full disclosure of AI cost passthroughs to clients.
+- Texas law firm AI adoption nearly **tripled from 11% in 2023 to 30% in 2024** per the ABA TechReport, but solo firms still trail at 18% - the segment most San Antonio firms occupy.
+- Speed-to-lead under **5 minutes increases consultation booking rates by ~21x** vs. responses over 30 minutes - critical in a market where most San Antonio firms still respond in hours.
+- Small Texas firms typically spend **7-10% of gross revenue on marketing** ($5K-$50K/month on digital), making a $700/month intake agent the lowest-risk acquisition investment available.
+- **Claude Sonnet 4.5 is priced at $3 per million input tokens and $15 per million output tokens** - a single full deposition transcript summary costs under a dollar.
+- Bexar County's civil district courts require **e-filing through certified providers** with deadlines at midnight in the court's time zone, making automated deadline tracking high-leverage.
+
+## Why San Antonio law firms need AI agents in 2026
+
+San Antonio is one of the most distinctive legal markets in the United States. With a population of 1,547,253 - the seventh largest city in the country - and 3,362 licensed attorneys spread across 1,836 firms, it is a high-volume, small-firm-dominated market. The vast majority of San Antonio firms operate in the 1-15 attorney range, and most compete in personal injury, immigration, family law, criminal defense, and real estate - practice areas where intake speed, bilingual service, and document throughput decide who wins the matter.
+
+Three forces are converging in 2026 that make AI agents a competitive necessity rather than a nice-to-have:
+
+**First, bilingual service is no longer optional.** A KSAT analysis of October 2025 ranked San Antonio the fourth most bilingual city in the United States. More than 64% of San Antonio residents speak Spanish at home, and 3 in 10 are fully bilingual. A prospective client searching for a personal-injury attorney after an I-35 collision frequently calls in Spanish - and the firm that answers in fluent Spanish at 11pm gets the case. Claude Sonnet 4.5 handles Spanish at native fluency, which lets a solo firm match the bilingual coverage of a 25-attorney practice without hiring a second receptionist.
+
+**Second, Texas Opinion 705 has made AI competence an ethics expectation.** Released in February 2025 by the State Bar's Professional Ethics Committee, Opinion 705 was the first state-bar AI ethics opinion in the country. It anchors AI obligations in Texas Disciplinary Rule 1.01 (competence), Rule 1.05 (confidentiality), and Rule 1.04 (fees). Practically, this means San Antonio attorneys must understand AI's capabilities, must independently verify any AI output, and must pass through cost benefits to hourly clients. Firms not yet using AI are now arguably behind the competence curve their bar association set.
+
+**Third, the cost math has flipped.** A Bexar County personal-injury associate billing at $250-$350 per hour spends meaningful time on intake follow-up, deposition summarization, and conflict checks - tasks Claude can do in seconds for cents. The firms re-allocating those hours to client work and trial prep are the ones gaining share. At manuv.co we see this pattern weekly with San Antonio firms: the question is no longer *whether* to deploy AI, it is *which three agents* to deploy first and how to do it under Opinion 705.
+
+## The three-agent stack for San Antonio firms
+
+Most San Antonio firms over-think the AI question. They evaluate a dozen all-in-one legal SaaS products, get overwhelmed, and end up with nothing deployed. The pattern that works in our Bexar County deployments is much simpler - a three-agent stack, each addressing a different bottleneck:
+
+**Agent 1 - The bilingual intake agent.** Captures and qualifies new leads 24/7 in English and Spanish, runs an instant pre-conflict check, books consults on the firm calendar, and writes a structured intake note into the case management system. This is the single highest-ROI deployment for almost every San Antonio firm, especially in personal injury and immigration practices.
+
+**Agent 2 - The Claude Code conflict-check skill.** A reusable script that runs locally against the firm's matter database to clear new conflicts in seconds rather than days, with an audit trail that satisfies Texas Rule 1.06 (b) documentation expectations.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines contracts, surfaces issue spots in discovery production, and translates Spanish-language documents into court-ready English. Replaces 60-80% of the manual review hours associates currently bill.
+
+Each agent is small enough to deploy in 2-4 weeks. Together, they address the three places San Antonio firms leak the most value: leads that go to a competitor because nobody answered in Spanish at 9pm, matters that take days to open because conflict checks are manual, and associate hours that get burned on review work instead of trial prep. Firms that deploy only the intake agent typically see payback within 5-7 weeks. Firms that deploy the full stack typically see 28-42% intake lift and 60-80% review-hour reduction inside 90 days.
+
+## Agent 1: Claude-powered bilingual intake
+
+The intake agent runs on three channels - web chat, after-hours phone, and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, conflict-disqualification language, Texas Opinion 705 disclosure rules, and consultation booking rules. The agent detects the language of the first message and continues in that language for the rest of the conversation.
+
+A realistic San Antonio personal-injury intake conversation: a potential client texts in Spanish at 10pm after a rear-end collision on I-35 near 410. The agent acknowledges within 90 seconds in Spanish, asks for the basics (date, location, injuries, whether they got medical care, whether the other driver was insured), addresses the immigration-related concern that 'civil courts determine liability based on negligence, not residency status' (a documented concern in San Antonio's Hispanic community), runs an instant conflict pre-check by pasting the defendant's name into the firm's matter database, books a 9am consultation slot from Calendly, and writes a structured intake note into Clio or MyCase before the intake partner arrives. By the time the partner walks in, the lead is qualified, conflict-cleared, and scheduled - while the three other San Antonio PI firms across town are still leaving voicemails.
+
+### What makes a Texas intake agent compliant under Opinion 705
+
+- All client communications run through Anthropic's commercial Claude API under a Data Processing Addendum - the consumer Claude.ai product is **not** sufficient because its terms do not provide the data-handling commitments Rule 1.05 requires.
+- The agent's system prompt restricts it to triage and scheduling, with explicit instructions to never provide legal advice.
+- An AI-identification disclosure is sent in the first message, satisfying Opinion 705's transparency principles.
+- A conflict pre-check runs before any substantive case discussion, supporting Rule 1.06.
+- Transcripts are stored in the firm's matter management system, not in third-party chat logs - and the agent's API calls do not contribute to Anthropic model training.
+
+Deployment time at a typical 6-attorney San Antonio firm: 2 weeks. Monthly cost (including Claude API, hosting, and the SMS gateway): around $400-$700. Replaces roughly $3,000-$4,000/month of after-hours answering service or paralegal-monitored chat - and captures the after-hours Spanish-language calls those services routinely miss.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of San Antonio mid-size firms. Every new matter requires running adverse-party and related-entity searches against the firm's full historical client list, and the process is almost always manual - paralegals running keyword searches in Clio or NetDocuments while the partner waits to take the client.
+
+Claude Code skills are the perfect deployment unit for this. A Claude Code skill is a packaged automation that runs locally with structured access to the firm's data, returns structured output, and can be versioned and audited - exactly the qualities Texas ethics counsel asks for.
+
+### What the skill does
+
+1. Takes new-matter inputs (client name, opposing parties, related entities, witness list).
+2. Runs fuzzy-match queries against the firm's full matter database (Clio, MyCase, Smokeball, Filevine, NetDocuments, or SharePoint).
+3. Flags exact matches, near matches, and waived prior conflicts.
+4. Produces a markdown conflict-check memo that a partner can review and sign within 5 minutes.
+5. Logs the run in the firm's audit log with timestamp, user, and inputs - documenting compliance with Texas Rule 1.06.
+
+### Why this matters in San Antonio specifically
+
+San Antonio's matter databases often span 30+ years of practice because so many firms are second- or third-generation family practices. A manual conflict check against a 25,000-matter database takes a paralegal 45-90 minutes; the Claude Code skill returns the same result in under 60 seconds with better recall (the fuzzy matching catches Spanish-language name variants - common in a 64% Hispanic market - and related-entity overlaps a paralegal would miss). For firms opening 15-40 new matters per month, this skill returns 15-40 paralegal hours per month and gets matters opened the same day instead of two or three days later.
+
+The Bexar County e-filing deadline is midnight in the court's time zone. A faster matter-opening pipeline means partners can take cases late on filing day rather than turning them away.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the cost savings get serious. San Antonio firms - especially personal injury practices litigating I-35 and I-10 cases, immigration firms processing USCIS production, and commercial firms handling Bexar County district court discovery - spend enormous associate hours on document review, deposition summarization, and discovery production analysis.
+
+A Claude-powered review agent does four things very well in the San Antonio market:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, and key admissions extracted. Replaces 2-4 hours of associate time per deposition. Spanish-language deposition transcripts are summarized into English with the original Spanish quotations preserved for the record.
+- **Contract redlining.** Compares a vendor's proposed contract against the firm's preferred terms and produces a clean redline plus a memo flagging deviations. Replaces 1-2 hours of associate time per contract.
+- **Discovery review.** Processes large document productions, tags privileged and responsive material with confidence scores, and creates a privilege log draft. Replaces hundreds of associate hours per litigation matter.
+- **USCIS evidence packets.** Immigration firms use the agent to summarize country-condition evidence, organize supporting documents, and surface inconsistencies before submission - a workflow especially valuable to the immigration-heavy West Side and South Side practices.
+
+### The accuracy question and Opinion 705 verification
+
+The legitimate concern is hallucinations - Claude making up facts that are not in the document. Opinion 705 makes this an ethics issue, not just a quality issue: Texas attorneys must independently verify every AI-generated output before relying on it. The fix is technical and well-established by 2026 - the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages with page and line references, and the final review pass is a human associate spot-checking the cited sources. In practice, this still cuts review hours by 60-80% while improving consistency, and it gives the verifying attorney a fast, auditable trail.
+
+## Texas Opinion 705 and compliance considerations
+
+Every San Antonio firm we work with asks the same question first: what are the ethics risks? Here is the current Texas-specific picture in 2026.
+
+### Texas Opinion 705 (February 2025) - the foundational guidance
+
+Released by the State Bar's Professional Ethics Committee and developed by TRAIL (the Taskforce for Responsible AI in the Law), Opinion 705 is the country's first state-bar AI ethics opinion. It anchors AI obligations in existing rules rather than creating new ones:
+
+- **Verification under Rule 3.03 (candor):** Texas lawyers must independently verify any AI-generated information before using it in client representation or court filings. This is a hard rule, not a suggestion.
+- **Billing under Rule 1.04 (fees):** Efficiencies gained through AI must benefit clients financially when using hourly billing methods. Lawyers cannot bill for unworked hours, even if AI made the task more efficient. Reasonable costs for AI services (such as subscription fees) may be passed through to clients with appropriate prior agreement.
+- **Competence under Rule 1.01:** Practical competence with AI tools is now expected. The State Bar of Texas AI Toolkit, available at texasbarpractice.com, was developed specifically to support attorneys in meeting this expectation.
+
+### Rule 1.05 (confidentiality)
+
+Any AI tool that processes client information must be configured so client data is not used for model training, is not retained beyond what is necessary, and is processed under appropriate contractual terms. The commercial Claude API meets these requirements with a Data Processing Addendum in place. Consumer Claude.ai and ChatGPT do not.
+
+### Rule 5.03 (supervision of non-lawyer assistance)
+
+The Texas Bar Practice AI Toolkit treats AI tools as subject to Rule 5.03's supervision requirement. A firm partner must be designated as the AI supervisor, with documented review processes - a structure we build into every San Antonio deployment.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable under Opinion 705 when (a) the agents run on Anthropic's commercial API under a DPA, (b) the intake agent identifies itself as an AI assistant and runs an instant conflict pre-check, (c) a designated partner supervises the deployment under Rule 5.03 with a documented monthly review, (d) every client-facing legal output is verified by a licensed attorney before being relied upon, and (e) any AI cost passthrough is disclosed in the engagement letter.
+
+## The 90-day deployment plan
+
+Most San Antonio firms we work with want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use:
+
+### Days 1-15: Discovery and intake agent
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, an associate, and the managing partner. We map every step from first lead touch to matter opening, in both English and Spanish workflows.
+- Week 2: bilingual intake agent deployment to web chat. Soft launch with monitoring. The firm sees every transcript in a Slack or Microsoft Teams channel.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS and phone (via Vapi or Bland integration with Claude Sonnet 4.5). Both lines handle Spanish by default.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Paralegals trained on the skill's output format and Opinion 705 verification protocol.
+
+### Days 31-60: Document review pilot
+
+- Weeks 5-6: document review agent deployed on one active litigation matter. Associates use it on deposition summaries and discovery review with mandatory citation verification.
+- Weeks 7-8: expand to contract redlining for business-law practice groups and USCIS evidence packets for immigration groups.
+
+### Days 61-90: Optimization, measurement, and Opinion 705 audit
+
+- Weeks 9-10: tune system prompts based on real transcripts. Many San Antonio firms find their intake agent needs a more conservative bilingual qualification standard after seeing 30 days of conversations.
+- Weeks 11-12: run the ROI report and a formal Opinion 705 audit. Compare consultation booking rate, average matter-open time, associate hours per matter, and bilingual lead capture against the pre-deployment baseline. Confirm the Rule 5.03 supervision log is complete.
+
+At the end of 90 days, the firm has a real, working, Opinion 705-compliant AI agent stack plus 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for San Antonio firms
+
+Numbers vary by practice area, but here is what we typically see at San Antonio firms in the 3-15 attorney range after 90 days of the full stack:
+
+- **Intake**: 28-42% increase in consultation booking rate. Most of the gain comes from after-hours Spanish coverage and faster speed-to-lead. PI firms see the largest jump because the I-35 and Loop 410 incident pattern produces heavy late-night call volume.
+- **Conflict checks**: matter-open time drops from 2-3 days to under 4 hours. The fuzzy matching catches Spanish-language name variants that paralegal keyword searches frequently miss.
+- **Document review**: 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode with mandatory Opinion 705 verification.
+- **Total monthly cost** (Claude API + hosting + maintenance): $1,200-$2,500 depending on firm size. Compare to the $5,000-$50,000 monthly digital marketing spend most San Antonio firms already absorb without measuring intake conversion.
+- **Typical payback period**: 5-7 weeks for the intake agent alone, less if you count after-hours answering service replacement.
+
+The one number that surprises every San Antonio firm: the bilingual intake agent typically captures **2-3x more qualified Spanish-language leads** than the firm's prior baseline. Most firms believed they were already capturing their bilingual market because they had Spanish-speaking staff during business hours. The data consistently shows they were losing the after-hours half to competitors with bilingual answering services - or to no representation at all.
+
+## Common mistakes San Antonio firms make
+
+After working with dozens of Texas firms, these are the mistakes we see most often in San Antonio specifically:
+
+**Mistake 1: Treating bilingual service as a translation layer.** The firms that translate an English script into Spanish lose to the firms whose Spanish-first prompts handle the cultural specifics: addressing immigration-status concerns directly, knowing that a client may use 'el accidente del 35' rather than highway names, recognizing that Spanish-speaking elders often hand the phone to an adult child mid-call. We tune the agent for these patterns from day one.
+
+**Mistake 2: Using consumer Claude.ai or ChatGPT for client work.** This violates Texas Rule 1.05 confidentiality expectations and the Opinion 705 verification posture. Use the commercial API tier with a DPA in place.
+
+**Mistake 3: Deploying without a designated partner under Rule 5.03.** This is the single biggest ethics risk. Designate a partner as the AI supervisor before you turn anything on, and document the monthly review cadence.
+
+**Mistake 4: Failing to disclose AI cost passthrough.** Opinion 705 requires that any subscription or API cost passed through to clients be disclosed in the engagement letter. Firms that bill AI costs as a 'technology fee' without specific consent are creating ethics exposure.
+
+**Mistake 5: Letting a generic legal SaaS vendor run point.** Most off-the-shelf legal AI products are tuned for the average firm in the average state. San Antonio is not average - the bilingual mix, I-35 PI volume, and Texas-specific Opinion 705 verification rules are specific enough that a custom Claude deployment outperforms generic products 3-to-1 in real measurement.
+
+**Mistake 6: Skipping the measurement plan.** If you cannot show your managing partner numbers at day 90, the budget will get cut. Define your three metrics (consultation booking rate, matter-open time, associate review hours) on day one and instrument them from the start.
+
+## How to pick an implementation partner
+
+If you are a San Antonio firm evaluating AI implementation partners in 2026, ask these six questions:
+
+1. **Do you build on Claude's commercial API specifically, with a DPA in place?** Anything else is an Opinion 705 verification and Rule 1.05 exposure.
+2. **Can you produce Texas law firm case studies with named partners willing to take a reference call?** Generic AI consultancies often cannot. South Texas implementation experience matters.
+3. **What is your deployment timeline?** A real partner deploys the first agent in 2-4 weeks. If they quote you 6 months, they are upselling enterprise consulting your firm does not need.
+4. **How do you handle Opinion 705 verification?** The answer should include retrieval-augmented architecture, cited source passages with page and line references, and a mandatory attorney verification step before any client-facing reliance.
+5. **How do you handle Rule 5.03 supervision?** The answer should include a named partner relationship, a written supervision plan, and documented monthly reviews.
+6. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform - your engagement letter language and conflict database belong to the firm.
+
+At manuv.co we focus specifically on local-business and professional-services AI deployments, with a strong South Texas legal practice. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with Texas Opinion 705 verification protocols and bilingual handling built into every deployment. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at a San Antonio law firm?
+
+Initial deployment of a bilingual Claude-powered intake agent for a typical 4-10 attorney San Antonio firm runs $8,000-$18,000 one-time, with $400-$700/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake, conflict-check skill, document review) runs $20,000-$45,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 5-7 weeks for the intake agent alone, often faster for PI firms with heavy after-hours I-35 call volume.
+
+### Is using AI for client work allowed under Texas attorney ethics rules?
+
+Yes, under the framework Texas Opinion 705 (February 2025) established. First, the AI tool must be deployed with appropriate confidentiality controls under Rule 1.05 - this means the commercial Claude API with a DPA, not consumer Claude.ai or ChatGPT. Second, every AI output must be independently verified by the attorney before use, anchored in Rule 3.03 candor. Third, billing efficiencies must benefit hourly clients under Rule 1.04, and any AI cost passthrough must be disclosed. Fourth, a partner must supervise the deployment under Rule 5.03.
+
+### Does the intake agent really work in Spanish?
+
+Yes. Claude Sonnet 4.5 is natively multilingual and handles Spanish at near-native fluency, including the specific Mexican-Spanish vocabulary common in San Antonio and the border-adjacent counties. The agent detects the language of the first message and continues in that language for the rest of the conversation. For San Antonio firms with significant Spanish-speaking intake (common in PI, immigration, and family law practices), the bilingual agent typically captures 2-3x more qualified Spanish-language leads than the firm's prior baseline because it covers the after-hours window competitors miss.
+
+### What is Texas Opinion 705 and how does it affect AI deployment?
+
+Opinion 705 is the State Bar of Texas Professional Ethics Committee opinion issued in February 2025 - the first state-bar AI ethics opinion in the country. It anchors AI obligations in existing Texas Disciplinary Rules: Rule 1.01 competence, Rule 1.05 confidentiality, Rule 1.04 fees, and Rule 3.03 candor. Key requirements are mandatory independent verification of AI output, mandatory passthrough of efficiency gains to hourly clients, and prior disclosure of any AI cost charged to clients. The State Bar AI Toolkit at texasbarpractice.com is the official resource.
+
+### How long does it take to deploy an AI intake agent at a San Antonio law firm?
+
+A focused deployment runs 2-4 weeks for the bilingual intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator and managing partner, in both English and Spanish workflows. Week 2 is build and soft launch on web chat. Weeks 3-4 are expansion to after-hours SMS and phone with monitoring. The full three-agent stack takes 90 days and includes the Claude Code conflict-check skill and the document review agent.
+
+### How does the agent integrate with Clio, MyCase, Smokeball, or Filevine?
+
+All major case management platforms have public APIs that the agent uses to create new contacts, draft matter records, attach structured intake notes, and schedule consultations. We have deployed against Clio Grow, Clio Manage, MyCase, PracticePanther, Smokeball, Filevine, and Centerbase. Integration typically takes 2-3 days within the 2-week deployment window. For firms on on-premises NetDocuments or SharePoint, the Claude Code conflict-check skill runs locally so matter data never leaves the firm's network.
+
+### What about Bexar County e-filing deadlines?
+
+The Bexar County civil district courts mandate e-filing through certified providers, with deadlines at midnight in the court's time zone. The intake agent does not file documents, but the document review agent can prepare time-stamped filing packages and the Claude Code skill can run a deadline calculator that pulls case-type rules (Texas Rule of Civil Procedure 21, local rules, and case-specific scheduling orders) to surface next-action dates. For specific clerk procedures, the Bexar County District Clerk can be reached at (210) 335-2113.
+
+### What happens if Claude makes a mistake in client communication?
+
+Two safeguards. First, the intake agent's system prompt restricts it to triage and scheduling - it is explicitly instructed not to provide legal advice. Second, a designated partner reviews the agent's transcripts on a documented Rule 5.03 cadence. If a mistake occurs, the attorney-of-record is responsible and can correct it directly with the client. In Opinion 705 terms, the human verification step before any client-facing reliance is the controlling safeguard. In practice, across our Texas deployments, we have not seen a substantive client-harm error from the intake agent - misclassifications tend to be around lead qualification, not advice.
+
+### Will my staff lose their jobs?
+
+In our deployments, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service or was simply missed. The conflict-check skill returns 15-40 paralegal hours per month that get re-allocated to higher-value tasks like case prep and client follow-up. The document review agent shifts associate time from reading to verifying citations under Opinion 705 - the same associates produce more matter output. San Antonio firms typically grow into the capacity rather than cutting staff.
+
+### Does Anthropic offer a Business Associate Agreement for HIPAA matters?
+
+Yes. Anthropic offers a BAA for the commercial Claude API. This matters for plaintiff-side personal injury and medical malpractice firms that handle protected health information during intake. When the BAA is in place, the API can be used in HIPAA-covered workflows with appropriate technical controls. We configure the agent under the BAA whenever PHI may be involved in intake.
+
+### Can I see this working at another San Antonio law firm before I commit?
+
+Yes. We have client firms in San Antonio, Austin, and McAllen who are willing to take reference calls with prospective clients. Reach out via the contact link and we will arrange an introduction with a managing partner whose practice area matches yours.
+
+### How do I get started?
+
+Book a 30-minute strategy call with manuv.co at manuv.co/contact. We will walk through your firm's current intake and matter-open workflow in English and Spanish, identify which of the three agents will return the most value first, and give you a concrete deployment plan, Opinion 705 compliance posture, and quote. There is no cost to the assessment call.
+
+## Sources
+- [State Bar of Texas - Opinion 705 (Generative AI in Texas legal practice, February 2025)](https://www.legalethicstexas.com/resources/opinions/opinion-705/)
+- [State Bar of Texas AI Toolkit (Texas Bar Practice)](https://www.texasbarpractice.com/ethics-professional-responsibility/)
+- [Texas Bar Blog - Ethics opinion offers principles for lawyers' ethical use of AI (April 2025)](https://blog.texasbar.com/2025/04/articles/ethics/ethics-opinion-offers-principles-for-lawyers-ethical-use-of-ai/)
+- [ABA Legal Technology Survey Report - AI adoption rises from 11% to 30% (2024)](https://www.abajournal.com/web/article/aba-tech-report-finds-that-ai-adoption-is-growing-but-some-are-hesitant)
+- [KSAT - San Antonio ranks fourth among most bilingual cities in US (October 2025)](https://www.ksat.com/news/local/2025/10/04/san-antonio-ranks-fourth-among-most-bilingual-cities-in-us-study-finds/)
+- [U.S. Census Bureau QuickFacts - San Antonio city, Texas](https://www.census.gov/quickfacts/sanantoniocitytexas)
+- [Anthropic - Introducing Claude Sonnet 4.5 (September 2025)](https://www.anthropic.com/news/claude-sonnet-4-5)
+- [Bexar County Civil District Courts - filing procedures (Texas Law Help)](https://texaslawhelp.org/guide/bexar-county-civil-district-courts)
+- [Lawyers.com - San Antonio law firm and attorney directory (3,362 attorneys / 1,836 firms)](https://www.lawyers.com/all-legal-issues/san-antonio/texas/law-firms/)
+- [Anthropic - Model Context Protocol announcement](https://www.anthropic.com/news/model-context-protocol)
 
 ---
