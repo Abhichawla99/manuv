@@ -76,8 +76,19 @@
       "state": "TX",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-san-diego-ca",
+      "title": "AI Agents for Law Firms in San Diego, CA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at San Diego law firms. Claude-powered intake, conflict checks, bilingual triage, California ethics rules, and a 90-day plan.",
+      "publishedAt": "2026-06-03",
+      "vertical": "legal",
+      "city": "San Diego",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-02T09:12:08.453Z",
-  "totalPublished": 7
+  "lastRunAt": "2026-06-03T09:15:03.452Z",
+  "totalPublished": 8
 }
