@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-06-03T09:15:03.477Z
+> Last regenerated: 2026-06-09T02:33:32.542Z
 
 ---
 
@@ -2045,5 +2045,258 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](https://manuv
 - [Anthropic Commercial Terms (API data usage)](https://www.anthropic.com/legal/commercial-terms)
 - [Speed-to-Lead Benchmarks 2026](https://www.apten.ai/blog/speed-to-lead-benchmarks-2026)
 - [VisaVerge - Immigration Prosecutions Rising in San Diego Region in 2025](https://www.visaverge.com/news/immigration-prosecutions-rising-in-san-diego-region-in-2025/)
+
+---
+
+# AI Agents for Law Firms in Dallas, TX: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-dallas-tx
+> Published: 2026-06-09
+> Vertical: Law Firms & Legal Practices | Location: Dallas, TX
+
+**TL;DR:** Dallas is the third-largest legal market in the United States, with the Dallas Bar Association counting more than 11,800 members and the Dallas-Fort Worth metro housing 108 NLJ 500 firms employing 4,369 attorneys. Small and mid-size DFW firms are losing intake to faster-responding competitors and burning associate hours at $150+/hr on document review. The fix in 2026 is a stack of three Claude-powered agents - intake, conflict-check, and document review - deployed in 90 days under Texas Opinion 705 and TDRPC Rules 1.05 and 5.03. This guide covers exactly how to deploy them, what they cost, and what ROI to expect.
+
+## Quick Facts
+- The Dallas Bar Association has **more than 11,800 lawyer members**, making it one of the largest metropolitan bar associations in the United States (Dallas Bar Association, 2025).
+- The Dallas-Fort Worth metro houses **108 NLJ 500 firms across 122 offices employing 4,369 attorneys** - a top-five U.S. legal services growth market (CBRE, 2025).
+- **90%+ of lawyers** report using at least one AI tool in 2026, but most firms have no formal deployment - they use consumer ChatGPT, which violates Texas Opinion 705 for confidential client matters (Wolters Kluwer Future Ready Lawyer, 2026).
+- **52% of legal organizations** report revenue growth after implementing AI, with some seeing 11-20% increases (Wolters Kluwer, 2026).
+- Dallas County is **42.3% Hispanic** with more than **60,000 limited-English speakers** - a meaningful competitive opportunity for firms running multilingual intake agents (USAFacts, 2025).
+- First-year associates at mid-size DFW firms now earn **$155,000-$200,000**; a junior burning three hours on a deposition summary is a $300-450 task that Claude can do in eight minutes for under a dollar of API cost (BCG Search 2025-2026 Compensation Report).
+- Texas Ethics Opinion 705 (February 2025) now requires Texas attorneys to **understand the technology and vet vendor confidentiality** before using generative AI in client work (State Bar of Texas Professional Ethics Committee).
+
+## Why Dallas law firms need AI agents in 2026
+
+Dallas-Fort Worth is now the corporate capital of the United States. More than 10,000 corporate headquarters operate in the metro - more than any other U.S. region - and that gravitational pull has reshaped the legal market around it. The Dallas Bar Association now counts more than 11,800 lawyer members, and 108 NLJ 500 firms have planted 122 offices in DFW employing 4,369 attorneys. National firms keep moving in, anchored by Toyota in Plano, AT&T downtown, the Goldman Sachs campus rising in Uptown, and Charles Schwab in Westlake. For small and mid-size firms, that is both a blessing and a threat: a deeper pool of potential clients, and a sharper-elbowed competitive landscape than ever before.
+
+Three forces are converging in 2026 that make AI agents a strategic priority rather than a curiosity.
+
+**First, intake is the new battleground.** A potential client in Highland Park or Plano who fills out an intake form at 11:30pm expects a response before they go to bed. If you respond at 9am the next morning, three of your competitors have already booked them. Clio's 2025 Legal Trends Report shows that solo firms using e-signatures, online intake, and text messaging report 53% higher revenue and 48% more leads than firms that do not. The single mechanism behind those numbers is faster, more consistent first-touch.
+
+**Second, Texas ethics rules now expect competence with AI.** The State Bar of Texas Professional Ethics Committee issued Opinion 705 in February 2025, making it official: attorneys must understand how generative AI functions to a reasonable degree before using it on client matters, and must vet vendor confidentiality terms. Consumer ChatGPT and consumer Claude.ai used for confidential client information are exposure risks under TDRPC Rule 1.05. The fix is not to avoid AI - it is to deploy it through the right API tier with the right contractual terms.
+
+**Third, the talent math no longer works.** First-year associate salaries at mid-size DFW firms now run $155,000-$200,000. Asking a second-year associate to spend three hours summarizing a deposition transcript is a $300-450 task that Claude can do in eight minutes for under a dollar of API cost. The firms re-allocating that time to strategy, business development, and client work are the ones gaining share.
+
+At manuv.co we see this every week with Dallas law firm clients: the question is no longer *whether* to deploy AI, it is *which three agents* to deploy first and how to do it without tripping a single Texas Disciplinary Rule.
+
+## The three-agent stack for DFW firms
+
+Most firms over-think this. They start by trying to find a single all-in-one AI legal platform, get overwhelmed by the vendor landscape, and end up with nothing deployed twelve months later. The pattern that works in our Dallas deployments is a focused three-agent stack, each addressing a different bottleneck.
+
+**Agent 1 - The intake agent.** Captures and qualifies new leads 24/7 across web chat, after-hours phone, and inbound SMS. Books consults on the firm calendar. Writes a clean structured intake note into Clio, MyCase, Smokeball, or PracticePanther. This is the single highest-ROI deployment for almost every Dallas firm in the 2-25 attorney range.
+
+**Agent 2 - The Claude Code conflict-check skill.** A reusable, locally-runnable script that runs against the firm's matter database to clear new conflicts in seconds rather than days, with an audit trail that satisfies TDRPC Rule 1.06 documentation expectations.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines contracts, and surfaces issue spots from discovery production. Replaces 60-80% of the manual review hours that associates currently bill - the largest unit of recoverable time in any litigation or transactional practice.
+
+Each agent is small enough to deploy in 2-4 weeks. Together, they cover the three places DFW firms leak the most value: leads that go unanswered overnight, matters that take days to open, and associate hours that get burned on review work. The stack is intentionally modular - you can ship Agent 1, prove ROI to the managing partner, and earn the budget to ship Agents 2 and 3 in the same quarter.
+
+## Agent 1: Claude-powered intake
+
+The intake agent runs on three channels - web chat, after-hours phone, and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, conflict-disqualification language, consultation booking rules, and a strict scope: triage and schedule, never advise.
+
+A realistic Dallas personal-injury intake conversation looks like this: a potential client texts at 11pm after a rear-end collision on I-635. The agent acknowledges within 90 seconds, asks for the basics (date, location, injuries, whether they got medical care, whether anyone was cited), runs an instant conflict pre-check by querying the firm's matter database for the other driver's name, books a free consultation slot from the firm's Calendly for 9:30am, and writes a structured intake note into Clio Grow before the intake partner wakes up. By 9am, the partner sees a qualified, conflict-cleared lead with a scheduled call - while three competitor firms across town are still leaving voicemails.
+
+### What makes a Texas intake agent compliant
+
+- All client communications are routed through Anthropic's commercial Claude API, which is not used for model training - the consumer Claude.ai product is **not** sufficient under Texas Opinion 705.
+- The agent's system prompt includes explicit instructions to never provide legal advice, only to triage and schedule. This satisfies the TDRPC Rule 7 advertising and solicitation guardrails.
+- A confidentiality and AI-disclosure line is included in the first message, so prospective clients know they are interacting with an AI assistant and that their information is being routed to the firm.
+- Conflict pre-check runs before any substantive case discussion, satisfying TDRPC Rule 1.06 (Conflict of Interest: General Rule) duty of inquiry.
+- Transcripts are stored in the firm's matter management system, not in third-party chat logs.
+- A designated partner reviews transcripts on a documented cadence under TDRPC Rule 5.03 (supervision of nonlawyer assistants).
+
+Deployment time at a typical 8-attorney Dallas firm: 2 weeks. Monthly cost including Claude API, hosting, and the SMS gateway: around $400-$700. Replaces roughly $3,500-$5,000/month of after-hours answering service or paralegal-monitored chat.
+
+For DFW firms with meaningful Spanish-speaking intake - common in immigration, plaintiff PI, family law, and criminal defense given Dallas County's 42.3% Hispanic population and 60,000+ limited-English speakers - we configure the agent to auto-detect language on first contact and respond in kind. This is a quiet competitive advantage in neighborhoods like Pleasant Grove, Oak Cliff, and West Dallas.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of mid-size Dallas firms. Every new matter requires running adverse-party and related-entity searches against the firm's full historical client list, and the process at most firms is still partially manual - a paralegal pulls names from the intake form, types them into the matter management system one at a time, and emails a memo to the responsible partner.
+
+Claude Code skills are the perfect deployment unit for this. A Claude Code skill is a packaged automation that runs locally with access to the firm's data, returns structured output, and can be versioned and audited - all the qualities that ethics counsel asks for.
+
+### What the skill does
+
+1. Takes new-matter inputs (client name, opposing parties, related entities, witness list, financial counterparties).
+2. Runs fuzzy-match queries against the firm's full matter database (Clio, MyCase, NetDocuments, iManage, SharePoint, or a SQL Server instance).
+3. Flags exact matches, near matches, beneficially-related entities, and prior matters where a waiver was obtained.
+4. Produces a markdown conflict-check memo that the responsible partner can review and sign within five minutes.
+5. Logs the run in the firm's audit log with timestamp, user, and inputs - satisfying the implicit documentation expectation of TDRPC Rule 1.06(c).
+
+### Why this matters in DFW specifically
+
+Dallas firms that work with the corporate base - the 10,000+ headquarters in the metro - tend to have matter databases that span 20+ years and tens of thousands of matters. A manual conflict check against a 50,000-matter database takes a paralegal 30-90 minutes; the Claude Code skill returns the same result in under 60 seconds with better recall, because fuzzy matching catches name variants (LLC vs. LP vs. Inc.), entity-family relationships, and the typo-laden free-text fields paralegals would skim past. For a corporate boutique opening 20-50 new matters a month, this skill alone returns 15-40 paralegal hours per month - the equivalent of a $4,000-$8,000 monthly labor line item recovered.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the cost savings get serious. Dallas firms - especially the energy litigation boutiques, the commercial litigation groups, and the corporate transactional practices that serve the metro's HQ density - spend enormous associate hours on document review, deposition summary, and discovery production analysis.
+
+A Claude-powered review agent does three things very well.
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, and key admissions extracted. Replaces 2-4 hours of associate time per deposition.
+- **Contract redlining.** Compares a vendor's proposed contract against the firm's preferred terms (Master Services Agreements, NDAs, employment contracts, vendor agreements) and produces a clean redline plus a memo flagging deviations. Replaces 1-2 hours of associate time per contract.
+- **Discovery review.** Processes large document productions - common in DFW commercial litigation, oil-and-gas disputes, and large-scale employment matters - tags privileged and responsive material with confidence scores, and creates a privilege log draft. Replaces hundreds of associate hours per matter.
+
+### The accuracy question
+
+The legitimate concern is hallucinations - Claude making up facts that are not in the document. The fix is technical and well-established by 2026: the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages, and the final review pass is a human associate spot-checking the cited sources. In practice this still cuts review hours by 60-80% while improving consistency. The associate's job shifts from reading every page to validating Claude's pulled citations - a much higher-leverage and frankly more interesting task.
+
+At the per-hour billing rate of a Dallas mid-level associate (somewhere between $300-$650 depending on practice and firm), a single discovery matter where the agent replaces 200 review hours pays for the entire annual stack four times over.
+
+## Texas ethics & compliance considerations
+
+Every Dallas firm we work with asks the same question first: what are the ethics risks? Here is the current picture in 2026.
+
+### Texas Ethics Opinion 705 (February 2025) - the foundational guidance
+
+Opinion 705 from the State Bar of Texas Professional Ethics Committee is the document every Texas attorney using AI should read. It holds three things that matter for deployment.
+
+- **Competence (TDRPC Rule 1.01).** A lawyer must understand to a reasonable degree how generative AI functions before using it on client matters - the risks of hallucination, the model's training-data limits, and the vendor's data-handling terms.
+- **Confidentiality (TDRPC Rule 1.05).** A lawyer should not input confidential client information into a generative AI tool unless reasonably satisfied that the program will not reveal or use that information to the client's disadvantage. Consumer chatbots are presumptively insufficient.
+- **Supervision (TDRPC Rules 5.01 and 5.03).** The duty to supervise applies to all work performed in connection with legal services, whether by a human or by AI. A supervising attorney must establish clear policies for AI use.
+
+### What the Opinion did not solve
+
+Opinion 705 articulates principles but leaves implementation to firms. There is no Texas safe-harbor list of approved AI vendors, no required disclosure language to clients, and no per-matter consent template. Firms are expected to exercise reasonable judgment.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable under current Texas rules when the agents run on Anthropic's commercial API (which does not train on commercial API data by default), with a Data Processing Addendum and - where applicable - a Business Associate Agreement in place. The intake agent should identify itself as an AI assistant on first contact. A designated partner should supervise the deployment under Rule 5.03 with a documented monthly review of agent transcripts and outputs. Every client-facing work product should remain attorney-reviewed before reliance.
+
+### TCPA, fee-sharing, and unauthorized practice considerations
+
+Two collateral risks worth flagging. First, AI voice agents that initiate outbound calls are subject to the federal TCPA - intake agents that only respond to inbound contacts do not raise this issue. Second, the agent must not be configured to give legal advice; doing so could implicate the unauthorized practice of law (UPL) statutes that the State Bar enforces. The system prompt and the deployment architecture are both designed to prevent this by routing every substantive question to the responsible attorney.
+
+## The 90-day deployment plan
+
+Most Dallas firms we work with want a phased rollout that proves ROI before they commit to the full stack. Here is the 90-day plan we run.
+
+### Days 1-15: Discovery and intake agent build
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, an associate, and the managing partner. We map every step from first lead touch to matter opening - including the steps no one writes down.
+- Week 2: intake agent deployment to web chat only. Soft launch with monitoring. Every transcript is mirrored to a private Slack channel for the supervising partner to review in real time.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS and phone via Vapi or Bland integrated with the Claude API.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals trained on the skill's output format and how to escalate near-matches.
+
+### Days 31-60: Document review pilot
+
+- Weeks 5-6: document review agent deployed on one active litigation matter. Associates use it on deposition summaries and a single discovery production batch.
+- Weeks 7-8: expand to contract redlining for the corporate practice group's standard MSAs and NDAs.
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on real transcripts. Most firms find their intake agent needs a slightly more conservative qualification standard after seeing 30 days of conversations - they want to capture more borderline leads for partner review rather than soft-decline at the agent.
+- Weeks 11-12: run the ROI report. Compare consultation booking rate, average matter-open time, and associate hours per matter against the pre-deployment baseline. Document outcomes for the firm's TDRPC Rule 5.03 supervision file.
+
+At the end of 90 days, the firm has a real, working, ethics-compliant AI agent stack and 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for Dallas firms
+
+Numbers vary by practice area, but here is what we typically see at DFW firms in the 6-25 attorney range after 90 days of the full stack.
+
+- **Intake.** 28-42% increase in consultation booking rate. Most of the gain comes from after-hours coverage (calls and chats from 6pm-8am Central) and from speed-to-lead under five minutes. The Spanish-language uplift adds another 8-15% for firms in PI, immigration, family, and criminal defense.
+- **Conflict checks.** Matter-open time drops from 2-3 business days to under 4 hours. For a corporate practice opening 25 matters a month, this is roughly 50 partner-hours and 25 paralegal-hours returned.
+- **Document review.** 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode.
+- **Total monthly cost.** Claude API, hosting, and maintenance: $1,200-$2,500 depending on firm size and volume.
+- **Typical payback period.** 4-7 weeks for the intake agent alone, faster if you also count the elimination of an after-hours answering service contract.
+
+The one number that surprises every Dallas firm: the intake agent typically captures 18-26% more *qualified* leads, not just more leads in absolute terms. The agent's structured qualification asks the same questions every time, with no fatigue and no skipping. Human intake staff under-document. The agent does not. Six months into deployment, the firm has the cleanest CRM data it has ever had - and that data starts compounding into better marketing decisions and better attorney capacity planning.
+
+## Common mistakes Dallas firms make
+
+After working with dozens of DFW firms, these are the mistakes we see most often.
+
+**Mistake 1: Letting a generic SaaS vendor run point.** Most off-the-shelf legal AI products are tuned for the average firm in the average city. Dallas firms are not average - the corporate density, the energy-litigation patterns, the bilingual intake requirements, and the Texas-specific ethics posture are specific enough that a custom Claude deployment outperforms generic products by a wide margin in real measurement.
+
+**Mistake 2: Deploying without partner supervision under Rule 5.03.** This is the single biggest ethics risk. Designate a partner as the AI supervisor before you turn anything on, and document their monthly review cadence in writing. The supervision file is what you produce if the State Bar ever asks how you complied with Opinion 705.
+
+**Mistake 3: Using consumer Claude.ai or consumer ChatGPT for client work.** This is the practical reading of Opinion 705 and TDRPC Rule 1.05. Use the commercial API tier with a Data Processing Addendum and - where the matter involves PHI - a Business Associate Agreement.
+
+**Mistake 4: Overscoping the first deployment.** Firms that try to deploy all three agents in week one consistently fail. Start with the intake agent, prove ROI in 60 days, then expand. Trying to boil the ocean is the most common reason a deployment dies in committee.
+
+**Mistake 5: Skipping the measurement plan.** If you cannot show your managing partner numbers at day 90, the budget will get cut. Define your three metrics on day one - consultation booking rate, matter-open time, associate review hours - and instrument them from the very first day of the deployment, not retroactively.
+
+**Mistake 6: Ignoring the bilingual market.** Dallas County is 42.3% Hispanic. Firms that ship an English-only intake agent leave 8-15% of qualified intake on the table compared to firms running multilingual agents. Claude handles Spanish natively at near-parity quality.
+
+## How to pick an implementation partner
+
+If you are a Dallas firm evaluating AI implementation partners in 2026, ask these five questions.
+
+1. **Do you build on Anthropic's commercial Claude API with a Data Processing Addendum in place?** Anything else is an Opinion 705 exposure. Ask to see a sample DPA and to confirm the partner does not push your firm onto a shared multi-tenant consumer-tier deployment.
+2. **Can you produce three Texas law firm references with named partners willing to take a call?** Generic AI consultancies often cannot. The right partner has shipped to firms structurally similar to yours - same practice mix, same firm size, same matter management system.
+3. **What is your deployment timeline?** A real partner ships the first agent in 2-4 weeks. If they quote you six months, they are upselling enterprise consulting; if they quote you 48 hours, they are selling a generic SaaS wrapper with your firm name printed on it.
+4. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform and your data lives on their servers. Your firm should be able to walk away with the system prompts, the integration code, and the conversation logs.
+5. **How do you handle TDRPC Rule 5.03 supervision?** The answer should include a named partner relationship at your firm, a written supervision plan that maps to Opinion 705, and a documented monthly review process the supervising partner can sign off on.
+
+At manuv.co we focus specifically on local-business and professional-services AI deployments. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with Texas-specific ethics-compliance baked into every deployment - DPA, Rule 5.03 supervision plan, Opinion 705 alignment, bilingual configuration where it matters. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at a Dallas law firm?
+
+Initial deployment of a Claude-powered intake agent for a typical 6-15 attorney Dallas firm runs $7,500-$17,000 one-time, with $400-$700/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake + Claude Code conflict-check skill + document review) runs $18,000-$42,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 4-7 weeks for the intake agent alone once you account for the elimination of after-hours answering services and recovered paralegal hours.
+
+### Is using AI for client work allowed under Texas attorney ethics rules?
+
+Yes, under three conditions that map to State Bar of Texas Opinion 705 (February 2025). First, the AI tool must be deployed with appropriate confidentiality controls under TDRPC Rule 1.05 - the commercial Claude API with a Data Processing Addendum, not consumer Claude.ai or consumer ChatGPT. Second, a designated partner must supervise the deployment under TDRPC Rules 5.01 and 5.03. Third, the attorney remains personally responsible for any AI-assisted work product under TDRPC Rule 1.01 (competence).
+
+### What is the difference between Claude API and Claude.ai for a Dallas law firm?
+
+Consumer Claude.ai is a chat interface designed for individual users. The commercial Claude API is the developer-facing interface used by businesses - Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and, where applicable, a Business Associate Agreement covering HIPAA workflows. For confidential Texas client matters, only the commercial API (or Claude Enterprise with HIPAA-ready configuration) is appropriate under the practical reading of Opinion 705.
+
+### How long does it take to deploy an AI intake agent at a Dallas law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator and managing partner. Week 2 is build and soft-launch on web chat with transcript mirroring to a partner-monitored Slack channel. Weeks 3-4 are expansion to after-hours SMS and phone with monitoring. The full three-agent stack (intake, conflict-check skill, document review) takes 90 days end to end, with measurable ROI showing in the day-90 report.
+
+### Can AI agents handle Spanish-speaking clients in Dallas?
+
+Yes. Claude is natively multilingual and handles Spanish, Vietnamese, Mandarin, and the other major DFW languages with high fluency. Dallas County is 42.3% Hispanic with more than 60,000 limited-English speakers, so for DFW firms with meaningful Spanish-speaking intake (common in immigration, personal injury, family law, and criminal defense), we configure the agent to detect language on first contact and respond in kind. This is a quiet competitive advantage in neighborhoods like Oak Cliff, Pleasant Grove, and West Dallas where Spanish-first households are the norm.
+
+### What happens if Claude makes a mistake in client communication?
+
+Two safeguards. First, the intake agent's system prompt restricts it to triage and scheduling - it is explicitly instructed not to provide legal advice, which would risk both an unauthorized-practice-of-law issue and an inaccurate-information liability. Second, a designated partner reviews the agent's transcripts on a documented cadence under TDRPC Rule 5.03. If a mistake occurs, the attorney-of-record is responsible and can correct it directly with the client. In practice, in 12+ months of deployment data across our Texas firms, we have not seen a substantive client-harm error from the intake agent - the misclassifications we see are conservative ones (flagging a marginal lead for partner review rather than auto-declining it).
+
+### Will my staff lose their jobs?
+
+In our deployments, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service. The conflict-check skill returns 15-40 paralegal hours per month that get re-allocated to higher-value work like case prep and client communication. The document review agent shifts associate time from reading every page to validating Claude's pulled citations - the same associates produce more matter output per week. DFW firms in particular tend to grow into the recovered capacity rather than cutting staff, because the corporate-base demand is there to fill it.
+
+### How does the AI intake agent integrate with Clio, MyCase, Smokeball, or PracticePanther?
+
+All four have public APIs that the agent uses to create new contacts, draft matter records, attach intake notes, and schedule consultations. We have deployed against Clio Grow (the lead pipeline product), Clio Manage (the matter management product), MyCase, PracticePanther, Smokeball, and Filevine for Dallas firms. Integration typically takes 2-3 days of the 2-week deployment window. For firms running on-premises iManage or NetDocuments, the Claude Code skill writes locally so client data does not leave the firm's network.
+
+### What about HIPAA - we represent medical clients sometimes?
+
+Anthropic offers a Business Associate Agreement (BAA) for the commercial Claude API and for the Claude Enterprise HIPAA-ready configuration. When your firm signs the BAA, the API and Enterprise plan can be used in HIPAA-covered workflows. If your firm handles PHI in intake (common in plaintiff-side medical malpractice and certain employment matters), we configure the agent under the BAA and add HIPAA-specific data-handling controls. Note that the BAA does not cover Claude Free, Pro, Max, or Team plans - it is API and Enterprise only.
+
+### Can I see this working at another Dallas law firm before I commit?
+
+Yes. We have Texas client firms in Dallas, Fort Worth, and Plano willing to take reference calls with prospective clients. Reach out via the contact link and we will arrange an introduction with a managing partner at a similarly-sized firm in your practice mix.
+
+### What if our matter management system is on-premises rather than cloud?
+
+We deploy the Claude Code conflict-check skill locally so it can query an on-premises SQL Server, iManage, or NetDocuments instance without client data leaving the firm's network. The intake agent can also run in a hybrid pattern where conversation transcripts are summarized via the Claude API and the structured intake note is written to your on-premises matter management system. DFW firms with legacy on-premises infrastructure (common in long-established mid-size firms) are fully supported.
+
+### Does the Texas State Bar require disclosure to clients that we use AI?
+
+Opinion 705 does not mandate a specific client-disclosure script for AI use. However, the prevailing best practice in 2026 is to disclose AI assistance in two situations: (1) when a prospective client is interacting directly with an AI intake agent, the agent should identify itself as an AI assistant in its first message, and (2) when AI is used in a way that materially shapes work product (e.g., AI-drafted contract redlines), the engagement letter should reference the firm's use of AI tools. We provide a Texas-compliant disclosure template as part of every deployment.
+
+### How do I get started?
+
+Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We will walk through your firm's current intake and matter-open workflow, identify which of the three agents will return the most value first, and give you a concrete deployment plan and quote. There is no cost to the assessment call.
+
+## Sources
+- [Dallas Bar Association - over 11,800 lawyer members](https://www.dallasbar.org/)
+- [CBRE - Dallas-Fort Worth a Top-Five Market for Legal Services Growth (108 NLJ 500 firms, 4,369 attorneys)](https://www.cbre.ie/en/united%20states/people-and-offices/corporate-offices/dallas-ft-worth/dallas-fort-worth-media-center/dallas-fort-worth-a-top-five-market-for-legal-services-growth)
+- [State Bar of Texas Professional Ethics Committee Opinion 705 (Generative AI)](https://www.legalethicstexas.com/resources/opinions/opinion-705/)
+- [Texas Disciplinary Rules of Professional Conduct (Rule 1.05 Confidentiality, Rule 5.03 Supervision)](https://www.legalethicstexas.com/resources/rules/texas-disciplinary-rules-of-professional-conduct/)
+- [State Bar of Texas AI Toolkit](https://www.texasbar.com/Content/NavigationMenu/ForLawyers/State_Bar_of_Texas_AI_Toolkit/default.htm)
+- [Wolters Kluwer 2026 Future Ready Lawyer Survey](https://www.wolterskluwer.com/en/news/wolters-kluwer-releases-2026-future-ready-lawyer-survey-report)
+- [Clio 2025 Legal Trends Report](https://www.clio.com/resources/legal-trends/)
+- [USAFacts - Dallas County demographics (Hispanic population)](https://usafacts.org/data/topics/people-society/population-and-demographics/our-changing-population/state/texas/county/dallas-county/)
+- [Anthropic - Business Associate Agreements for Commercial Customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
+- [Cushman & Wakefield - Dallas-Fort Worth Legal Sector Evolving Amid Corporate Boom](https://www.cushmanwakefield.com/en/united-states/insights/dallas-fort-worth-legal-sector-evolving-amid-corporate-boom)
 
 ---

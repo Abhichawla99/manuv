@@ -35,6 +35,7 @@
 
 Below is the full index of in-depth, location-and-vertical-specific research articles published on manuv.co. Each article covers a specific industry in a specific U.S. city with implementation steps, ROI math, local regulatory notes, and FAQ answers.
 
+- [AI Agents for Law Firms in Dallas, TX: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-dallas-tx) - Complete 2026 guide to deploying AI agents at Dallas law firms. Claude-powered intake, conflict checks, document review. Texas Opinion 705 ethics, ROI math, and a 90-day plan.
 - [AI Agents for Law Firms in San Diego, CA: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-san-diego-ca) - Complete 2026 guide to deploying AI agents at San Diego law firms. Claude-powered intake, conflict checks, bilingual triage, California ethics rules, and a 90-day plan.
 - [AI Agents for Law Firms in San Antonio, TX: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-san-antonio-tx) - Complete 2026 guide to deploying AI agents at San Antonio law firms. Claude-powered bilingual intake, conflict checks, document review under Texas Opinion 705, ROI math, 90-day plan.
 - [AI Agents for Law Firms in Philadelphia, PA: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-philadelphia-pa) - Complete 2026 guide to deploying AI agents at Philadelphia law firms. Claude intake, conflict checks, document review, PA Opinion 2024-200 ethics, ROI math, 90-day plan.

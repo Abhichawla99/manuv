@@ -87,8 +87,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-dallas-tx",
+      "title": "AI Agents for Law Firms in Dallas, TX: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Dallas law firms. Claude-powered intake, conflict checks, document review. Texas Opinion 705 ethics, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-06-09",
+      "vertical": "legal",
+      "city": "Dallas",
+      "state": "TX",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3320
     }
   ],
-  "lastRunAt": "2026-06-03T09:15:03.452Z",
-  "totalPublished": 8
+  "lastRunAt": "2026-06-09T02:33:32.518Z",
+  "totalPublished": 9
 }
