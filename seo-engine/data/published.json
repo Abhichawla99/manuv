@@ -98,8 +98,19 @@
       "state": "TX",
       "topic": "ai-agents-implementation",
       "wordCount": 3320
+    },
+    {
+      "slug": "ai-agents-implementation-legal-san-jose-ca",
+      "title": "AI Agents for Law Firms in San Jose, CA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at San Jose law firms. Claude-powered intake, conflict checks, document review, California ethics, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-09",
+      "vertical": "legal",
+      "city": "San Jose",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-09T02:33:32.518Z",
-  "totalPublished": 9
+  "lastRunAt": "2026-06-09T09:14:50.144Z",
+  "totalPublished": 10
 }
