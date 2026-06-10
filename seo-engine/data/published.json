@@ -109,8 +109,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-austin-tx",
+      "title": "AI Agents for Law Firms in Austin, TX: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Austin law firms. Claude-powered intake, conflict checks, document review. Opinion 705 compliance, Travis County rules, ROI, 90-day plan.",
+      "publishedAt": "2026-06-10",
+      "vertical": "legal",
+      "city": "Austin",
+      "state": "TX",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-09T09:14:50.144Z",
-  "totalPublished": 10
+  "lastRunAt": "2026-06-10T09:15:04.519Z",
+  "totalPublished": 11
 }
