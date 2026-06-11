@@ -120,8 +120,19 @@
       "state": "TX",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-jacksonville-fl",
+      "title": "AI Agents for Law Firms in Jacksonville, FL: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Jacksonville law firms. Claude-powered intake, conflict checks, Florida Bar Opinion 24-1 compliance, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-11",
+      "vertical": "legal",
+      "city": "Jacksonville",
+      "state": "FL",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3380
     }
   ],
-  "lastRunAt": "2026-06-10T09:15:04.519Z",
-  "totalPublished": 11
+  "lastRunAt": "2026-06-11T09:14:00.466Z",
+  "totalPublished": 12
 }
