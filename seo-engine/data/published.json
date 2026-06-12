@@ -131,8 +131,19 @@
       "state": "FL",
       "topic": "ai-agents-implementation",
       "wordCount": 3380
+    },
+    {
+      "slug": "ai-agents-implementation-legal-fort-worth-tx",
+      "title": "AI Agents for Law Firms in Fort Worth, TX: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Fort Worth law firms. Claude-powered intake, conflict checks, and discovery review under Texas Opinion 705, with ROI math and a 90-day plan.",
+      "publishedAt": "2026-06-12",
+      "vertical": "legal",
+      "city": "Fort Worth",
+      "state": "TX",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3320
     }
   ],
-  "lastRunAt": "2026-06-11T09:14:00.466Z",
-  "totalPublished": 12
+  "lastRunAt": "2026-06-12T09:16:24.108Z",
+  "totalPublished": 13
 }
