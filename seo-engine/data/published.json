@@ -142,8 +142,19 @@
       "state": "TX",
       "topic": "ai-agents-implementation",
       "wordCount": 3320
+    },
+    {
+      "slug": "ai-agents-implementation-legal-columbus-oh",
+      "title": "AI Agents for Law Firms in Columbus, OH: 2026 Implementation Guide",
+      "metaDescription": "Complete guide to deploying AI agents at Columbus law firms in 2026. Claude-powered intake, conflict checks, document review, Ohio Board ethics, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-13",
+      "vertical": "legal",
+      "city": "Columbus",
+      "state": "OH",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3320
     }
   ],
-  "lastRunAt": "2026-06-12T09:16:24.108Z",
-  "totalPublished": 13
+  "lastRunAt": "2026-06-13T09:14:56.692Z",
+  "totalPublished": 14
 }
