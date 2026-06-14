@@ -153,8 +153,19 @@
       "state": "OH",
       "topic": "ai-agents-implementation",
       "wordCount": 3320
+    },
+    {
+      "slug": "ai-agents-implementation-legal-indianapolis-in",
+      "title": "AI Agents for Law Firms in Indianapolis, IN: 2026 Implementation Guide",
+      "metaDescription": "How Indianapolis law firms deploy Claude-powered intake, conflict-check, and document-review agents in 2026. Indiana ethics rules, ROI math, costs, and a 90-day plan.",
+      "publishedAt": "2026-06-14",
+      "vertical": "legal",
+      "city": "Indianapolis",
+      "state": "IN",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3126
     }
   ],
-  "lastRunAt": "2026-06-13T09:14:56.692Z",
-  "totalPublished": 14
+  "lastRunAt": "2026-06-14T09:13:56.404Z",
+  "totalPublished": 15
 }
