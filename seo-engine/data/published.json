@@ -164,8 +164,19 @@
       "state": "IN",
       "topic": "ai-agents-implementation",
       "wordCount": 3126
+    },
+    {
+      "slug": "ai-agents-implementation-legal-charlotte-nc",
+      "title": "AI Agents for Law Firms in Charlotte, NC: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Charlotte NC law firms. Claude-powered intake, conflict checks, document review. NC FEO 1, eCourts, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-15",
+      "vertical": "legal",
+      "city": "Charlotte",
+      "state": "NC",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3320
     }
   ],
-  "lastRunAt": "2026-06-14T09:13:56.404Z",
-  "totalPublished": 15
+  "lastRunAt": "2026-06-15T09:15:53.469Z",
+  "totalPublished": 16
 }
