@@ -175,8 +175,19 @@
       "state": "NC",
       "topic": "ai-agents-implementation",
       "wordCount": 3320
+    },
+    {
+      "slug": "ai-agents-implementation-legal-san-francisco-ca",
+      "title": "AI Agents for Law Firms in San Francisco, CA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at San Francisco law firms. Claude intake, conflict checks, document review. CA Bar Rule 1.6 AI amendments, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-16",
+      "vertical": "legal",
+      "city": "San Francisco",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-15T09:15:53.469Z",
-  "totalPublished": 16
+  "lastRunAt": "2026-06-16T09:15:18.554Z",
+  "totalPublished": 17
 }
