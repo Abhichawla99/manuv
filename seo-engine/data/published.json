@@ -186,8 +186,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-seattle-wa",
+      "title": "AI Agents for Law Firms in Seattle, WA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Seattle law firms. Claude-powered intake, conflict checks, document review. WSBA Opinion 2025-05, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-18",
+      "vertical": "legal",
+      "city": "Seattle",
+      "state": "WA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3320
     }
   ],
-  "lastRunAt": "2026-06-16T09:15:18.554Z",
-  "totalPublished": 17
+  "lastRunAt": "2026-06-18T09:16:40.330Z",
+  "totalPublished": 18
 }
