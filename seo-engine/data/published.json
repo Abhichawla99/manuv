@@ -197,8 +197,19 @@
       "state": "WA",
       "topic": "ai-agents-implementation",
       "wordCount": 3320
+    },
+    {
+      "slug": "ai-agents-implementation-legal-denver-co",
+      "title": "AI Agents for Law Firms in Denver, CO: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Denver law firms. Claude-powered intake, conflict checks, Rule Change 2026(02) compliance, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-06-19",
+      "vertical": "legal",
+      "city": "Denver",
+      "state": "CO",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3178
     }
   ],
-  "lastRunAt": "2026-06-18T09:16:40.330Z",
-  "totalPublished": 18
+  "lastRunAt": "2026-06-19T09:14:57.188Z",
+  "totalPublished": 19
 }
