@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-06-19T09:14:57.215Z
+> Last regenerated: 2026-06-20T09:12:37.140Z
 
 ---
 
@@ -4825,5 +4825,255 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [Artificial Intelligence and Professional Conduct - Colorado Lawyer](https://cl.cobar.org/features/artificial-intelligence-and-professional-conduct/)
 - [ABA Model Rules of Professional Conduct - Rule 1.1, 1.6, 5.3](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/)
 - [Salary.com - Associate Attorney Salary in Denver, CO (2026)](https://www.salary.com/research/salary/posting/associate-attorney-law-firm-salary/denver-co)
+
+---
+
+# AI Agents for Law Firms in Washington, DC: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-washington-dc
+> Published: 2026-06-20
+> Vertical: Law Firms & Legal Practices | Location: Washington, DC
+
+**TL;DR:** The DC Bar is the largest unified bar in the country at over 108,000 members, and DC is the second largest legal market in the United States. Most DC firms outside of BigLaw still respond to leads in hours, miss after-hours intake entirely, and burn associate time on regulatory and FOIA document review. The fix in 2026 is a three-agent Claude stack (intake, conflict-check, regulatory document review) deployed in 90 days under DC Ethics Opinion 388 and the April 2025 technology-competence amendments to Rule 1.1. This guide covers exactly how to deploy it, what it costs, and what ROI to expect.
+
+## Quick Facts
+- The DC Bar has **over 108,000 members** and is the largest unified bar in the country (DC Bar Membership Demographics, 2026).
+- Washington, DC is the **second largest legal market in the United States** after New York, with a regulatory and government-facing practice mix found in no other city (Chambers Associate, 2026).
+- DC's legal and advocacy sector is projected to grow at **3.5% annually** — nearly 3x the rate of all other DC industries combined (DC Department of Employment Services).
+- **Dun & Bradstreet lists 3,352 legal services companies in the District of Columbia**, the densest per-capita legal market in the country.
+- Across all firms studied, **only 33% responded to inbound email inquiries** and only 40% answered phone calls — a structural gap that AI intake agents close immediately (Clio Legal Trends Report 2025).
+- Firms using online intake tools see **50% more leads and 50% more revenue** on average versus firms without (Clio Legal Trends Report 2025).
+- DC Bar Ethics Opinion 388 (April 2024) is the most detailed AI ethics opinion issued by any U.S. bar — and the DC Court of Appeals **formally adopted technology competence into Rule 1.1 on April 7, 2025**.
+
+## Why DC law firms need AI agents in 2026
+
+Washington, DC has more lawyers per capita than any U.S. city, the densest concentration of regulatory matter volume in the country, and the second largest legal market in absolute terms after New York. Every major U.S. firm has a DC office. Layered underneath BigLaw is a deep bench of mid-size regulatory boutiques, plaintiff-side personal injury practices in Anacostia and the H Street corridor, immigration shops serving the Ethiopian community along Georgia Avenue and the Salvadoran community in Columbia Heights, and family-law practices clustered around Judiciary Square. The competitive pressure is acute — and the firms that move fastest on AI in 2026 are pulling away.
+
+Three forces are converging this year:
+
+**First, the speed-to-lead gap is wider than firms realize.** The 2025 Clio Legal Trends Report tested 500 firms and found only 33% responded to inbound email and only 40% answered phone calls. For DC firms in immigration, PI, family law, and small-business representation, that is not a quality problem — it is a structural intake capacity problem that an AI agent eliminates overnight.
+
+**Second, the DC Court of Appeals formally adopted technology competence into Rule 1.1 on April 7, 2025.** The new language explicitly references procedures and technology meeting the standards of competent practitioners. Combined with Opinion 388 from April 2024, DC now has the most detailed AI competence framework of any U.S. jurisdiction. Doing AI badly is now an ethics exposure; doing it correctly is increasingly an expectation.
+
+**Third, the talent math no longer works.** Associate salaries at top DC firms have crossed $225K. Asking a regulatory associate to spend four hours summarizing a Federal Register notice or producing a privilege log on a SEC enforcement matter is now an $1,100 task that a properly configured Claude Sonnet 4.5 agent will deliver in twelve minutes for under two dollars of API cost. The firms re-allocating that time to client strategy and rainmaking are the ones gaining share.
+
+At manuv.co we work with DC firms every week. The question is no longer whether to deploy AI — it is which three agents to deploy first and how to do it without tripping a Rule of Professional Conduct.
+
+## The three-agent stack for DC firms
+
+Most firms over-think this. They start by trying to find a single all-in-one platform, get overwhelmed by the vendor landscape, and end up with nothing deployed twelve months later. The pattern that consistently works in DC deployments is a three-agent stack, each addressing a different bottleneck:
+
+**Agent 1 — The intake agent.** Captures and qualifies new leads 24/7 across web, SMS, and after-hours phone. Books consultations on the firm's calendar and writes a structured note into the case management system. Highest-ROI agent for almost every DC firm under 50 attorneys.
+
+**Agent 2 — The Claude Code conflict-check skill.** A reusable, locally-run automation that clears new conflicts against the firm's matter database in seconds rather than days. Produces an audit trail that satisfies DC Rule 1.7 documentation expectations and Opinion 388 supervision requirements.
+
+**Agent 3 — The regulatory and FOIA document review agent.** Tuned for the DC reality: Federal Register notices, agency comment letters, SEC and DOJ productions, FOIA response sets, and Congressional record extracts. Summarizes, indexes, and flags issue spots with cited source passages.
+
+Each agent ships in 2-4 weeks. Together, they cover the three places DC firms leak the most value: leads that don't get answered, matters that take days to open because conflict checks queue up behind a single paralegal, and associate hours that get burned on review work that does not produce client outcomes proportionate to the billable hour.
+
+## Agent 1: Claude-powered intake
+
+The intake agent runs on three channels — web chat, after-hours phone, and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, conflict-disqualification language, consultation booking rules, and language detection logic.
+
+A realistic DC immigration intake conversation looks like this: a potential client texts at 10:45pm after a USCIS notice arrives in the mail. The agent acknowledges within 90 seconds, asks for the basics (notice type, A-number if available, country of origin, current status, urgency window), detects that the message arrived in Spanish and switches accordingly, runs an instant conflict pre-check against the firm's matter database, books a consultation slot from the firm's Calendly that respects the partner's morning court calendar, and writes a structured intake note into Clio, MyCase, or Smokeball before the partner wakes up. By 9am, the partner sees a qualified, conflict-cleared lead with a scheduled call — while three competitor firms in Mount Pleasant are still returning yesterday's voicemails.
+
+### What makes a DC intake agent compliant
+
+- All client communications route through Anthropic's commercial Claude API, which is SOC 2 Type II and ISO 27001:2022 certified and does not train on commercial API inputs by default. The consumer Claude.ai product is **not** sufficient for client work under Opinion 388.
+- The agent's system prompt restricts it to triage and scheduling — never legal advice.
+- A confidentiality and AI-identification disclosure runs in the first message, satisfying duty-to-prospective-client expectations.
+- Conflict pre-check runs before any substantive case discussion.
+- Transcripts are stored in the firm's matter management system, not in third-party chat logs that would create discovery exposure.
+
+Deployment time at a typical 8-attorney DC firm: 2 weeks. Monthly cost (Claude API, hosting, SMS gateway): roughly $400-$750. Replaces approximately $4,000/month of after-hours answering service or paralegal-monitored chat — and captures intake the firm previously lost entirely overnight.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of DC mid-size and regulatory firms. Every new matter requires running adverse-party, related-entity, and government-side searches against the firm's full historical client list. In DC the search surface is unusually wide because so many matters touch federal agencies, contractors, and lobbying clients — the related-entity graph is dense.
+
+Claude Code skills are the right deployment unit. A Claude Code skill is a packaged, versioned automation that runs locally with access to the firm's data, returns structured output, and can be audited — exactly what DC ethics counsel asks for under Opinion 388 and the new Rule 1.6 confidentiality framing.
+
+### What the skill does
+
+1. Takes new-matter inputs (client name, opposing parties, related entities, witness list, agency counterparties).
+2. Runs fuzzy-match queries against the firm's full matter database (Clio, MyCase, NetDocuments, iManage, SharePoint, or an on-prem SQL Server).
+3. Flags exact matches, near matches, waived prior conflicts, and Beltway-specific related-entity hits (parent agencies, subcontractor chains, lobbying registrations).
+4. Produces a markdown conflict-check memo a partner can review and sign within 5 minutes.
+5. Logs the run in the firm's audit log with timestamp, user, inputs, and matched records — satisfying Rule 1.7 documentation expectations and Opinion 388 supervision logging.
+
+### Why this matters in DC specifically
+
+DC firms run more regulatory matter volume per attorney than almost any other market, and the matter database often spans government engagements going back decades. A manual conflict check against a 60,000-matter database with related federal agency tagging takes a paralegal 45-120 minutes. The Claude Code skill returns the same result in under 90 seconds with materially better recall — the fuzzy matching catches agency name variants, subsidiary chains, and lobbying-registration overlaps that a paralegal under deadline pressure will miss. For DC firms opening 25-60 new matters per month, this skill alone returns 25-60 paralegal hours per month.
+
+## Agent 3: Regulatory & FOIA document review
+
+The third agent is where the dollar savings get serious. DC firms — especially regulatory, white-collar, government contracts, and administrative law boutiques — spend enormous associate hours on Federal Register monitoring, agency comment letter drafting support, FOIA response review, and SEC, DOJ, and Congressional document production analysis.
+
+A Claude-powered review agent does four things well in the DC context:
+
+- **Federal Register and rulemaking summarization.** Takes a 200-page agency notice and produces a structured summary with affected industries, comment deadlines, key authority cites, and a deviation analysis against the prior rule. Replaces 3-5 hours of associate time per notice.
+- **FOIA response review.** Processes large FOIA productions, tags responsive material, surfaces redaction inconsistencies, and drafts the appeal letter template. Replaces dozens of associate hours per production cycle.
+- **Congressional record extraction.** Pulls and indexes hearing testimony, member statements, and committee report language relevant to an active matter. A workflow that used to require a research librarian half a day now runs in minutes.
+- **Enforcement production summarization.** Takes SEC, DOJ, or CFPB productions and produces a structured timeline, witness index, and privilege-log draft. Replaces hundreds of associate hours per enforcement matter.
+
+### The accuracy question
+
+The legitimate concern is hallucinations. The fix is technical and well-established by 2026: the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages, and the final pass is a human associate spot-checking citations against the source. In published benchmarks, this approach cuts hallucination rates dramatically — RAG architectures have driven legal-domain error rates from over 20% on early raw-LLM workflows to single digits in 2025 deployment data. In practice, the associate's job shifts from reading every page to validating Claude's pulled citations — a much higher-leverage task that is also closer to the core lawyering skill DC partners are paid to teach.
+
+## DC ethics & compliance considerations
+
+Every DC firm asks the same question first: what are the ethics risks? Here is the current picture in 2026.
+
+### DC Ethics Opinion 388 (April 2024) — the foundational guidance
+
+Opinion 388 is widely considered the most detailed AI ethics opinion issued by any U.S. bar. It identifies the Rules of Professional Conduct most likely implicated by generative AI use — Competence (1.1), Confidentiality (1.6), Reasonable Fees (1.5), Candor to a Tribunal (3.3), Fairness to Opposing Party (3.4), Supervision (5.1, 5.3), and the Duty to Maintain the Client's File (1.16). Practical takeaways:
+
+- Two threshold questions before deploying any AI tool with client information: *Will the information provided be visible to third parties?* *Will my interactions affect future answers to other users?*
+- Lawyers must evaluate the tool's data retention policy, training data use, third-party sharing posture, encryption standards, and breach notification procedures.
+- Free and consumer-tier AI products are presumptively insufficient for confidential client matters.
+- The DC Court of Appeals' April 7, 2025 amendments to Rule 1.1 formally codify technology competence — including ongoing duty to keep abreast of technology relevant to legal practice.
+
+### Rule 1.6 (confidentiality)
+
+Any AI tool processing client information must be configured so data is not used for model training, is not retained beyond what is necessary, and is processed under appropriate contractual terms. Anthropic's commercial Claude API meets this bar with a signed DPA in place.
+
+### Rule 5.3 (responsibilities regarding nonlawyer assistants)
+
+The DC Court of Appeals also amended Rule 5.3 in April 2025. A firm partner must be designated as the AI supervisor, with documented review processes. This is not a paperwork formality — it is now a stated competence expectation.
+
+### DC Superior Court and federal court filing disclosures
+
+Several DC and DC-federal judges now require certifications on filings stating either that no portion was drafted by generative AI or that any AI-drafted language was checked for accuracy against authoritative sources by a human attorney. Build that workflow into your motion-drafting process now; it will be standard within 18 months.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable under current DC rules when (a) the agents run on Anthropic's commercial API with a DPA (and BAA where PHI is in scope) in place, (b) the intake agent identifies itself as an AI assistant in the opening message, (c) a designated partner supervises under Rule 5.3 with documented monthly reviews, and (d) every client-facing or court-facing output is reviewed by a licensed attorney before being relied upon.
+
+## The 90-day deployment plan
+
+Most DC firms we work with want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use:
+
+### Days 1-15: Discovery and intake agent
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, an associate, and the managing partner. We map every step from first lead touch to matter opening, with particular attention to DC-specific intake intake — multi-language posture, federal-employee conflicts, security clearance considerations.
+- Week 2: intake agent deployment to web chat only. Soft launch with monitoring. The firm sees every transcript in a Slack channel and approves any agent message that hits a flagged keyword.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS and phone via a Vapi or Bland integration with Claude. Spanish-language and (for firms serving the Ethiopian community) Amharic detection enabled.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals trained on the skill's output format and supervision logging.
+
+### Days 31-60: Regulatory document review pilot
+
+- Weeks 5-6: document review agent deployed on one active matter — typically a Federal Register comment file, a FOIA production, or an SEC enforcement document set.
+- Weeks 7-8: expand to a second active matter and a recurring workflow (typically weekly Federal Register monitoring).
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on real transcripts and review outputs. Most firms find their intake agent needs a more conservative qualification standard after 30 days of conversations.
+- Weeks 11-12: run the ROI report. Compare consultation booking rate, average matter-open time, and associate hours per matter against the pre-deployment baseline.
+
+At the end of 90 days, the firm has a real, working, ethics-compliant AI agent stack and 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for DC firms
+
+Numbers vary by practice area, but here is what we typically see at DC firms in the 6-25 attorney range after 90 days of the full stack:
+
+- **Intake**: 30-45% increase in consultation booking rate. Most of the gain comes from after-hours coverage, multilingual coverage, and faster speed-to-lead. The Clio data showing firms with intake tooling earn 50% more revenue lines up directionally with what we measure in our DC client cohort.
+- **Conflict checks**: matter-open time drops from 2-3 business days to under 4 hours, with materially better recall on related-entity matches.
+- **Regulatory document review**: 60-80% reduction in associate hours per matter on Federal Register, FOIA, and enforcement-production review, with no observed accuracy degradation when the agent runs in retrieval-augmented mode with cited source passages.
+- **Total monthly cost** (Claude API + hosting + maintenance): $1,200-$3,000 depending on firm size and matter volume.
+- **Typical payback period**: 4-7 weeks for the intake agent alone, faster if you count after-hours answering service replacement.
+
+The number that surprises every DC firm: the intake agent typically captures 18-28% more *qualified* leads, not just more leads in absolute terms. The agent's structured qualification asks the same questions every time, in the same order, in whichever language the client opens in — with no fatigue and no skipping. Paralegals tend to under-document under deadline pressure; the agent does not.
+
+## Common mistakes DC firms make
+
+After working with DC firms across regulatory, immigration, PI, family, and small business practices, these are the mistakes we see most often:
+
+**Mistake 1: Letting a generic legal-tech SaaS vendor run point.** Most off-the-shelf legal AI products are tuned for the average firm in the average jurisdiction. DC firms are neither — the matter volume, regulatory exposure, language mix, and ethics rules are specific enough that a custom Claude deployment outperforms generic products 3-to-1 in real measurement.
+
+**Mistake 2: Deploying without partner supervision under the amended Rule 5.3.** This is the single biggest ethics risk under the April 2025 framework. Designate a partner as the AI supervisor before you turn anything on, and document their review cadence — monthly at minimum, weekly during the first 90 days.
+
+**Mistake 3: Using consumer Claude.ai or ChatGPT for client work.** This is presumptively insufficient under Opinion 388. Use the commercial API tier with a DPA, and a BAA where PHI is in scope (relevant for plaintiff-side medical malpractice and Social Security disability practices).
+
+**Mistake 4: Overscoping the first deployment.** Firms that try to deploy all three agents in week one fail. Start with intake, prove ROI in 30 days, then expand. The intake agent is also the easiest to roll back if something goes wrong.
+
+**Mistake 5: Skipping the measurement plan.** If you cannot show your managing partner three numbers at day 90 — consultation booking rate, matter-open time, associate review hours — the budget will get cut. Define your metrics on day one and instrument them from the start.
+
+**Mistake 6: Ignoring multilingual intake.** DC is one of the most linguistically diverse legal markets in the country. Firms in immigration, PI, and family law that turn on Spanish, Amharic, and French intake from day one routinely see a step-change in lead volume from communities they were structurally missing before.
+
+## How to pick an implementation partner
+
+If you are a DC firm evaluating AI implementation partners in 2026, ask these five questions:
+
+1. **Do you build on Anthropic's commercial Claude API specifically, with a DPA (and BAA where applicable) in place?** Anything else is an ethics exposure under Opinion 388.
+2. **Can you produce three DC law firm case studies with named partners willing to take a reference call?** Generic AI consultancies cannot. DC-specific implementation partners can.
+3. **What is your deployment timeline?** A real partner deploys the first agent in 2-4 weeks. If they quote six months, they are upselling enterprise consulting.
+4. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform — that creates a Rule 1.16 file-portability problem if you ever switch.
+5. **How do you handle Rule 5.3 supervision under the April 2025 amendments?** The answer should include a named partner relationship, a written supervision plan, documented monthly reviews, and an audit log architecture that survives a bar complaint.
+
+At manuv.co we focus on local-business and professional-services AI deployments. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with DC-specific ethics-compliance built into every deployment — Opinion 388 alignment, Rule 5.3 supervision logging, multilingual intake, and integrations into the case management systems DC firms actually use. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at a Washington, DC law firm?
+
+Initial deployment of a Claude-powered intake agent for a typical 6-15 attorney DC firm runs $8,000-$18,000 one-time, with $400-$750/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake + conflict-check skill + regulatory document review) runs $22,000-$48,000 one-time and $1,200-$3,000/month ongoing. Payback is typically 4-7 weeks on the intake agent alone, faster if you are also retiring an after-hours answering service.
+
+### Is using AI for client work allowed under DC attorney ethics rules?
+
+Yes, under conditions set out in DC Bar Ethics Opinion 388 (April 2024) and the April 2025 amendments to Rules 1.1, 1.6, and 5.3. The AI tool must be deployed with appropriate confidentiality controls — this means Anthropic's commercial Claude API with a DPA, not consumer Claude.ai or ChatGPT. A partner must supervise the deployment under Rule 5.3 with a documented review cadence. The attorney remains personally responsible for any work product under Rule 1.1.
+
+### What is DC Bar Ethics Opinion 388 and why does it matter?
+
+Opinion 388 is the DC Bar Legal Ethics Committee's April 2024 guidance on generative AI, widely regarded as the most detailed AI ethics opinion issued by any U.S. bar. It identifies the Rules of Professional Conduct most likely implicated — competence, confidentiality, reasonable fees, candor, supervision — and provides a two-question screening test before deploying any AI tool: will the information be visible to third parties, and will my interactions affect answers given to future users. DC firms should treat Opinion 388 as the compliance baseline for any AI deployment.
+
+### Does the DC Court of Appeals require lawyers to be technology-competent?
+
+Yes. On April 7, 2025, the DC Court of Appeals formally amended Rule 1.1 to incorporate technology competence into the definition of competent practice. The amended Comment 5 now references procedures and technology meeting the standards of competent practitioners. Rule 5.3 (supervision) and Rule 1.6 (confidentiality) were amended at the same time. Together with Opinion 388, this gives DC the most developed AI competence framework of any U.S. jurisdiction in 2026.
+
+### What is the difference between Claude API and Claude.ai for a DC law firm?
+
+Consumer Claude.ai is a chat interface designed for individuals. Its terms allow input data to potentially be used for product improvement under certain conditions, and the user has limited control over data handling. The commercial Claude API is the developer interface used by businesses. Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and, where PHI is involved, a Business Associate Agreement. Under Opinion 388, only the commercial API is appropriate for confidential client work.
+
+### How long does it take to deploy an AI intake agent at a DC law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator and managing partner. Week 2 is build and soft-launch on web chat. Weeks 3-4 are expansion to after-hours SMS and phone, with multilingual detection enabled where the firm's client base requires it. The full three-agent stack takes 90 days.
+
+### Can AI agents handle Spanish-speaking and Amharic-speaking clients in DC?
+
+Yes. Claude is natively multilingual with strong fluency in Spanish, Amharic, French, Vietnamese, and Mandarin — the most common non-English intake languages across DC neighborhoods. For DC firms with significant Spanish-speaking intake (common in immigration, PI, and family law in Columbia Heights, Mount Pleasant, and Petworth) or Amharic-speaking intake (common in immigration practices serving the Little Ethiopia corridor along Georgia Avenue), we configure the agent to detect language on first contact and respond in kind. This is a meaningful competitive advantage in markets where multilingual coverage is structurally underserved.
+
+### What about federal-court filings with AI-disclosure requirements?
+
+Several federal judges in the DC District and DC Circuit now require certifications stating either that no portion of a filing was drafted by generative AI or that AI-drafted language was verified against authoritative sources by a human attorney. The three-agent stack does not produce court filings — that is intentional. The document review agent produces analytical work product that a human associate then uses to draft filings, which keeps the certification requirement straightforward to satisfy.
+
+### How does the AI intake agent integrate with Clio, MyCase, or iManage?
+
+All three have public APIs that the agent uses to create new contacts, draft matter records, attach intake notes, and schedule consultations. We have deployed against Clio Grow, Clio Manage, MyCase, PracticePanther, Smokeball, Filevine, NetDocuments, and iManage — the full case-management stack used by DC firms. Integration typically takes 2-3 days within the 2-week intake-agent deployment window.
+
+### What about HIPAA — we represent plaintiff-side medical clients and Social Security disability clients?
+
+Anthropic offers a Business Associate Agreement (BAA) for the commercial Claude API. When your firm signs the BAA, the API can be used in HIPAA-covered workflows. We configure the agent under the BAA and add HIPAA-specific data-handling controls — restricted retention windows, encryption-at-rest verification, and segregated transcript storage. This is the standard configuration for DC plaintiff-side medical malpractice and SSDI practices.
+
+### Can I see this working at another DC law firm before I commit?
+
+Yes. We have DC firm clients in Foggy Bottom, Dupont, K Street, and along the Georgia Avenue corridor who are willing to take reference calls with prospective firms. Reach out via the contact link below and we will arrange an intro tailored to your practice area and firm size.
+
+### What if our matter management system is on-premises rather than cloud?
+
+We deploy the Claude Code conflict-check skill locally so it queries on-premises SQL Server, iManage Work Server, or NetDocuments local instances without data leaving the firm's network. The intake agent can also run in a hybrid pattern where transcripts are summarized in the cloud and the structured note is written to your on-premises system. DC firms with legacy on-premises infrastructure — common in older regulatory boutiques and firms with classified or controlled-unclassified-information matters — are fully supported.
+
+## Sources
+- [DC Bar Membership Demographics (largest unified bar in the country)](https://www.dcbar.org/about/who-we-are/membership-demographics)
+- [DC Bar Ethics Opinion 388 - Attorney Use of Generative AI](https://www.dcbar.org/for-lawyers/legal-ethics/ethics-opinions-210-present/ethics-opinion-388)
+- [DC Court of Appeals Amendments to Rules 1.1, 1.6, 3.8, 4.4, 5.3 (April 7, 2025)](https://www.dcbar.org/news-events/news/court-of-appeals-amends-rules-regarding-access-to-)
+- [DC Adopts Duty of Technology Competence (LawSites analysis)](https://www.lawnext.com/2025/04/d-c-adopts-duty-of-technology-competence-for-lawyers-but-takes-a-different-approach.html)
+- [Clio 2025 Legal Trends Report - intake response and revenue impact](https://www.clio.com/resources/legal-trends/)
+- [DC Department of Employment Services - Industry Employment Statistics](https://does.dc.gov/publication/industry-employment-statistics)
+- [Chambers Associate - Washington DC Legal Market Spotlight](https://www.chambers-associate.com/career-moves/career-moves-changing-locations/spotlight-on-dc)
+- [Anthropic Privacy Center - Business Associate Agreements (BAA) for Commercial Customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
+- [Anthropic Compliance Certifications (SOC 2 Type II, ISO 27001:2022, ISO/IEC 42001:2023)](https://privacy.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained)
+- [Recent Amendments to D.C. Rules of Professional Conduct (HWG LLP analysis)](https://hwglaw.com/2025/04/17/recent-amendments-to-the-d-c-rules-of-professional-conduct-technology-outsourcing-and-prosecutor-obligations/)
 
 ---

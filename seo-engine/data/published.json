@@ -208,8 +208,19 @@
       "state": "CO",
       "topic": "ai-agents-implementation",
       "wordCount": 3178
+    },
+    {
+      "slug": "ai-agents-implementation-legal-washington-dc",
+      "title": "AI Agents for Law Firms in Washington, DC: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Washington, DC law firms. Claude-powered intake, conflict checks, regulatory document review, and a 90-day plan under DC Opinion 388.",
+      "publishedAt": "2026-06-20",
+      "vertical": "legal",
+      "city": "Washington",
+      "state": "DC",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-19T09:14:57.188Z",
-  "totalPublished": 19
+  "lastRunAt": "2026-06-20T09:12:37.112Z",
+  "totalPublished": 20
 }
