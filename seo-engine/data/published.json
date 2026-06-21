@@ -219,8 +219,19 @@
       "state": "DC",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-boston-ma",
+      "title": "AI Agents for Law Firms in Boston, MA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Boston law firms. Claude intake, conflict checks, document review. Mass. ethics, BBA guidance, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-21",
+      "vertical": "legal",
+      "city": "Boston",
+      "state": "MA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-20T09:12:37.112Z",
-  "totalPublished": 20
+  "lastRunAt": "2026-06-21T09:13:17.731Z",
+  "totalPublished": 21
 }
