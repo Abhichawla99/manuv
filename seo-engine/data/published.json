@@ -241,8 +241,19 @@
       "state": "TN",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-detroit-mi",
+      "title": "AI Agents for Law Firms in Detroit, MI: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying Claude-powered AI agents at Detroit law firms. Intake, conflict checks, document review. Michigan ethics rules, Seither sanctions, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-06-26",
+      "vertical": "legal",
+      "city": "Detroit",
+      "state": "MI",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-25T11:44:47.077Z",
-  "totalPublished": 22
+  "lastRunAt": "2026-06-26T09:15:02.775Z",
+  "totalPublished": 23
 }

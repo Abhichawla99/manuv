@@ -35,6 +35,7 @@
 
 Below is the full index of in-depth, location-and-vertical-specific research articles published on manuv.co. Each article covers a specific industry in a specific U.S. city with implementation steps, ROI math, local regulatory notes, and FAQ answers.
 
+- [AI Agents for Law Firms in Detroit, MI: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-detroit-mi) - Complete 2026 guide to deploying Claude-powered AI agents at Detroit law firms. Intake, conflict checks, document review. Michigan ethics rules, Seither sanctions, ROI math, and a 90-day plan.
 - [AI Agents for Law Firms in Nashville, TN: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-nashville-tn) - Complete 2026 guide to deploying AI agents at Nashville law firms. Claude-powered intake, conflict checks, document review, Tennessee ethics, ROI math, 90-day plan.
 - [AI Agents for Law Firms in Boston, MA: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-boston-ma) - Complete 2026 guide to deploying AI agents at Boston law firms. Claude intake, conflict checks, document review. Mass. ethics, BBA guidance, ROI math, 90-day plan.
 - [AI Agents for Law Firms in Washington, DC: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-washington-dc) - Complete 2026 guide to deploying AI agents at Washington, DC law firms. Claude-powered intake, conflict checks, regulatory document review, and a 90-day plan under DC Opinion 388.
