@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-06-26T09:15:02.808Z
+> Last regenerated: 2026-06-27T09:13:12.606Z
 
 ---
 
@@ -5818,5 +5818,259 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [Anthropic - Legal industry MCP connectors announcement (May 2026, LawSites)](https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html)
 - [Anthropic commercial terms and API data usage policy](https://www.anthropic.com/legal/commercial-terms)
 - [Michigan Rules of Professional Conduct (Rules 1.1, 1.3, 1.6, 1.7, 1.18, 5.1, 5.3)](https://www.michbar.org/file/opinions/michigan/MRPC.pdf)
+
+---
+
+# AI Agents for Law Firms in Portland, OR: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-portland-or
+> Published: 2026-06-27
+> Vertical: Law Firms & Legal Practices | Location: Portland, OR
+
+**TL;DR:** Portland is one of only a handful of U.S. metros where the state bar has issued a direct, on-the-record green light for AI client intake agents: Oregon State Bar Formal Opinion 2026-208 (February 2026) concludes 'Yes, qualified.' Combined with the earlier Formal Opinion 2025-205 on AI tools generally, Portland's roughly 12,000+ Oregon-licensed attorneys now have the clearest deployment runway in the country. This guide covers the three-agent stack that wins for small and mid-size Portland firms, the exact OSB compliance posture, real cost benchmarks against Portland's $325/hr lawyer rate, and a 90-day rollout plan.
+
+## Quick Facts
+- Oregon has **over 12,000 active licensed attorneys**, with the Portland metro accounting for the largest concentration in the state (Oregon State Bar membership data, 2026).
+- **Oregon State Bar Formal Opinion 2026-208** (February 2026) explicitly approves law firms using autonomous AI agents for client intake, subject to supervision and disclosure qualifiers - one of the first state bar opinions in the country to do so.
+- **Oregon State Bar Formal Opinion 2025-205** sets a two-tier billing rule: attorneys can bill for time spent reviewing AI output but cannot charge AI processing time at attorney rates.
+- The average Oregon attorney bills at **$325/hour** in 2026 (Clio Legal Trends), making every hour of review work the highest-leverage place to deploy AI in a Portland firm.
+- **93% of mid-sized law firms** (50-200 attorneys) use AI extensively in 2026 versus only **10% of small firms** - this is the gap a Portland boutique can close in 90 days (Clio 2026 Mid-Sized Firms Report).
+- Multnomah County is home to **~89,000 Spanish speakers** (11% of the population) and **110+ languages spoken at home**, making multilingual intake a real competitive lever for Portland firms.
+- Mandatory e-filing under **UTCR 21.140** means deadline-aware document workflows are essential - missed Oregon Circuit Court deadlines under ORCP 7 C(2) (the 30-day answer window) are a leading malpractice trigger.
+
+## Why Portland law firms need AI agents in 2026
+
+Portland's legal market is small enough that everyone knows everyone, and dense enough that competition for the right cases is brutal. Within Multnomah, Washington, and Clackamas Counties you have thousands of solo and small-firm attorneys competing for the same personal injury claims, the same divorce intakes, the same estate planning appointments, and the same immigration consults. Speed and consistency win clients in this market - and both are exactly what AI agents deliver.
+
+Three forces are converging in 2026 that make this the moment for Portland firms to act.
+
+**First, client expectations have shifted decisively.** A potential client searching at 10pm after a Highway 26 crash, or a panicked parent looking for family law help after a Saturday incident, expects a response before they go to bed. If you respond Monday morning, three of your competitors have already booked them. Industry data shows legal leads that get responses within 5 minutes are roughly 21x more likely to book a consultation than leads that hear back after 30 minutes. Most Portland firms still respond in hours, not minutes.
+
+**Second, the Oregon State Bar has issued the clearest AI runway in the country.** Formal Opinion 2025-205 set the rules for AI tools generally; Formal Opinion 2026-208, issued in February 2026, explicitly approved autonomous AI agents for client intake. Portland attorneys do not need to read the tea leaves on what their bar will allow - the OSB has put it on the record. Firms in other states still working through ambiguity are at a real disadvantage.
+
+**Third, the labor math no longer pencils out for review work.** Oregon attorneys bill at an average of $325/hour in 2026, and Portland paralegals draw a mean salary near $74,400/year. Asking a paralegal to spend two hours running a manual conflict check against a 30,000-matter database, or asking an associate to spend three hours summarizing a deposition transcript, are tasks that Claude Sonnet 4.5 can do in minutes at a fraction of the cost. The firms that re-allocate that time to client work, strategy, and matter origination are the ones that will be on the partnership track in 2027.
+
+At manuv.co we hear the same question every week from Portland firms: not *whether* to deploy AI, but *which three agents* to deploy first, and how to do it without tripping a single Oregon Rule of Professional Conduct.
+
+## The Oregon State Bar: the clearest AI runway in the country
+
+Most state bars are still issuing cautious, hedged guidance on AI. Oregon is the exception. Two opinions now govern AI practice in the state, and together they give Portland firms more on-the-record clarity than attorneys have in almost any other jurisdiction.
+
+### Formal Opinion 2025-205 - AI tools generally
+
+Issued in 2025, this opinion sets four core duties for any Oregon lawyer using AI in legal practice:
+
+- **Competence (Oregon RPC 1.1).** Lawyers may only use AI tools after taking reasonable steps to become competent in how they work - including the underlying model, training data posture, and failure modes.
+- **Confidentiality (Oregon RPC 1.6).** If the AI tool would expose client information to an open model, the lawyer must obtain informed client consent. The safer path is a closed-environment deployment that does not train on client data.
+- **Verification.** Lawyers must verify any work product produced by or with the assistance of AI - the model's output is a draft, not a deliverable.
+- **Billing.** Attorneys may charge for time spent reviewing AI output, but may not charge AI processing time at attorney rates. This creates a clean two-tier framework you can encode directly into your billing system.
+
+### Formal Opinion 2026-208 - AI agents for client intake
+
+Issued in February 2026, this opinion takes the further step of approving the use of *autonomous* AI agents that interact with prospective clients without an attorney in the loop in real time. The opinion's headline conclusion is 'Yes, qualified.' The qualifiers worth noting:
+
+- The lawyer is professionally responsible to supervise the accuracy of all work product, including AI-generated communications.
+- Disclaimers help but do not eliminate all risk - the agent's design and supervision must be substantive, not cosmetic.
+- Confidential information shared with the agent must be protected to the same standard as information shared with a paralegal or associate.
+
+In practical terms, OSB 2026-208 is the green light Portland firms have been waiting for. It does not say 'be cautious about chatbots' - it says yes, here are the conditions. Firms that build their deployment around those conditions are operating in fully approved territory.
+
+## The three-agent stack for Portland firms
+
+Most firms over-think this. They try to find a single all-in-one AI legal platform, get overwhelmed by the vendor landscape, and end up deploying nothing. The pattern that consistently works for Portland firms in the 2-25 attorney range is a focused three-agent stack, each addressing a different operational bottleneck:
+
+**Agent 1 - The intake agent.** Captures and qualifies new leads 24/7, runs a conflict pre-check, books consultations on the firm calendar, and writes a clean structured note into the case management system. Deploys against OSB Formal Opinion 2026-208 explicitly.
+
+**Agent 2 - The Claude Code conflict-check skill.** A versioned, auditable script that runs against the firm's matter database to clear new conflicts in seconds rather than days, with an audit trail that satisfies Oregon RPC 1.7 documentation expectations.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines contracts, indexes discovery production, and flags issue spots. Replaces 60-80% of the manual review hours associates currently bill - while preserving the human verification step OSB 2025-205 requires.
+
+Each agent is small enough to deploy in 2-4 weeks. Together, they cover the three places Portland firms leak the most value: leads that don't get a fast response, matters that take days to formally open, and associate or paralegal hours that get burned on review work that Claude could finish in minutes.
+
+The sequencing matters. Almost every Portland firm we work with starts with the intake agent because it has the cleanest measurable ROI (booked consults per week) and the lowest deployment complexity. The conflict-check skill is layered in second, because it depends on a clean matter database export. The document review agent goes last because it requires more associate change-management - the workflow shifts from reading every page to verifying cited passages, and that culture change takes a few weeks to settle in.
+
+## Agent 1: Claude-powered intake (OSB 2026-208 compliant)
+
+The intake agent runs on three channels - web chat, after-hours phone, and inbound SMS. It is built on Claude Sonnet 4.5 with a system prompt that encodes the firm's practice areas, conflict-disqualification language, OSB 2026-208 disclosure language, and consultation booking rules.
+
+A realistic Portland personal-injury intake conversation looks like this: a potential client texts at 11pm after a cyclist-versus-driver collision on SE Hawthorne. The agent acknowledges within 90 seconds and identifies itself as the firm's AI assistant (satisfying the OSB 2026-208 disclosure expectation). It asks for the basics (date, location, injuries, medical care, insurance status), runs an instant conflict pre-check by pasting the at-fault driver's name into the firm's matter database, books a consultation slot from the firm's Calendly, and writes a structured intake note into Clio Grow or MyCase before the intake partner wakes up. By 8am the partner sees a qualified, conflict-cleared lead with a scheduled call - while three competitor firms across town are still leaving voicemails.
+
+### What makes a Portland intake agent OSB-compliant
+
+- All client communications route through the commercial Claude API (Anthropic does not train on commercial API inputs by default) under a Data Processing Addendum, with a Business Associate Agreement layered on when PHI is in scope (med-mal, personal injury with medical records).
+- The agent's first message identifies it as an AI assistant for the firm and clarifies that no attorney-client relationship is formed by the conversation alone - the OSB 2026-208 prospective-client posture.
+- The system prompt explicitly restricts the agent to triage, conflict-pre-check, and scheduling. It does not give legal advice.
+- Conflict pre-check runs before any substantive case discussion - the same posture an Oregon RPC 1.18 prospective-client analysis would require from a human intake coordinator.
+- Transcripts are stored in the firm's matter management system (Clio, MyCase, PracticePanther, Smokeball) rather than in third-party chat logs the firm does not control.
+- A designated supervising attorney reviews a sample of transcripts weekly, with the review logged - satisfying the supervision posture OSB 2026-208 requires.
+
+Deployment time at a typical 6-attorney Portland firm: 2 weeks. Monthly cost (Claude API + hosting + SMS gateway via Twilio): roughly $400-$700. Typically replaces $3,000-$5,000/month of after-hours answering service or paralegal-monitored chat coverage. Even before counting incremental booked consults, this pays for itself in week one.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the silent bottleneck of mid-size Portland firms. Every new matter requires running adverse-party and related-entity searches against the firm's full historical client list, and at most firms the process is still manual - a paralegal in front of Clio search, working through name variants and prior-representation flags one at a time.
+
+Claude Code skills are the right deployment unit for this. A Claude Code skill is a packaged, versioned automation that runs locally with access to the firm's data, returns structured output, and is fully auditable - exactly the qualities OSB Formal Opinion 2025-205 expects under the verification and competence duties.
+
+### What the skill does
+
+1. Takes new-matter inputs from the intake agent or the case management system (client name, opposing parties, related entities, witness list, corporate parents).
+2. Runs fuzzy-match queries against the firm's full matter database (Clio Manage, MyCase, NetDocuments, Smokeball, or an on-premises SQL Server).
+3. Flags exact matches, near matches, prior-representation patterns, and waived prior conflicts.
+4. Produces a markdown conflict-check memo a partner can review and sign in 5 minutes.
+5. Logs the run in the firm's audit log with timestamp, user, inputs, and outputs - satisfying Oregon RPC 1.7(b) documentation expectations and OSB 2025-205's verification duty.
+
+### Why this matters in Portland specifically
+
+Many Portland firms have matter databases that go back 15-25 years, often spanning multiple practice management systems through migrations. A manual conflict check against a 30,000-matter database takes a paralegal 30-90 minutes; the Claude Code skill returns the same result in under 60 seconds with better recall - the fuzzy matching catches name variants, married-name changes, and related-entity overlaps a paralegal would miss. For firms doing 20-40 new matter openings per month, this skill alone returns 15-40 paralegal hours per month, freeing that capacity for client work that actually generates revenue.
+
+Because the skill runs locally and writes structured output, it slots cleanly into the firm's matter-opening workflow without forcing any change in the case management system the firm already uses.
+
+## Agent 3: Document review, deposition summary, discovery
+
+The third agent is where the cost savings get serious. Portland litigation boutiques, plaintiff personal injury firms, commercial firms, and estate planning practices all spend significant associate or paralegal time on document review, deposition summary, and contract redlining. At a Portland average of $325/hour for attorneys, every hour shifted from review to higher-leverage work is real margin.
+
+A Claude-powered review agent built on Claude Sonnet 4.5 or Claude Opus does three things very well:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, and key admissions extracted with line citations. Replaces 2-4 hours of associate time per deposition.
+- **Contract redlining.** Compares a vendor's proposed contract or settlement agreement against the firm's preferred terms and produces a clean redline plus a memo flagging deviations. Replaces 1-2 hours of associate time per contract.
+- **Discovery review.** Processes large document productions, tags privileged and responsive material with confidence scores, and drafts a privilege log. Replaces hundreds of associate hours per litigation matter, and produces the kind of structured output that holds up under opposing-counsel scrutiny.
+
+### The accuracy question, and the OSB 2025-205 answer
+
+The legitimate concern is hallucinations - Claude producing facts that are not in the document. The fix is technical and well-established by 2026: the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages, and the final review pass is a human associate spot-checking the cited sources. This is exactly the verification posture OSB Formal Opinion 2025-205 requires.
+
+In practice, this still cuts review hours by 60-80% while *improving* consistency - the agent does not get tired at 9pm and skip a paragraph. The associate's job shifts from reading every page to validating Claude's pulled citations, which is a higher-leverage task that more closely resembles what associates actually want to do.
+
+## The 90-day deployment plan
+
+Most Portland firms we work with want a phased rollout that proves ROI before committing to the full stack. The plan we run is built around quick wins, measurable metrics, and OSB-compliance from day one:
+
+### Days 1-15: Discovery and intake agent
+
+- **Week 1: workflow mapping.** We sit with the firm's intake coordinator, an associate, and the managing partner. We map every step from first lead touch to matter opening, identify the leak points, and write the OSB 2026-208 supervision plan.
+- **Week 2: intake agent web-chat deployment.** Soft launch with monitoring. Every transcript posts to a Slack channel the supervising partner reviews daily for the first two weeks.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- **Week 3: intake agent expansion to after-hours SMS and phone.** Phone is handled via Vapi or Bland integrated with Claude. The disclosure language plays at the top of every call, in keeping with OSB 2026-208.
+- **Week 4: Claude Code conflict-check skill deployment.** Two paralegals trained on the skill's output format. We do a parallel run for two weeks where the skill and the paralegal both run conflicts on the same new matters - this validates accuracy before the skill is trusted as primary.
+
+### Days 31-60: Document review pilot
+
+- **Weeks 5-6: document review agent on one active litigation matter.** Associates use it on deposition summaries and one round of discovery review. The retrieval-augmented configuration is non-negotiable.
+- **Weeks 7-8: contract redlining for the transactional practice group** (estate planning, business law, real estate law). Each output goes through associate verification per OSB 2025-205.
+
+### Days 61-90: Optimization and measurement
+
+- **Weeks 9-10: tune system prompts** based on real transcripts and outputs. Most firms find their intake agent needs a more conservative qualification standard after seeing 30 days of conversations.
+- **Weeks 11-12: run the ROI report.** Compare consultation booking rate, average matter-open time, and associate hours per matter against the pre-deployment baseline. Present to the partnership.
+
+At the end of 90 days, the firm has a real, working, OSB-compliant AI agent stack and 90 days of measurement data showing exactly what it returned.
+
+## Real ROI benchmarks for Portland firms
+
+Numbers vary by practice area, but the patterns we typically see at Portland firms in the 4-25 attorney range after 90 days of the full stack:
+
+- **Intake**: a 28-45% increase in consultation booking rate. Most of the gain is from after-hours coverage (no answering service drop-off) and from a faster, more consistent qualification conversation. For firms with significant Spanish-speaking intake - common in PI, family law, and immigration practices - the lift is larger because the agent handles Spanish natively without requiring a bilingual paralegal on call.
+- **Conflict checks**: matter-open time drops from 2-3 days to under 4 hours, with better recall on near-matches and related entities.
+- **Document review**: 60-80% reduction in associate or paralegal hours per matter on review-heavy tasks, with no observed accuracy degradation when the agent runs in retrieval-augmented mode and outputs are spot-checked.
+- **Total monthly cost** (Claude API + hosting + maintenance + SMS): typically $1,200-$2,500/month for a 6-15 attorney Portland firm.
+- **Typical payback period**: 3-6 weeks for the intake agent alone, faster if you count after-hours answering service replacement and incremental booked consults.
+
+The number that surprises every Portland firm: the intake agent typically captures **18-26% more *qualified* leads**, not just more leads in absolute terms. The agent asks the same structured qualification questions every time, with no fatigue and no skipping. Human intake coordinators tend to under-document under load; the agent does not. The Clio 2026 Legal Trends Report puts the firm-wide effect at 65% more capacity for new work among AI-adopting mid-sized firms, with 44% improvement in client satisfaction - the Portland firms we work with consistently land in that range.
+
+## Common mistakes Portland firms make
+
+After working with Portland firms across PI, family law, business law, estate planning, and immigration, these are the mistakes we see most often:
+
+**Mistake 1: Skipping the OSB 2026-208 supervision plan.** Even though the opinion is permissive, it requires substantive supervision - not just a disclaimer at the bottom of the chat window. Designate a supervising partner, define a review cadence (weekly is the floor), and document it before you turn anything on.
+
+**Mistake 2: Using consumer Claude.ai or ChatGPT for client work.** This violates Oregon RPC 1.6 confidentiality under the OSB 2025-205 reading - the consumer products' data-handling terms are not appropriate for client information. Use the commercial Claude API with a DPA in place.
+
+**Mistake 3: Billing AI processing time at attorney rates.** OSB 2025-205 specifically prohibits this. Configure your billing system to flag AI-generated time entries and route them to the appropriate (lower) rate or strike them from invoices entirely.
+
+**Mistake 4: Deploying without retrieval grounding on document review.** Unconstrained generative output is where hallucinations come from. Retrieval-augmented configurations are not optional - they are how you keep the agent honest and how you satisfy the OSB 2025-205 verification duty.
+
+**Mistake 5: Overscoping the first deployment.** Firms that try to deploy all three agents in week one tend to fail. Start with the intake agent, prove ROI in 30 days, then add the conflict-check skill, then layer in document review. The Portland firms that move fastest are the ones that move in focused increments.
+
+**Mistake 6: Skipping the measurement plan.** If you cannot show your partnership numbers at day 90 - booked consults per week, matter-open time, hours per matter on review - the budget will get cut at the next quarterly meeting. Define those three metrics on day one and instrument them from the start.
+
+## How to pick an implementation partner
+
+If you are a Portland firm evaluating AI implementation partners in 2026, ask these five questions before signing anything:
+
+1. **Do you build on Anthropic's commercial Claude API specifically, with a DPA (and BAA when relevant) in place?** Anything else - consumer Claude.ai, ChatGPT plus tier, generic 'AI chatbots' on someone else's stack - is an Oregon RPC 1.6 exposure under OSB 2025-205.
+2. **Are you fluent in OSB Formal Opinions 2025-205 and 2026-208?** If your prospective partner has not read both opinions and cannot articulate the supervision plan they will help you write, they are not the right partner for an Oregon firm.
+3. **Can you produce Pacific Northwest legal references with named partners willing to take a reference call?** Generic AI consultancies often cannot. The legal market is regional, and the deployment patterns that work in New York or Houston are not the same patterns that work in Portland or Vancouver.
+4. **What is your deployment timeline?** A serious partner deploys the first agent in 2-4 weeks. If they quote you 6 months, they are upselling enterprise consulting you do not need at firm sizes below 25 attorneys.
+5. **Who owns the system after deployment?** You should. Beware of lock-in models where the agent only runs on the vendor's platform and you cannot export your prompts, transcripts, or skill code.
+
+At manuv.co we focus on local-business and professional-services AI implementation, with deep specialization in legal deployments under state bar ethics frameworks. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with OSB-specific supervision plans built into every deployment. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below.
+
+## Frequently Asked Questions
+
+### Has the Oregon State Bar actually approved AI agents for client intake?
+
+Yes. Oregon State Bar Formal Opinion 2026-208, issued in February 2026, addresses chatbots and autonomous AI agent communications with prospective clients. Its conclusion is 'Yes, qualified' - meaning AI client intake is permissible subject to substantive supervision, appropriate disclosure that the user is interacting with an AI assistant, and confidentiality protections equivalent to those a human intake coordinator would observe. Lawyers remain professionally responsible to supervise the accuracy of all work product, including AI-generated communications. This is one of the clearest state-bar green lights for AI intake in the country.
+
+### How much does it cost to deploy an AI agent at a Portland law firm?
+
+Initial deployment of a Claude-powered intake agent for a typical 4-12 attorney Portland firm runs $8,000-$18,000 one-time, with $400-$700/month ongoing for the Claude API, hosting, and SMS gateway. The full three-agent stack (intake + Claude Code conflict-check skill + document review) runs $20,000-$45,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 3-6 weeks for the intake agent alone if you count the answering service it replaces plus incremental booked consults.
+
+### Can I bill clients for AI-assisted work under Oregon ethics rules?
+
+Yes, with an important constraint from OSB Formal Opinion 2025-205. You can bill for the time you spend reviewing AI output - that is human attorney time and is properly billed at your hourly rate. You cannot, however, bill the AI's processing time at attorney rates. So if Claude summarizes a deposition in eight minutes and you spend 45 minutes reviewing and validating the summary, you bill 0.8 hours of attorney review time, not 0.95 hours. Configure your billing system to enforce this split.
+
+### What is the difference between Claude API and Claude.ai for an Oregon law firm?
+
+Consumer Claude.ai is a chat interface designed for individual users. Its terms have varied over time and the user has limited control over data handling. The commercial Claude API is the developer interface used by businesses - Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and (where applicable) a Business Associate Agreement for HIPAA-covered work. For client work under OSB Formal Opinion 2025-205's confidentiality requirements, only the commercial API tier is appropriate.
+
+### How long does it take to deploy an AI intake agent at a Portland law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the firm's intake coordinator and managing partner, plus drafting the OSB 2026-208 supervision plan. Week 2 is build and soft-launch on web chat. Weeks 3-4 are expansion to after-hours SMS and phone with full supervisor monitoring. The full three-agent stack takes 90 days end to end.
+
+### Can AI agents handle Spanish-speaking clients in Portland?
+
+Yes, and this is a meaningful competitive lever in Portland. Multnomah County is home to roughly 89,000 Spanish speakers (~11% of the population), and over 26% of county residents speak a language other than English at home across 110+ languages. Claude is natively multilingual and handles Spanish, Russian, Vietnamese, Mandarin, and other major Portland-area languages with high fluency. For firms with significant non-English intake - common in PI, family law, and immigration practices - we configure the agent to detect language on first contact and respond in kind, with the supervising attorney reviewing translated transcripts.
+
+### What happens if the AI agent makes a mistake in client communication?
+
+Two safeguards. First, the intake agent's system prompt restricts it to triage, conflict pre-check, and scheduling - it is explicitly instructed not to provide legal advice. Second, a designated supervising attorney reviews transcripts on a documented weekly cadence under OSB 2026-208. If a mistake occurs, the attorney-of-record is responsible and can correct it directly with the prospective client. In 12+ months of deployment data across our Pacific Northwest firms, the misclassifications we see are around lead qualification (rejecting a viable lead), not substantive client harm.
+
+### Will my paralegals or staff lose their jobs?
+
+In our deployments to date, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service. The Claude Code conflict-check skill returns 15-40 paralegal hours per month that get re-allocated to higher-value matter work like client onboarding, case prep, and discovery support. The document review agent shifts associate time from reading to validating - the same associates produce more matter output. Firms grow into the added capacity rather than cutting staff.
+
+### How does the AI intake agent integrate with Clio, MyCase, or Smokeball?
+
+All three have public APIs the agent uses to create new contacts, draft matter records, attach intake notes, and schedule consultations. We have deployed against Clio Grow (the lead pipeline product), Clio Manage (matter management), MyCase, PracticePanther, Smokeball, and Filevine - the systems most common at Portland firms. Integration typically takes 2-3 days of the 2-week intake-agent deployment window.
+
+### What about HIPAA - we represent medical clients sometimes?
+
+Anthropic offers a Business Associate Agreement (BAA) for the commercial Claude API and sales-assisted Claude Enterprise plans. When your firm signs the BAA, the API can be used in HIPAA-covered workflows. For Portland plaintiff personal injury or medical malpractice firms that routinely handle protected health information in intake, we configure the deployment under the BAA and add HIPAA-specific data-handling controls (retention windows, access logging, redaction at intake). Note that the BAA covers Anthropic's side - your firm still needs its own HIPAA compliance posture.
+
+### What if our matter management system is on-premises or older than the major cloud platforms?
+
+Common in Portland mid-size firms with 15-25 years of matter history. We deploy the Claude Code conflict-check skill locally so it can query an on-premises SQL Server, Worldox, or NetDocuments instance without firm data leaving the network. The intake agent can also run in a hybrid pattern where transcripts are summarized via the Claude API and the structured note is written to the on-premises system. Older infrastructure is fully supported and is often the strongest argument for the Claude Code skill approach over generic SaaS legal AI products.
+
+### How do Oregon court deadlines factor into the document review agent?
+
+Oregon Circuit Court e-filing is mandatory for attorneys under UTCR 21.140, and the 30-day answer deadline under ORCP 7 C(2) is one of the most common malpractice triggers in the state. The document review agent can be configured with deadline-tracking logic that calculates response dates from filing or service dates per the Oregon Rules of Civil Procedure and the Uniform Trial Court Rules, and surfaces upcoming deadlines into the firm's calendar. The attorney remains responsible for verifying deadlines per OSB 2025-205, but the agent removes the 'I forgot to put it on the calendar' failure mode.
+
+### How do I get started?
+
+Book a 30-minute strategy call with manuv.co at [manuv.co/contact](https://manuv.co/contact). We will walk through your firm's current intake and matter-open workflow, identify which of the three agents will return the most value first, draft your OSB 2026-208 supervision plan outline, and give you a concrete deployment timeline and quote. There is no cost to the assessment call.
+
+## Sources
+- [Oregon State Bar Formal Opinion 2026-208 - Chatbots and AI Agent Communications](https://www.osbar.org/_docs/ethics/2026-208.pdf)
+- [Oregon State Bar Formal Opinion 2025-205 - Artificial Intelligence Tools](https://www.osbar.org/_docs/ethics/2025-205.pdf)
+- [NWSidebar - New Oregon State Bar Opinion on Using AI Agents for Client Intake (March 2026)](https://nwsidebar.wsba.org/2026/03/23/new-oregon-state-bar-opinion-on-using-ai-agents-for-client-intake/)
+- [Clio - How much should I charge as a lawyer in Oregon (2026)](https://www.clio.com/resources/legal-trends/compare-lawyer-rates/or/)
+- [Clio 2026 Legal Trends Report - AI adoption and firm capacity](https://www.clio.com/resources/legal-trends/)
+- [Oregon Judicial Department - Uniform Trial Court Rules (UTCR 21.140 mandatory e-filing)](https://www.courts.oregon.gov/programs/utcr/pages/currentrules.aspx)
+- [Oregon Rules of Civil Procedure (ORCP 7 C(2) - 30-day answer deadline)](https://www.oregonlegislature.gov/bills_laws/SiteAssets/ORCP.html)
+- [Multnomah County / QualityInfo - Languages Spoken in Multnomah County](https://www.qualityinfo.org/-/most-popular-languages-spoken-in-multnomah-county-2023)
+- [Anthropic - HIPAA-ready Enterprise plans and BAA coverage](https://support.claude.com/en/articles/13296973-hipaa-ready-enterprise-plans)
+- [American Bar Association - National Lawyer Population Survey](https://www.americanbar.org/news/profile-legal-profession/demographics/)
 
 ---

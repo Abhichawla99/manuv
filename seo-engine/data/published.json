@@ -252,8 +252,19 @@
       "state": "MI",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-portland-or",
+      "title": "AI Agents for Law Firms in Portland, OR: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Portland, Oregon law firms. Claude-powered intake under OSB Formal Opinion 2026-208, conflict checks, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-27",
+      "vertical": "legal",
+      "city": "Portland",
+      "state": "OR",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-26T09:15:02.775Z",
-  "totalPublished": 23
+  "lastRunAt": "2026-06-27T09:13:12.574Z",
+  "totalPublished": 24
 }
