@@ -263,8 +263,19 @@
       "state": "OR",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-las-vegas-nv",
+      "title": "AI Agents for Law Firms in Las Vegas, NV: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Las Vegas law firms. Claude-powered intake, conflict checks, document review. Nevada ethics rules, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-28",
+      "vertical": "legal",
+      "city": "Las Vegas",
+      "state": "NV",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-27T09:13:12.574Z",
-  "totalPublished": 24
+  "lastRunAt": "2026-06-28T09:15:06.295Z",
+  "totalPublished": 25
 }
