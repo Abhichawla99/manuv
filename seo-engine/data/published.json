@@ -274,8 +274,19 @@
       "state": "NV",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-baltimore-md",
+      "title": "AI Agents for Law Firms in Baltimore, MD: 2026 Implementation Guide",
+      "metaDescription": "Practical 2026 guide to deploying AI agents at Baltimore law firms. Claude-powered intake, conflict checks, document review, MSBA ethics rules, ROI math, 90-day plan.",
+      "publishedAt": "2026-06-29",
+      "vertical": "legal",
+      "city": "Baltimore",
+      "state": "MD",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3149
     }
   ],
-  "lastRunAt": "2026-06-28T09:15:06.295Z",
-  "totalPublished": 25
+  "lastRunAt": "2026-06-29T09:15:52.903Z",
+  "totalPublished": 26
 }
