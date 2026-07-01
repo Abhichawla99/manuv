@@ -285,8 +285,19 @@
       "state": "MD",
       "topic": "ai-agents-implementation",
       "wordCount": 3149
+    },
+    {
+      "slug": "ai-agents-implementation-legal-sacramento-ca",
+      "title": "AI Agents for Law Firms in Sacramento, CA: 2026 Implementation Guide",
+      "metaDescription": "How Sacramento law firms deploy Claude-powered AI agents for intake, conflict checks, and document review in 2026 - with California Bar ethics rules, ROI math, and a 90-day plan.",
+      "publishedAt": "2026-07-01",
+      "vertical": "legal",
+      "city": "Sacramento",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-06-29T09:15:52.903Z",
-  "totalPublished": 26
+  "lastRunAt": "2026-07-01T09:18:40.062Z",
+  "totalPublished": 27
 }
