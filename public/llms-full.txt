@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-07-01T09:18:40.095Z
+> Last regenerated: 2026-07-02T09:12:39.046Z
 
 ---
 
@@ -6842,5 +6842,251 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [California SB 942 (AI Transparency Act) - Bill Text and Effective Dates](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB942)
 - [Anthropic - Business Associate Agreements (BAA) for Commercial Customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
 - [Anthropic Trust Center - SOC 2 Type II, ISO 27001, ISO/IEC 42001 certifications](https://trust.anthropic.com/)
+
+---
+
+# AI Agents for Law Firms in Atlanta, GA: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-atlanta-ga
+> Published: 2026-07-02
+> Vertical: Law Firms & Legal Practices | Location: Atlanta, GA
+
+**TL;DR:** Atlanta is one of the deepest legal markets in the Southeast - 31 AmLaw 100 firms, 80 NLJ 500 offices, hundreds of solo and mid-size practices competing across Buckhead, Midtown, Downtown, and the perimeter. In 2026, the firms winning intake and controlling associate leverage in this market are the ones deploying a Claude-powered agent stack under the State Bar of Georgia's November 2025 Generative AI Toolkit. This guide covers exactly how to deploy that stack in 90 days without violating a single Georgia Rule of Professional Conduct.
+
+## Quick Facts
+- Metro Atlanta hosts **31 AmLaw 100 firms with offices in the market and 80 NLJ 500 firms**, plus hundreds of solo and small-firm practices across Fulton, DeKalb, Gwinnett, and Cobb counties.
+- The average Georgia lawyer hourly rate is **$369** and Atlanta-metro rates run **10-20% higher** than smaller Georgia cities (Clio 2026 lawyer rate data, LawPay).
+- **79% of legal professionals** now use AI according to Clio's 2025 Legal Trends Report - but only **32% of solos and 31% of small firms** report an associated revenue increase, meaning most firms are using AI without capturing the ROI.
+- In **Shahid v. Esaam** (Ga. Ct. App., June 30, 2025), the court imposed the maximum **$2,500 sanction** on a Georgia attorney whose brief contained 11 hallucinated AI-generated citations out of 15 total.
+- Under the State Bar of Georgia's **Generative AI Toolkit** (Nov 19, 2025), Rule 1.6 prohibits inputting confidential client information into consumer AI without adequate confidentiality protections - vendor privacy policies must be vetted.
+- **79% of potential legal clients sign with the first firm that responds** - and Atlanta's after-hours intake gap is the biggest single leak point for firms in Buckhead, Midtown, and the Northside.
+- Fulton County Superior Court requires **e-filing on Odyssey eFileGA for all civil cases** - a data source that AI matter-open agents can query directly for deadline calculation.
+
+## Why Atlanta law firms need AI agents in 2026
+
+Atlanta is one of the deepest and most competitive legal markets in the Southeast. Within the metro alone you have 31 AmLaw 100 firms with offices in the market and 80 firms on the National Law Journal's NLJ 500 list, layered on top of hundreds of solo, boutique, and mid-size firms across Fulton, DeKalb, Cobb, and Gwinnett counties. The market saw more than 400 lateral attorney moves in 2024 - roughly half of them partners - and Q1 2025 opened with four additional firm mergers involving Atlanta offices. The competition for intake calls, referral pipelines, and associate talent is only getting hotter.
+
+Three forces are pushing every Atlanta firm toward AI deployment in 2026.
+
+**First, client expectations have moved past voicemail.** A potential client googling personal-injury attorneys in Buckhead at 10:47pm expects a response before they go to sleep. If the response arrives at 9am the next morning, three competitors have already booked them. Industry research shows **79% of potential clients sign with the first firm that responds**, and firms responding within one minute see 400% better conversion than firms responding after 30 minutes.
+
+**Second, Georgia ethics rules have started expecting competence with AI.** The State Bar of Georgia's Generative AI Toolkit, released November 19, 2025 by the Law Practice Management Program, is now the operative guidance. It applies existing Rules 1.1 (competence), 1.5 (fees), and 1.6 (confidentiality) to AI use and explicitly says consumer AI tools without adequate confidentiality protections are inappropriate for client information. The Special Committee on Artificial Intelligence and Technology, formed October 31, 2024 and chaired by Darrell Lee Sutton, is expected to produce formal rulemaking in 2026-2027.
+
+**Third, the associate math is upside-down.** In metro Atlanta, particularly Marietta, Cobb, and inside the perimeter, legal fees run 10-20% higher than smaller Georgia markets, but so do salaries. Asking a first-year associate to spend three hours summarizing a deposition at $300+/hour is a $900 task Claude can do in eight minutes for under a dollar in API cost. Firms that re-allocate associate hours to strategy and client contact are gaining share in this market.
+
+The question is no longer *whether* to deploy AI. It is which agents to deploy first and how to do it without ending up like the attorney in Shahid v. Esaam.
+
+## The three-agent stack for Atlanta firms
+
+Most Atlanta firms over-think this. They start by evaluating fifteen legal AI platforms, get overwhelmed, and end up with nothing deployed except a Westlaw AI subscription that two associates use sporadically. The pattern that actually works in our Atlanta deployments is a three-agent stack, each agent addressing a specific bottleneck:
+
+**Agent 1 - The intake agent.** Captures and qualifies new leads 24/7 across web chat, after-hours SMS, and inbound phone. Runs an instant conflict pre-check, books consults directly on the firm calendar, and writes a structured intake note into Clio, MyCase, or Filevine. This is the single highest-ROI deployment for almost every Atlanta firm we have worked with.
+
+**Agent 2 - The Claude Code conflict-check skill.** A packaged, versioned automation that runs against the firm's full historical matter database to clear new-matter conflicts in seconds rather than days, with an audit trail suitable for Rule 1.7(b) documentation and for defending decisions to the State Bar disciplinary board.
+
+**Agent 3 - The document review agent.** Summarizes deposition transcripts, redlines contracts, and surfaces issue spots from discovery production. Replaces 60-80% of the manual review hours associates currently bill on litigation and corporate matters.
+
+Each agent is deployable in 2-4 weeks. Together they cover the three places Atlanta firms leak the most value: leads that never get answered, matters that take three days to open, and associate hours that get burned on review work that Claude can do faster and more consistently.
+
+## Agent 1: Claude-powered intake agent
+
+The Atlanta intake agent runs on three channels - web chat on the firm's website, after-hours phone (via a Claude-integrated voice agent), and inbound SMS. It is built on **Claude Sonnet 4.5** with a system prompt encoding the firm's practice areas, geographic scope, fee structure, and Georgia-specific conflict-disqualification language.
+
+A realistic intake conversation at an Atlanta plaintiff-side personal-injury firm looks like this: a prospective client texts at 11:20pm after a rear-end collision on I-285. The agent acknowledges within 60 seconds, gathers the basics (date, location, injuries, medical care to date, insurance information), runs an instant conflict pre-check against the firm's matter database, books a next-morning consultation from the intake partner's Calendly, and drops a structured intake memo into Filevine. By 8:30am the intake partner sees a qualified, conflict-cleared lead with a scheduled call - while the three competitor firms across town are still processing voicemails.
+
+### What makes an Atlanta intake agent compliant
+
+- The agent runs on Anthropic's commercial API with a Data Processing Addendum, **not** the consumer Claude.ai product. Under Rule 1.6 and the Bar's Generative AI Toolkit, vendor privacy policies must be vetted and consumer-grade tools with training-on-input terms are inappropriate for client information.
+- The system prompt explicitly restricts the agent to triage and scheduling, prohibits providing legal advice, and requires the agent to identify itself as an AI assistant on first contact.
+- Confidentiality language is included in the opening message, satisfying the duty to prospective clients (analogous to ABA Rule 1.18, which Georgia follows in substance).
+- The conflict pre-check runs before any substantive case discussion.
+- All transcripts are stored in the firm's matter management system, not in third-party chat logs beyond retention needs.
+
+Deployment time at a typical 6-attorney Atlanta firm: 2 weeks. Monthly runtime cost (Claude API + hosting + SMS gateway + voice minutes): **$400-$800**. Replaces roughly $3,500-$5,000/month of after-hours answering service or paralegal-monitored chat, and typically captures **28-42% more qualified consultations**.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of Atlanta mid-size firms. Every new matter requires running adverse-party, related-entity, and beneficial-owner searches against the firm's full historical client list, and at most firms the process is still manual - a paralegal typing names into Clio or NetDocuments and eyeballing results.
+
+**Claude Code skills** are the ideal deployment unit here. A Claude Code skill is a packaged, versioned automation that runs locally (or in the firm's private cloud) with scoped access to firm data, returns structured output, and can be audited - all the qualities Georgia ethics counsel and the State Bar disciplinary board want to see if a conflict decision is ever questioned.
+
+### What the skill does
+
+1. Takes new-matter inputs: proposed client, opposing parties, related entities, key witnesses, corporate parents, insurance carriers.
+2. Runs fuzzy-match queries against the firm's full matter database (Clio, MyCase, Filevine, NetDocuments, or SharePoint) plus the corporate-family expansion via a Secretary of State lookup for Georgia entities.
+3. Flags exact matches, fuzzy near matches (name variants, DBA overlaps), and prior waived conflicts.
+4. Produces a markdown conflict-check memo that a partner can review and sign in under 5 minutes.
+5. Logs the run in the firm's audit log with timestamp, user, and inputs - satisfying Rule 1.7(b) documentation expectations.
+
+### Why this matters in Atlanta specifically
+
+Atlanta firms often carry deep matter histories - many mid-size practices have 15-30 years of matter data across multiple case management systems (migrations from LegalWorks to Clio, or from PCLaw to Filevine are common). A manual conflict check against a 30,000-matter database takes a paralegal 20-60 minutes; the Claude Code skill returns the same result in under 45 seconds with better recall because the fuzzy matching catches variants a human would miss (Corp/Inc/LLC swaps, spelling variants, married-name changes). For firms opening 15-40 new matters per month - a realistic volume for an 8-15 attorney Atlanta boutique - the skill alone returns **15-40 paralegal hours per month**.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the associate leverage math flips. Atlanta firms - especially litigation boutiques, PI shops, and mid-market corporate practices - spend enormous associate hours on document review, deposition summary, contract redlining, and discovery production analysis. At $200-$400/hour associate rates common in the metro, this is the biggest bucket of billed-but-recoverable time in most firms.
+
+A Claude-powered review agent does four things very well:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged against prior sworn statements, and key admissions extracted. Replaces 2-4 hours of associate time per deposition.
+- **Contract redlining.** Compares a vendor's or counterparty's proposed contract against the firm's preferred terms and produces a clean redline plus a memo flagging deviations by severity. **Industry data shows AI contract review reduces review time by 80-85%** on standard commercial contracts.
+- **Discovery review.** Processes large document productions, tags privileged and responsive material with confidence scores, and drafts a privilege log. Replaces hundreds of associate hours per litigation matter, especially useful in Fulton County business-litigation matters with large document exchanges.
+- **Court filing readiness.** Cross-references drafts against Fulton County Superior Court filing requirements before submission through Odyssey eFileGA, catching formatting issues before the clerk kicks the filing back.
+
+### The accuracy question - and the Shahid v. Esaam lesson
+
+The legitimate concern is hallucinations. The Shahid v. Esaam sanction case is the reason every Georgia attorney should care. The fix in 2026 is well-established: the agent runs in a retrieval-augmented configuration where every output is grounded in cited source passages from the underlying document, and every citation is verified against the actual production. The final review pass is a human associate spot-checking the cited sources. In practice this cuts review hours by 60-80% while improving consistency, and it structurally prevents the type of citation hallucination that got attorney Diana Lynch sanctioned by the Court of Appeals.
+
+## Georgia ethics and the Shahid v. Esaam lesson
+
+Every Atlanta firm we work with asks about ethics risk first. Here is the current picture in 2026.
+
+### The State Bar of Georgia Generative AI Toolkit (November 19, 2025)
+
+This is the operative guidance until the Special Committee on Artificial Intelligence and Technology produces formal rulemaking (expected 2026-2027). The Toolkit is explicitly a "living document" and cannot substitute for a formal advisory opinion, but it is what disciplinary panels are pointing to today. Its key positions:
+
+- **Rule 1.1 (competence)** requires ongoing education about AI capabilities and limitations, plus human oversight of every AI-generated work product.
+- **Rule 1.5 (fees)** addresses fee reasonableness when AI reduces the time to complete a task, and informed consent for how AI-related efficiencies are billed.
+- **Rule 1.6 (confidentiality)** prohibits inputting confidential client information into AI tools without adequate confidentiality and security protections. Vendor privacy policies must be vetted, and premium tiers with enhanced privacy should be considered.
+
+### Shahid v. Esaam (Ga. Ct. App., June 30, 2025)
+
+This is the single most important Georgia AI case for practicing attorneys. The husband's attorney filed a brief containing 11 hallucinated citations out of 15 total, and the trial court had earlier relied on two fictitious cases in its original order. The Court of Appeals vacated the judgment, remanded for a new hearing, and imposed the maximum **$2,500 sanction** on the attorney under Court of Appeals Rule 7(e)(2). Enforcement arrived ahead of formal rules.
+
+The lesson is not "don't use AI." It is "never file AI output without verifying the citations against a live legal-research database." Firms deploying Claude for research or drafting should pair it with a citation-verification step - either an integrated Westlaw or Lexis check, or a human paralegal spot-check on every cite.
+
+### ABA Model Rule 5.3 (supervision)
+
+Georgia's version of Rule 5.3 applies to non-lawyer assistance. AI tools fall under this rule in the operative interpretation. A firm partner must be designated as the AI supervisor, with a documented review cadence.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable under current Georgia rules when: (a) all agents run on Anthropic's commercial API with a DPA (and BAA if PHI is involved), (b) the intake agent identifies itself as an AI assistant on first contact, (c) a named partner supervises the deployment under Rule 5.3, (d) every AI-generated citation is verified against Westlaw or Lexis before filing, and (e) every client-facing output is reviewed by a licensed attorney before being relied upon.
+
+## The 90-day Atlanta deployment plan
+
+Most Atlanta firms want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use with Atlanta clients:
+
+### Days 1-15: Discovery and intake agent (web chat)
+
+- Week 1: workflow mapping. We sit with the firm's intake coordinator, one associate, and the managing partner. We map every step from first lead touch through matter opening. We audit the current after-hours coverage (typical Atlanta firms are using an answering service that costs $2,500-$5,000/month with sub-20% qualification rates).
+- Week 2: intake agent soft-launch on the firm's website chat. Every transcript is mirrored to a Slack channel for partner review. The agent begins learning the firm's practice areas.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to after-hours SMS and inbound phone (via a Vapi or Bland voice layer integrated with Claude). Voice includes the required disclosure at the start of the call.
+- Week 4: Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals are trained on the memo output format.
+
+### Days 31-60: Document review pilot
+
+- Weeks 5-6: document review agent deployed on one active litigation matter with a large document production. Associates use it for deposition summaries and privilege-log drafting.
+- Weeks 7-8: expand to contract redlining for any corporate or transactional practice group.
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on 45+ days of real transcripts. Many Atlanta firms discover their intake agent needs a more aggressive qualification threshold after seeing conversion data, or that certain practice areas (immigration, family) need Spanish-language handling.
+- Weeks 11-12: run the 90-day ROI report. Compare consultation booking rate, average matter-open time, and associate hours per matter against the pre-deployment baseline. Present to the partnership.
+
+At the end of 90 days, the firm has a working, ethics-compliant, measured three-agent stack - not a pilot, not a PoC, a production system.
+
+## Real ROI benchmarks for Atlanta firms
+
+Numbers vary by practice area, but here is what we typically see at Atlanta firms in the 4-25 attorney range after 90 days of the full stack:
+
+- **Intake**: 28-42% increase in consultation booking rate. The largest gains come from after-hours coverage (evenings and weekends) and sub-2-minute speed-to-lead on web chat.
+- **Conflict checks**: matter-open time drops from 2-3 business days to under 4 hours, with better recall on fuzzy matches.
+- **Document review**: 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode with citation verification.
+- **Total monthly runtime cost** (Claude API + hosting + maintenance + voice minutes): $1,200-$2,500 depending on firm size and intake volume.
+- **Typical payback period**: 4-7 weeks for the intake agent alone, faster if the firm was paying an after-hours answering service.
+
+The number that surprises Atlanta firms most: the intake agent captures **18-26% more qualified leads**, not just more leads in absolute terms. The agent's structured qualification asks the same questions every time, with no fatigue and no skipping - human paralegals under-document; the agent does not. For a PI firm with a $12,000 average case value, capturing an extra three qualified consultations per month at a 30% signup rate is roughly $10,800/month in incremental fee revenue, against ~$700 in agent runtime cost. That is the math that gets partners to sign off.
+
+## Common mistakes Atlanta firms make
+
+After working with Atlanta firms across PI, family, criminal defense, immigration, and mid-market corporate practices, these are the mistakes we see most often:
+
+**Mistake 1: Using consumer Claude.ai or ChatGPT for client work.** This is the biggest single ethics exposure and the most common mistake. Under the State Bar of Georgia's Generative AI Toolkit and Rule 1.6, consumer AI without adequate confidentiality protections is inappropriate for client information. Use the commercial Claude API with a DPA. This is not optional.
+
+**Mistake 2: Filing AI output without verifying citations.** Shahid v. Esaam is the cautionary tale. Every AI-drafted brief, motion, or memo needs its cites verified against Westlaw or Lexis before it goes out. If a partner cannot articulate the citation-verification step, the firm is one filing away from a sanction.
+
+**Mistake 3: Deploying without partner supervision under Rule 5.3.** Designate a partner as the AI supervisor before you turn anything on, and document their monthly review cadence. If the disciplinary panel ever asks who was supervising the AI, there must be a name and a paper trail.
+
+**Mistake 4: Overscoping the first deployment.** Firms that try to launch all three agents in week one fail. Start with the intake agent, prove ROI, then expand. The compounding value in weeks 5-12 is much greater than the marginal value in week 1.
+
+**Mistake 5: Skipping the measurement plan.** If you cannot show the managing partner numbers at day 90, the budget gets cut. Define your three metrics on day one - consultation booking rate, matter-open time, associate review hours per matter - and instrument them from the start.
+
+**Mistake 6: Letting a generic legal-tech SaaS run the deployment.** Off-the-shelf legal AI products are tuned for the average firm. Atlanta's practice mix (heavy PI, immigration, family, and mid-market corporate) is not the average - custom Claude deployments outperform generic products 2-3x in real measurement, because the system prompt encodes the firm's exact qualification criteria and Georgia-specific rules.
+
+## How to pick an Atlanta implementation partner
+
+If you are an Atlanta firm evaluating AI implementation partners in 2026, ask these five questions before you sign anything:
+
+1. **Do you build on Claude's commercial API specifically, with a DPA in place?** Anything else - especially consumer AI tools or opaque third-party wrappers - is a Rule 1.6 exposure. Ask to see the DPA before you sign.
+2. **Can you produce Atlanta or Southeast law firm case studies with named partners willing to take a reference call?** Generic AI consultancies from Silicon Valley usually cannot. Ask for two references in your practice area and call them.
+3. **What is your deployment timeline?** A real partner deploys the first agent (intake) in 2-4 weeks. If they quote you 6 months, they are upselling enterprise consulting hours.
+4. **Who owns the system after deployment?** You should. The system prompt, the code, the integrations, the transcripts - all firm property. Beware of lock-in models where the agent only runs on the vendor's platform and disappears if you cancel.
+5. **How do you handle Rule 5.3 supervision and Shahid v. Esaam-style citation risk?** The answer must include a named partner supervision plan, documented monthly review, and a citation-verification step on any AI-drafted filing. If the vendor blinks on this question, walk.
+
+At manuv.co we focus specifically on local-business and professional-services AI deployments in the Southeast. We build custom Claude agents and Claude Code skills sized for firms in the 2-50 attorney range, with Georgia-specific ethics compliance built into every deployment. If you want to map your firm's highest-ROI first agent in a 30-minute call, book it below.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI agent at an Atlanta law firm?
+
+Initial deployment of a Claude-powered intake agent for a typical 5-15 attorney Atlanta firm runs $7,500-$16,000 one-time, with $400-$800/month ongoing for the Claude API, hosting, SMS gateway, and voice minutes. The full three-agent stack (intake + conflict-check + document review) runs $18,000-$40,000 one-time and $1,200-$2,500/month ongoing. Payback is typically 4-7 weeks for the intake agent alone - faster if the firm currently pays for an after-hours answering service that costs $2,500-$5,000/month.
+
+### Is using AI for client work allowed under Georgia attorney ethics rules?
+
+Yes, when three conditions are met. First, the AI tool must be deployed with confidentiality protections under Rule 1.6 - the State Bar of Georgia's November 2025 Generative AI Toolkit specifies vetting vendor privacy policies and considering premium tiers with enhanced privacy. Consumer Claude.ai and ChatGPT are inappropriate for client information. Second, a partner must supervise under Rule 5.3. Third, the attorney remains personally responsible under Rule 1.1, which means every AI-generated citation must be verified before it enters a filing.
+
+### What does the Shahid v. Esaam case mean for Atlanta firms using AI?
+
+Shahid v. Esaam (Ga. Ct. App., June 30, 2025) was the first Georgia appellate case sanctioning an attorney for AI-hallucinated citations. The husband's brief contained 11 fictitious citations out of 15 total, and the Court of Appeals imposed the maximum $2,500 sanction on attorney Diana Lynch under Court of Appeals Rule 7(e)(2). The lesson is that every AI-drafted filing must have its citations verified against Westlaw or Lexis before submission. The case does not prohibit AI use - it prohibits AI use without human verification.
+
+### What is the difference between Claude API and Claude.ai for a law firm?
+
+Consumer Claude.ai is a chat interface designed for individual users. The commercial Claude API is the developer interface used by businesses - Anthropic does not train on commercial API inputs by default, and firms can sign a Data Processing Addendum and (where applicable) a Business Associate Agreement. Under Georgia Rule 1.6 and the State Bar's Generative AI Toolkit, only the commercial API tier with appropriate contractual data-handling terms is appropriate for client work.
+
+### How long does it take to deploy an AI intake agent at an Atlanta law firm?
+
+A focused deployment runs 2-4 weeks for the intake agent alone. Week 1 is workflow mapping with the intake coordinator and managing partner. Week 2 is build and soft-launch on the firm website chat. Weeks 3-4 are expansion to after-hours SMS and phone with partner monitoring. The full three-agent stack (intake + conflict-check + document review) takes 90 days end to end.
+
+### Can AI agents handle Spanish-speaking clients in Atlanta?
+
+Yes. Claude Sonnet 4.5 is natively multilingual and handles Spanish, Portuguese, Vietnamese, Korean, and Amharic with strong fluency - important languages in Atlanta's diverse metro. For firms serving Latino communities on Buford Highway, or Vietnamese communities in Norcross, or Korean communities in Duluth, we configure the agent to detect language on first contact and respond in kind. Immigration and PI practices see the biggest lift here.
+
+### How does the AI intake agent integrate with Clio, MyCase, Filevine, or PracticePanther?
+
+All four have public APIs that the agent uses to create contacts, draft matter records, attach intake notes, and schedule consultations. We have deployed against Clio Grow, Clio Manage, MyCase, PracticePanther, Smokeball, Filevine, and Rocket Matter. Integration typically takes 2-3 days of the 2-week deployment window. For firms on legacy on-premises systems like PCLaw or older LegalWorks installations, we build a lightweight sync layer.
+
+### Will my staff lose their jobs if we deploy AI agents?
+
+In our deployments to date, no staff have been let go. The intake agent absorbs after-hours work that previously went to a paid answering service. The conflict-check skill returns 15-40 paralegal hours per month that get re-allocated to case prep and client communication. The document review agent shifts associate time from reading every page to validating cited passages - the same associates handle more matters. Atlanta firms in growth mode grow into the capacity rather than cutting headcount.
+
+### What if I only have one office and 3-5 attorneys - is this still worth it?
+
+Yes, and often more so than at larger firms. Small firms feel the after-hours intake gap more acutely because there is nobody covering the phones. A single intake agent deployment for a 3-5 attorney firm typically pays for itself in the first month by (a) capturing 8-15 additional qualified consultations that would have gone to voicemail and (b) eliminating a $2,500-$4,000/month answering service. The deployment cost is proportionally smaller too - $6,000-$10,000 one-time.
+
+### What about HIPAA - we handle medical records in personal injury cases?
+
+Anthropic offers a Business Associate Agreement (BAA) for the commercial Claude API. When your firm signs the BAA, the API can be used in HIPAA-covered workflows. For Atlanta PI firms handling medical records in intake, we configure the agent under the BAA and add HIPAA-specific data-handling controls (encryption at rest, minimum-necessary access, and audit logging).
+
+### Does the agent handle Fulton County e-filing requirements?
+
+The document review agent can cross-reference filing drafts against Fulton County Superior Court's Odyssey eFileGA formatting requirements before submission, catching common issues (missing certificate of service, incorrect caption format, unpaid filing fees) that cause clerks to reject filings. This alone saves 1-3 hours of re-work per rejected filing.
+
+### How do I get started?
+
+Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We walk through your firm's current intake and matter-open workflow, identify which of the three agents will return the most value first, and give you a concrete deployment plan and quote scoped to your firm size. There is no cost to the assessment call, and no obligation - most firms leave the call with enough clarity to make an internal decision even if they do not hire us.
+
+## Sources
+- [State Bar of Georgia - Generative AI Toolkit (November 19, 2025)](https://www.gabar.org/programs/law-practice-management/ai-and-emerging-tech)
+- [Shahid v. Esaam - Ga. Court of Appeals (June 30, 2025) - $2,500 sanction for AI-hallucinated citations](https://caselaw.findlaw.com/court/ga-court-of-appeals/117442275.html)
+- [Clio 2025 Legal Trends Report - AI adoption 79% of legal professionals](https://www.clio.com/resources/legal-trends/)
+- [Georgia lawyer hourly rate benchmarks - Clio Lawyer Rate Data](https://www.clio.com/resources/legal-trends/compare-lawyer-rates/ga/)
+- [Fulton County Superior Court Civil E-Filing (Odyssey eFileGA)](https://www.fultonclerk.org/294/Civil-E-Filing)
+- [Sandpiper Partners - Atlanta Legal Market 2025 (31 AmLaw 100 offices, 80 NLJ 500 firms)](https://www.sandpiperpartners.com/atlanta-legal-market-2025)
+- [Georgia Rules of Professional Conduct - Rules 1.1, 1.5, 1.6, 5.3](https://www.gabar.org/barrules/georgia-rules-of-professional-conduct.cfm)
+- [Anthropic Commercial Terms of Service and Data Handling](https://www.anthropic.com/legal/commercial-terms)
+- [Atlanta Bar Association - 100% Member Firms directory](https://atlantabar.org/?pg=100PercentFirms)
 
 ---

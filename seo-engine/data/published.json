@@ -296,8 +296,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-atlanta-ga",
+      "title": "AI Agents for Law Firms in Atlanta, GA: 2026 Implementation Guide",
+      "metaDescription": "Complete 2026 guide to deploying AI agents at Atlanta law firms. Claude-powered intake, conflict checks, discovery review. Georgia Bar rules, Shahid v. Esaam lessons, and a 90-day plan.",
+      "publishedAt": "2026-07-02",
+      "vertical": "legal",
+      "city": "Atlanta",
+      "state": "GA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3260
     }
   ],
-  "lastRunAt": "2026-07-01T09:18:40.062Z",
-  "totalPublished": 27
+  "lastRunAt": "2026-07-02T09:12:39.015Z",
+  "totalPublished": 28
 }
