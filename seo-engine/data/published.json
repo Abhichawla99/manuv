@@ -318,8 +318,19 @@
       "state": "NC",
       "topic": "ai-agents-implementation",
       "wordCount": 3315
+    },
+    {
+      "slug": "ai-agents-implementation-legal-miami-fl",
+      "title": "AI Agents for Law Firms in Miami, FL: 2026 Implementation Guide",
+      "metaDescription": "How Miami law firms deploy Claude-powered intake, conflict-check and document-review agents in 90 days under Florida Bar Opinion 24-1. Bilingual, ROI, ethics.",
+      "publishedAt": "2026-07-04",
+      "vertical": "legal",
+      "city": "Miami",
+      "state": "FL",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-07-03T09:15:59.607Z",
-  "totalPublished": 29
+  "lastRunAt": "2026-07-04T09:13:30.478Z",
+  "totalPublished": 30
 }

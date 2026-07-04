@@ -1,7 +1,7 @@
 # manuv.co - Full Research Library
 > Boutique AI studio. Custom Claude-powered agents, Claude Code skills, and AI automations for law firms, medical practices, real estate, and home services across the United States.
 > Site: https://manuv.co | Contact: https://manuv.co/contact
-> Last regenerated: 2026-07-03T09:15:59.642Z
+> Last regenerated: 2026-07-04T09:13:30.513Z
 
 ---
 
@@ -7359,5 +7359,255 @@ Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We
 - [NC Judicial Branch - Business Court](https://www.nccourts.gov/courts/business-court)
 - [NC Judicial Branch - eCourts](https://www.nccourts.gov/ecourts)
 - [Anthropic - Claude Sonnet models overview](https://www.anthropic.com/claude/sonnet)
+
+---
+
+# AI Agents for Law Firms in Miami, FL: 2026 Implementation Guide
+> URL: https://manuv.co/resources/ai-agents-implementation-legal-miami-fl
+> Published: 2026-07-04
+> Vertical: Law Firms & Legal Practices | Location: Miami, FL
+
+**TL;DR:** Miami's 107,000-attorney Florida Bar market is the most bilingual, most competitive intake market in the country - 69.3% of Miami-Dade is Hispanic and 54.5% foreign-born. In 2026, small and mid-size Miami firms are losing intake to same-day-response competitors and burning associate hours on document review. The fix is a three-agent Claude stack (bilingual intake, conflict-check skill, document-review agent) deployed in 90 days under Florida Bar Opinion 24-1. This guide gives you the exact deployment plan, ROI math, and Florida-specific ethics posture.
+
+## Quick Facts
+- **Florida has more than 107,000 licensed attorneys** through The Florida Bar, one of the country's largest mandatory bars (The Florida Bar, 2026).
+- **69.3% of Miami-Dade County is Hispanic** (1.9M people) and **54.5% are foreign-born** - the highest metro Hispanic share in the continental US (US Census QuickFacts, 2024).
+- In the City of Miami itself, **71.5% are Hispanic** (329K people, including 154,235 Cuban-Americans) and **57.6% are foreign-born** (Data USA, 2024).
+- **69% of legal professionals used generative AI for work in 2026** - more than double 2025's 31% - yet **43% of firms still have no formal AI policy** (8am 2026 Legal Industry Report).
+- **39% of law firms take more than two hours** to respond to online inquiries, and 42% of the time lawyers take **three or more days** to reply to a prospective client - a pure gift to firms with 24/7 AI intake.
+- Miami personal-injury leads cost **$100-$500 each**, with Google Ads clicks for terms like *Miami car accident lawyer* running **$50-$200+ per click** - which is why speed-to-lead is the single highest-leverage lever.
+- Florida Bar Ethics Opinion 24-1 (January 19, 2024) **greenlights generative AI** for lawyers under four conditions: confidentiality, competence, no double-billing, and honest advertising.
+
+## Why Miami law firms need AI agents in 2026
+
+Miami is unlike any other US legal market. It is bilingual by default, majority-immigrant, densely competitive, and structurally weighted toward practice areas - personal injury, immigration, real estate, family, and international business - where the first firm to respond usually wins the client. Every one of these dynamics is amplified by AI agents built the right way.
+
+Three structural forces are converging in 2026:
+
+**First, Miami's language and demographic mix is a competitive edge only if you can staff it.** 69.3% of Miami-Dade is Hispanic, 71.5% of the City of Miami is Hispanic, and 54.5% of Miami-Dade residents are foreign-born - a full 1.49 million people. Firms without night-and-weekend bilingual intake lose the client to the firm across NW 7th Street that has it. Claude is natively fluent in Spanish, Portuguese, Haitian Creole, and English - a Miami intake agent handles all four channels without a language-line handoff.
+
+**Second, response time is the single biggest conversion lever, and Miami is bad at it.** Industry data shows 39% of firms take more than two hours to respond to online inquiries, and 42% of the time lawyers take three or more days to reply to a voicemail or web form. In a market where personal-injury leads cost between $100 and $500 each and top-of-funnel Google clicks run $50-$200, that response gap is the difference between a $30K case and someone else's $30K case. Firms responding within five minutes are dramatically more likely to book the consultation.
+
+**Third, Florida Bar Opinion 24-1 legitimized the deployment path.** In January 2024, the Florida Bar Board of Governors unanimously approved Opinion 24-1, which explicitly greenlights lawyer use of generative AI under four conditions: confidentiality, competence, no double-billing, and honest advertising. Miami is now one of the friendliest bar jurisdictions in the country for a well-configured AI deployment.
+
+At manuv.co we see this weekly with Miami firms: the question is no longer *whether* to deploy AI - it is which three agents to deploy first, in what order, and how to do it without tripping a Florida Bar rule or a client's confidentiality expectation. That is what this guide covers.
+
+## The three-agent stack for Miami firms
+
+Miami firms have a tendency to look for one all-in-one legal AI product, get overwhelmed by the vendor landscape at ILTACON or ABA Techshow, and end up deploying nothing. The pattern that actually works in Miami-Dade is a three-agent stack, each addressing a specific bottleneck we see over and over:
+
+**Agent 1 - The bilingual intake agent.** Captures and qualifies new leads 24/7 in English and Spanish (Portuguese and Creole optional), books consults on the firm calendar, and writes a clean intake note into the case management system. For most Miami PI, immigration, family, and real-estate firms this is the single highest-ROI deployment - it absorbs after-hours calls, weekend web form submissions, and Spanish-language inbound that would otherwise go to a competitor.
+
+**Agent 2 - The Claude Code conflict-check skill.** A packaged automation that runs against the firm's matter database to clear new conflicts in seconds rather than days, producing a markdown memo with an audit trail that satisfies Rule 4-1.7 (Florida's conflict rule). This is especially important in Miami's business-law and real-estate practices where cross-matter parties overlap frequently.
+
+**Agent 3 - The document-review agent.** Summarizes deposition transcripts, redlines contracts, drafts privilege logs, and processes discovery. Replaces 60-80% of the associate hours currently burned on review-heavy work. In a market where the average US billable rate is $349/hour and blended firm rate is $311/hour according to the Clio Legal Trends Report, every hour reclaimed is worth real money.
+
+Each agent is small enough to deploy in 2-4 weeks. Together, they cover the three places Miami firms leak the most value: leads that never get answered in the right language at the right time, matters that take 2-3 days to open because of manual conflict checks, and associate hours that get burned on document review at attorney rates. The stack works for a 3-attorney family-law boutique in Coral Gables and for a 40-attorney litigation firm in Brickell - the size of each agent scales, but the shape does not change.
+
+## Agent 1: Bilingual Claude-powered intake
+
+The Miami intake agent runs on four channels - web chat, after-hours phone (via Vapi or Bland), inbound SMS, and WhatsApp (which is essentially universal in Miami's Latin American and Caribbean client base). It is built on Claude Sonnet 4.5, with a system prompt that encodes the firm's practice areas, disqualification language, consultation-booking rules, and Florida-specific advertising disclosures.
+
+Here is a typical Miami PI intake conversation: a potential client texts in Spanish at 10:47pm after a rear-end collision on the Palmetto Expressway. Within 90 seconds the agent has responded in Spanish, gathered the basics (date, location, injuries, treatment status, insurance carrier, whether police responded), run an instant conflict pre-check by pasting the at-fault driver's name against the firm's Clio Manage matter list, booked a next-morning consultation slot from the intake attorney's Google Calendar, and written a structured intake note into Clio with a pre-populated matter template. By 8am when the intake paralegal opens Slack, there is a qualified lead with a scheduled consultation and a conflict-clear flag. The three competitor firms on Google Maps a mile away are still returning voicemails from noon the day before.
+
+### What makes a Miami intake agent Opinion-24-1-compliant
+
+- Runs on Anthropic's **commercial Claude API** with a Data Processing Addendum in place - not consumer Claude.ai, which the Florida Bar Opinion warns against for confidential information without informed consent.
+- The agent identifies itself as an AI assistant at the start of every conversation - satisfying Opinion 24-1's advertising-and-chatbot guidance.
+- The system prompt explicitly restricts the agent to triage and scheduling; it does not give legal advice.
+- Bilingual disclosures include Florida Bar's *no representation until engagement letter signed* language in both English and Spanish.
+- Conflict pre-check runs before any substantive case discussion, protecting Rule 4-1.18 (duties to prospective clients).
+- Transcripts are written to the firm's matter-management system, not left in third-party chat logs.
+
+Deployment time at a typical 6-attorney Miami firm: 2-3 weeks. Monthly cost (Claude API + hosting + SMS gateway + Vapi voice): approximately $500-$900. Replaces roughly $3,500-$5,000/month of after-hours answering service, bilingual staff overtime, or paid legal intake bureau.
+
+## Agent 2: Claude Code conflict-check skill
+
+Conflict checks are the unsung bottleneck of Miami mid-size firms. Every new matter requires searching adverse parties, related entities, and prior counsel relationships against the firm's historical matter database - and for most firms this remains a paralegal-driven manual process that takes 30 minutes to two days depending on staff availability. In Miami's fast-moving PI and real-estate closings environments, days-long conflict checks lose clients.
+
+Claude Code skills are the perfect deployment unit for this. A Claude Code skill is a versioned, auditable automation that runs locally with access to the firm's data, calls Claude Sonnet 4.5 through the Anthropic API for reasoning steps, and returns structured output the firm can preserve in its file for Rule 4-1.7 documentation. The skill is not a SaaS product - the firm owns it end-to-end.
+
+### What the Miami conflict-check skill does
+
+1. Takes new-matter inputs: client name(s), opposing parties, related entities, witnesses, corporate affiliates, and (for immigration or family work) common household members.
+2. Runs fuzzy-match queries against the firm's full historical matter database (Clio Manage, MyCase, PracticePanther, Smokeball, Filevine, or on-premises SQL Server).
+3. Flags exact matches, phonetic near-matches (Rodríguez / Rodriguez), Spanish naming conventions (paternal + maternal surnames), and known-related-entity overlaps.
+4. Produces a markdown conflict-check memo with a partner-review section, pre-populated with the specific matter file cites.
+5. Logs every run with timestamp, user, inputs, and Claude reasoning trace in the firm's audit log - satisfying Rule 4-1.7(b) documentation expectations and Opinion 24-1's competence-verification requirement.
+
+### Why this matters in Miami specifically
+
+Miami-Dade firms carry unique conflict-check risk because of Hispanic naming conventions (dual surnames, compound given names), high inter-family litigation load in family-law practice, and heavy corporate-affiliate density in Brickell business-law work. A paralegal running manual searches against a 40,000-matter database misses far more than the Claude Code skill's fuzzy-matcher will. For firms opening 15-40 matters per month, the skill returns 15-40 paralegal hours monthly and materially reduces the risk of a downstream conflict challenge.
+
+## Agent 3: Document review and discovery summarization
+
+The third agent is where the cost math gets serious. Miami litigation, commercial, and IP boutiques spend enormous associate hours on document review, deposition summary, and discovery production analysis. In a Florida market where blended firm hourly rates average $311 per Clio's 2026 data, every hour reclaimed at scale is material to firm profitability.
+
+A Claude Sonnet 4.5-powered document review agent does three things very well:
+
+- **Deposition summarization.** Takes a transcript and produces a structured summary with witness statements indexed by topic, contradictions flagged, key admissions extracted, and citations to line and page numbers. Replaces 2-4 hours of associate time per deposition. Miami PI firms with 5-15 depositions per month recover 10-60 associate hours monthly on this task alone.
+- **Contract redlining.** Compares a vendor's proposed contract, a commercial lease, or a purchase-and-sale agreement against the firm's preferred terms and produces a clean redline plus a memo flagging deviations. Replaces 1-2 hours of associate time per contract - meaningful for Coral Gables and Brickell real-estate and business-law shops handling 30-100 contracts per month.
+- **Discovery review.** Processes large document productions - common in Southern District of Florida commercial litigation - tags privileged and responsive material with confidence scores, and drafts a privilege log. Replaces hundreds of associate hours per matter.
+
+### Handling the hallucination question the Florida Bar cares about
+
+Opinion 24-1 explicitly flags that generative AI can hallucinate and holds lawyers responsible for verification. The 2026 deployment pattern that satisfies this is retrieval-augmented review: every output is grounded in a cited source passage, the Claude Code skill returns the exact document, page and line for every conclusion, and a licensed associate spot-checks the citations. The associate's role shifts from reading every page to validating pulled citations - a much higher-leverage task. In practice this cuts review hours by 60-80% while improving consistency, because the same qualification questions get applied to every document with no fatigue or skipping - and because the associate is now doing verification rather than first-pass review, they catch more actual issues.
+
+## Florida ethics and compliance considerations (Opinion 24-1)
+
+Every Miami firm we work with starts with the same question: what are the Florida Bar ethics risks? The picture in 2026 is unusually clear because of Opinion 24-1.
+
+### Florida Bar Ethics Opinion 24-1 (January 19, 2024) - the foundational guidance
+
+On January 19, 2024, the Florida Bar Board of Governors unanimously approved Ethics Opinion 24-1, providing non-binding guidance on the ethical use of generative AI in legal practice. The opinion greenlights AI use under **four conditions**:
+
+1. **Confidentiality.** Lawyers must research the AI program's policies on data retention, data sharing, and self-learning. The opinion recommends obtaining the client's informed consent before using a third-party AI that would involve disclosure of confidential information. The clean deployment pattern is Anthropic's **commercial Claude API** - Anthropic does not train on commercial API inputs by default, and a signed Data Processing Addendum plus (where applicable) a Business Associate Agreement covers Rule 4-1.6 exposure.
+2. **Competence.** Lawyers remain responsible for AI-assisted work product, must verify accuracy, and must develop firm policies for AI use. Hallucination is called out explicitly.
+3. **No double-billing.** The lawyer cannot bill for time saved by AI. If an AI cuts drafting time from four hours to one, the client is billed for one.
+4. **Honest advertising.** Advertising rules extend to AI-driven communications including website chatbots. Any AI-powered chatbot must comply with Florida's rules on advertising - which is why our intake-agent system prompts identify the agent as AI on first contact.
+
+### HIPAA and the Business Associate Agreement
+
+Anthropic offers a **BAA on the Claude API, Claude Enterprise, and Claude Code CLI (ZDR only)** but not on Pro, Team, or consumer Claude.ai. Miami firms with medical-legal cross-over (plaintiff-side med-mal, workers' comp with medical records, elder-law with senior health data) should ensure the BAA is executed before any PHI-adjacent workflow runs.
+
+### Certifications the Florida Bar competence duty benefits from
+
+Anthropic maintains SOC 2 Type I and Type II, ISO 27001:2022, and ISO/IEC 42001:2023 (AI management systems). These are the specific certifications ethics counsel and firm risk committees look for when documenting a competence review under Opinion 24-1.
+
+### Practical compliance posture
+
+The three-agent stack above is fully deployable in Miami when (a) the agents run on Anthropic's commercial API with a DPA (and BAA where relevant), (b) the intake agent identifies itself as an AI, (c) a designated partner supervises the deployment, (d) transcripts are stored in firm-owned systems, and (e) every client-facing output is reviewed by a licensed attorney before it is relied upon.
+
+## The 90-day deployment plan
+
+Most Miami firms we work with want a phased rollout that proves ROI before committing to the full stack. Here is the 90-day plan we use, tuned for Miami-specific realities:
+
+### Days 1-15: Discovery and bilingual intake
+
+- Week 1: workflow mapping. We sit with the intake coordinator, an associate, and the managing partner. We map every step from first lead touch to matter opening. For Miami PI and family firms we specifically map the Spanish-language intake path - most firms have never formally documented it and lose leads there.
+- Week 2: intake agent deployment on web chat only, English + Spanish. Soft launch with transcript monitoring in a firm Slack channel. Every intake is reviewed daily by the assigned partner.
+
+### Days 16-30: Intake expansion + conflict-check skill
+
+- Week 3: intake agent expanded to WhatsApp and after-hours SMS - both are how much of Miami's Hispanic and Caribbean client base actually communicates.
+- Week 4: after-hours Vapi/Bland phone integration goes live. Claude Code conflict-check skill deployed against the firm's matter database. Two paralegals trained on the memo output format.
+
+### Days 31-60: Document review pilot and language expansion
+
+- Weeks 5-6: document review agent deployed on one active litigation matter. Associates use it on deposition summaries and discovery production.
+- Weeks 7-8: Portuguese and Haitian Creole added to the intake agent (Miami has ~85K Haitian Creole speakers and a substantial Brazilian community in Aventura and North Miami Beach). Contract redlining goes live for the transactional group.
+
+### Days 61-90: Optimization and measurement
+
+- Weeks 9-10: tune system prompts based on real transcripts. Miami firms almost always find their intake agent needs a more conservative qualification standard by week 30 after seeing enough conversations.
+- Weeks 11-12: run the ROI report. Compare consultation booking rate, matter-open time, and associate hours per matter to the pre-deployment baseline. Present to the managing partner and executive committee.
+
+At day 90 the firm has a real, working, Opinion-24-1-compliant AI agent stack and three months of measurement data proving what it returned. Most Miami firms extend the engagement into a phase-2 build after seeing the day-90 numbers.
+
+## Real ROI benchmarks for Miami firms
+
+Numbers vary by practice area, but this is what we typically see at Miami firms in the 4-25 attorney range after 90 days of the full stack:
+
+- **Intake:** 30-45% increase in consultation booking rate. Most of the gain comes from after-hours coverage, Spanish-language coverage, and faster speed-to-lead - three things Miami firms leak on more than firms in comparably-sized markets like Atlanta or Charlotte.
+- **Conflict checks:** matter-open time drops from 1-3 days to under 4 hours. For real-estate practices closing on tight contract timelines, this alone is worth the deployment.
+- **Document review:** 60-80% reduction in associate hours per matter on review-heavy tasks, with no observed accuracy degradation when used in retrieval-augmented mode with associate verification.
+- **Total monthly cost** (Claude API + hosting + SMS/WhatsApp/voice gateways + maintenance): $1,300-$2,700 depending on firm size and channel mix.
+- **Typical payback period:** 4-8 weeks for the intake agent alone. Faster for PI firms because a single additional signed case at Miami's average PI settlement well exceeds the deployment cost.
+
+The one number that surprises every Miami firm: the intake agent typically captures **20-30% more qualified leads**, not just more leads in absolute terms. The agent asks the same qualification questions every time, in the client's chosen language, with no fatigue and no skipping. Human intake staff tend to under-document and skip questions when tired or on the fifth call of the hour. The agent does not.
+
+A second Miami-specific number worth flagging: firms that add Spanish-language intake typically see a **35-60% increase in Hispanic-market lead volume** within 60 days - because previously those leads dropped off after the first English-only autoresponder. If you serve immigration, PI, family law, or plaintiff-side employment matters in Miami-Dade or Broward, this is often the single biggest revenue swing in the deployment.
+
+## Common mistakes Miami firms make
+
+After working with dozens of firms across Miami-Dade, Broward, and Palm Beach, these are the mistakes we see most often:
+
+**Mistake 1: Deploying an English-only agent.** In a market where 71.5% of the City of Miami is Hispanic and 57.6% is foreign-born, an English-only intake agent is leaving a huge share of qualified leads on the table. Bilingual is not optional in this market - it is table stakes.
+
+**Mistake 2: Letting a generic legal-AI SaaS vendor run point.** Most off-the-shelf legal AI products are tuned for the average US firm. Miami is not average - the naming conventions, language mix, practice area distribution, and Florida Bar rules are specific enough that a custom Claude deployment materially outperforms generic products.
+
+**Mistake 3: Skipping the Opinion 24-1 competence review.** This is the biggest ethics risk. Under Opinion 24-1 the lawyer is responsible for understanding what the AI does, how it handles data, and whether it can hallucinate. Document the review at the start, not after a complaint.
+
+**Mistake 4: Using consumer Claude.ai or ChatGPT for client work.** Opinion 24-1 flags this specifically. Use the commercial Claude API with a DPA (and BAA where relevant).
+
+**Mistake 5: Overscoping the first deployment.** Firms that try to deploy all three agents in week one fail. Start with the bilingual intake agent, prove ROI in 30 days, then expand.
+
+**Mistake 6: Skipping the measurement plan.** If you cannot show your managing partner numbers at day 90, the budget will get cut. Define three metrics (consultation booking rate, matter-open time, associate hours per matter) on day one and instrument them from the start.
+
+**Mistake 7: Ignoring WhatsApp and voice.** In Miami, WhatsApp is not a nice-to-have channel - it is often the primary channel for Latin American and Caribbean clients. Voice matters for Krome-adjacent immigration work where clients cannot text easily. Deploy multichannel from the start.
+
+## How to pick an implementation partner in Miami
+
+If you are a Miami firm evaluating AI implementation partners in 2026, ask these five questions:
+
+1. **Do you build on Anthropic's commercial Claude API with a DPA and, where relevant, a BAA?** Anything else is a Rule 4-1.6 exposure under Opinion 24-1.
+2. **Can you produce Florida law-firm references - by name - who will take a reference call?** Generic AI consultancies often cannot. Miami is small enough that you should be able to talk to another local partner who has already deployed.
+3. **What is your deployment timeline?** A real partner deploys the first agent in 2-4 weeks. If they quote six months, they are upselling enterprise consulting or building on legacy tech.
+4. **Who owns the system after deployment?** You should. Beware vendor lock-in models where the agent only runs on the vendor's platform - it puts your intake process at their pricing mercy.
+5. **How is Opinion 24-1 compliance built in?** The answer should include a named partner supervisor, a written AI policy, a documented competence review, and a monthly transcript audit process.
+
+At manuv.co we focus specifically on local-business and professional-services AI implementations. We build custom Claude agents and Claude Code skills sized for Miami firms in the 2-40 attorney range, with Florida-Bar-specific compliance built in from day one and full bilingual (English/Spanish, Portuguese/Creole optional) intake as a default. If you want to map your firm's highest-ROI agent in a 30-minute call, the link is below - we will walk through your current intake and matter-open workflow, identify which of the three agents will return the most value first for your practice mix, and give you a concrete deployment plan and quote.
+
+## Frequently Asked Questions
+
+### How much does it cost to deploy an AI intake agent at a Miami law firm?
+
+Initial deployment of a bilingual Claude-powered intake agent for a typical 5-15 attorney Miami firm runs $9,000-$20,000 one-time, with $500-$900/month ongoing for the Claude API, hosting, SMS gateway, WhatsApp business channel, and voice integration. The full three-agent stack (intake + conflict-check skill + document review) runs $22,000-$50,000 one-time and $1,300-$2,700/month ongoing. Payback is typically 4-8 weeks for the intake agent alone - faster in PI where a single additional signed case exceeds the deployment cost.
+
+### Is using generative AI at a Florida law firm allowed under Florida Bar rules?
+
+Yes. Florida Bar Ethics Opinion 24-1 (approved January 19, 2024, by the Board of Governors) explicitly greenlights lawyer use of generative AI under four conditions: (1) protect client confidentiality by researching the AI vendor's data practices and obtaining informed consent when appropriate, (2) verify accuracy since the lawyer remains responsible for work product, (3) do not double-bill for AI-accelerated work, and (4) comply with advertising rules for AI-driven client-facing communications like chatbots. The commercial Claude API with a DPA is the clean deployment path.
+
+### What is the difference between Claude API and Claude.ai for a Miami law firm?
+
+Consumer Claude.ai is a chat product designed for individual users - its terms allow input data to be used for product improvement in some tiers and the user has limited control over data-handling. The commercial Claude API is the developer/business interface. Anthropic does not train on commercial API inputs by default, firms can sign a Data Processing Addendum and a Business Associate Agreement, and the API is covered by SOC 2 Type II, ISO 27001:2022, and ISO/IEC 42001:2023 certifications. For client work in Florida, only the commercial API is appropriate under Opinion 24-1's confidentiality prong.
+
+### Can the intake agent handle Spanish, Portuguese, and Haitian Creole?
+
+Yes - and this is arguably the single biggest reason to deploy AI intake in Miami. Claude Sonnet 4.5 is natively multilingual and handles Spanish, Portuguese, and Haitian Creole (as well as English) with high fluency. We configure the agent to detect language on first contact and respond in kind, with proper accent and register for the client's region (Cuban vs. Colombian vs. Venezuelan Spanish, for example). Miami firms that add bilingual intake typically see a 35-60% lift in Hispanic-market lead volume within 60 days.
+
+### How does the intake agent integrate with Clio, MyCase, or PracticePanther?
+
+All three have public APIs that the agent uses to create new contacts, draft matter records, attach intake notes, and schedule consultations. We have deployed against Clio Grow, Clio Manage, MyCase, PracticePanther, Smokeball, Filevine, and CosmoLex - all common at Miami-Dade firms. Integration typically takes 2-3 days of the 2-3 week intake deployment window.
+
+### How does the Claude Code conflict-check skill handle Spanish naming conventions?
+
+Traditional conflict-check tools miss a lot in Miami because they do not handle Spanish naming conventions correctly - dual surnames (Rodríguez García), compound given names (Juan Carlos), accent variations (Rodríguez / Rodriguez), and Anglicized versions of the same name. The Claude Code skill uses fuzzy matching plus a Claude Sonnet 4.5 reasoning step to catch these variants. In pilot deployments the skill catches 15-30% more matches than the incumbent tool - which materially reduces downstream conflict risk.
+
+### What happens if Claude makes a mistake in a client conversation?
+
+Two safeguards. First, the intake agent's system prompt strictly limits it to triage and scheduling - it is instructed not to give legal advice, only to gather facts and route to a licensed attorney. Second, a designated partner reviews transcripts on a documented cadence, satisfying the supervision and competence expectations of Opinion 24-1. If a substantive error occurs, the attorney-of-record corrects it directly with the client. In our 2026 Miami deployment data, we have not seen a client-harm error from the intake agent - the misclassifications we see are around lead qualification, not advice.
+
+### What about HIPAA - we represent medical clients sometimes?
+
+Anthropic offers a Business Associate Agreement on the commercial Claude API, Claude Enterprise, and Claude Code CLI (Zero Data Retention only). For Miami firms handling PHI in intake - plaintiff-side med-mal, workers' comp with medical records, elder-law with senior health data - we execute the BAA before any PHI-adjacent workflow runs and configure the agent with HIPAA-specific data-handling controls.
+
+### Will my staff lose their jobs?
+
+In our Miami deployments, no staff have been let go. The intake agent absorbs after-hours and weekend work that previously went to a paid answering service or Spanish-language legal-intake bureau. The Claude Code conflict-check skill returns 15-40 paralegal hours per month that get reallocated to higher-value work. The document review agent shifts associate time from reading to validating citations - the same associates produce more matter output. Firms grow into the capacity rather than cutting staff, which is the pattern most Miami managing partners want anyway given how hard it is to recruit bilingual paralegals in this market.
+
+### How is this different from off-the-shelf legal AI products like CoCounsel or Harvey?
+
+CoCounsel (Thomson Reuters) and Harvey are large SaaS platforms optimized for BigLaw and general research/drafting workflows. They are excellent products, but they are not custom-built for your firm's specific intake process, Miami's language mix, or the exact fields in your Clio or PracticePanther instance. A custom Claude deployment built on Anthropic's API costs less in monthly recurring, ships in weeks not quarters, is owned by you, and can be tuned to Cuban-vs-Venezuelan Spanish register, Krome-adjacent immigration intake nuance, or Coral Gables real-estate contract redlining patterns in a way generic SaaS cannot.
+
+### What if our matter-management system is on-premises rather than cloud?
+
+We deploy the Claude Code conflict-check skill locally so it can query an on-premises SQL Server, NetDocuments, or SharePoint instance without matter data leaving the firm's network. The intake agent can run in a hybrid pattern where transcripts are summarized in the cloud via Anthropic's API and structured notes are written to the on-premises system. Miami firms with legacy on-premises setups - common at older mid-size firms - are fully supported.
+
+### How do I get started at my Miami firm?
+
+Book a 30-minute strategy call with manuv.co at [manuv.co/contact](/contact). We will walk through your current intake and matter-open workflow, identify which of the three agents will return the most value first for your practice mix, and give you a concrete Opinion-24-1-compliant deployment plan and quote. There is no cost to the assessment call, and you leave with a written recommendation you can take to your executive committee whether or not you engage us.
+
+## Sources
+- [Florida Bar Ethics Opinion 24-1 - Generative Artificial Intelligence](https://www.floridabar.org/etopinions/opinion-24-1/)
+- [The Florida Bar - Attorney Licensing and Membership](https://www.floridabar.org/)
+- [US Census QuickFacts - Miami-Dade County, Florida](https://www.census.gov/quickfacts/fact/table/miamidadecountyflorida/PST045224)
+- [US Census QuickFacts - Miami city, Florida](https://www.census.gov/quickfacts/fact/table/miamicityflorida/PST045224)
+- [Data USA - Miami, FL demographic profile](https://datausa.io/profile/geo/miami-fl/)
+- [8am 2026 Legal Industry Report - AI adoption 69%](https://www.8am.com/reports/legal-industry-report-2026/)
+- [Clio Legal Trends Report - benchmarks and rates](https://www.clio.com/resources/legal-trends/)
+- [Anthropic - Business Associate Agreements (BAA) for Commercial Customers](https://privacy.claude.com/en/articles/8114513-business-associate-agreements-baa-for-commercial-customers)
+- [Anthropic - Certifications (SOC 2 Type II, ISO 27001, ISO 42001)](https://privacy.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained)
+- [Hinshaw & Culbertson - Analysis of Florida Bar Opinion 24-1](https://www.hinshawlaw.com/en/insights/lawyers-for-the-profession-alert/florida-bar-advisory-opinion-24-1-gives-green-light-to-generative-ai-use-by-lawyers-with-four-ethical-caveats)
 
 ---
