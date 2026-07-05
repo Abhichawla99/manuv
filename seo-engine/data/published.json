@@ -329,8 +329,19 @@
       "state": "FL",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-oakland-ca",
+      "title": "AI Agents for Law Firms in Oakland, CA: 2026 Implementation Guide",
+      "metaDescription": "The 2026 playbook for deploying Claude AI agents at Oakland law firms: multilingual intake, conflict checks, doc review, CA ethics rules, and ROI benchmarks.",
+      "publishedAt": "2026-07-05",
+      "vertical": "legal",
+      "city": "Oakland",
+      "state": "CA",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-07-04T09:13:30.478Z",
-  "totalPublished": 30
+  "lastRunAt": "2026-07-05T09:16:43.217Z",
+  "totalPublished": 31
 }

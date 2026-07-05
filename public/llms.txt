@@ -35,6 +35,7 @@
 
 Below is the full index of in-depth, location-and-vertical-specific research articles published on manuv.co. Each article covers a specific industry in a specific U.S. city with implementation steps, ROI math, local regulatory notes, and FAQ answers.
 
+- [AI Agents for Law Firms in Oakland, CA: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-oakland-ca) - The 2026 playbook for deploying Claude AI agents at Oakland law firms: multilingual intake, conflict checks, doc review, CA ethics rules, and ROI benchmarks.
 - [AI Agents for Law Firms in Miami, FL: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-miami-fl) - How Miami law firms deploy Claude-powered intake, conflict-check and document-review agents in 90 days under Florida Bar Opinion 24-1. Bilingual, ROI, ethics.
 - [AI Agents for Law Firms in Raleigh, NC: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-raleigh-nc) - Complete 2026 guide to deploying AI agents at Raleigh law firms. Claude-powered intake, conflict checks, and document review under 2024 FEO 1, with ROI math and a 90-day plan.
 - [AI Agents for Law Firms in Atlanta, GA: 2026 Implementation Guide](https://manuv.co/resources/ai-agents-implementation-legal-atlanta-ga) - Complete 2026 guide to deploying AI agents at Atlanta law firms. Claude-powered intake, conflict checks, discovery review. Georgia Bar rules, Shahid v. Esaam lessons, and a 90-day plan.
