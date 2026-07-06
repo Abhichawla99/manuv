@@ -340,8 +340,19 @@
       "state": "CA",
       "topic": "ai-agents-implementation",
       "wordCount": 3280
+    },
+    {
+      "slug": "ai-agents-implementation-legal-minneapolis-mn",
+      "title": "AI Agents for Law Firms in Minneapolis, MN: 2026 Implementation Guide",
+      "metaDescription": "Deploy AI agents at a Minneapolis law firm in 90 days. Claude-powered intake, conflict checks, and doc review. MSBA guidance, Kohls v. Ellison lessons, ROI math, and 12 FAQs.",
+      "publishedAt": "2026-07-06",
+      "vertical": "legal",
+      "city": "Minneapolis",
+      "state": "MN",
+      "topic": "ai-agents-implementation",
+      "wordCount": 3280
     }
   ],
-  "lastRunAt": "2026-07-05T09:16:43.217Z",
-  "totalPublished": 31
+  "lastRunAt": "2026-07-06T09:14:44.093Z",
+  "totalPublished": 32
 }
